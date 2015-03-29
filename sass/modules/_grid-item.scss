@@ -1,0 +1,8 @@
+.grid-item {
+	@include span-columns(6);
+	&:nth-child(even) { @include omega; }
+	border: 1px solid $base-accent-color;
+	padding: 0.5em;
+	min-height: 100px;
+	margin-bottom: 1em;
+}

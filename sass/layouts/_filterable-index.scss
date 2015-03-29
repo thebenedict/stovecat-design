@@ -1,0 +1,23 @@
+aside[role="filters"] {
+	background: lighten($base-accent-color, 13);
+	position: fixed;
+	top: $navigation-height + 1px;
+	left: 0;
+	bottom: 0;
+	overflow-y: scroll;
+	webkit-overflow-scrolling: touch;
+	width: 35%;
+}
+
+main[role="stoves"] {
+	position: fixed;
+	background: white;
+	top: $navigation-height + 1px;
+	right: 0;
+	bottom: 0;
+	overflow-y: scroll;
+	webkit-overflow-scrolling: touch;
+	width: 65%;
+	padding: 1em;
+	@include outer-container;
+}

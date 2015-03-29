@@ -1,0 +1,474 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>Clean Cooking Catalog</title>
+
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/fontello.css">
+  </head>
+  <body>
+    <header class="navigation" role="banner">
+      <div class="navigation-wrapper">
+        <a href="javascript:void(0)" class="logo">
+          <img src="images/squished-logo.png" alt="Global Alliance Logo Image">
+          <div class="site-name">clean cooking catalog</div>
+        </a>
+        <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">menu</a>
+        <nav role="navigation">
+          <ul id="js-navigation-menu" class="navigation-menu show">
+            <li class="nav-link"><a href="javascript:void(0)">stoves</a></li>
+            <li class="nav-link"><a href="javascript:void(0)">fuels</a></li>
+            <li class="nav-link more"><a href="javascript:void(0)">testing</a>
+              <ul class="submenu">
+                  <li><a href="javascript:void(0)">stove test results</a></li>
+                  <li><a href="javascript:void(0)">fuel test results</a></li>
+              </ul>
+            </li> 
+          </ul>
+        </nav>
+        <div class="navigation-tools">
+          <a href="javascript:void(0)" class="nav-button">contribute</a>
+          <a href="javascript:void(0)" class="nav-button">resources</a>
+        </div>
+      </div>
+    </header>
+    <aside role="filters">
+      <div class="filter-panel">
+        <div class="filter-group panel-header">
+          <span class="count-value">262</span><span class="count-label"> stoves shown</span>
+          <a href="javascript:void(0)" class="download"><i class="icon-down-circled"></i> Download CSV</a>
+        </div>
+        <div class="filter-group">
+          <div class="label inline">View stoves as</div>
+          <div class="options inline">
+            <div class="button-group">
+              <label>
+                <input type="radio" name="button-group" value="item" checked>
+                <span class="button-group-item"><i class="icon-list"></i> List</span>
+              </label>
+              <label>
+                <input type="radio" name="button-group" value="other-item">
+                <span class="button-group-item"><i class="icon-globe"></i> Map</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="label inline">Keyword search <i class="icon-info"></i></div>
+          <div class="options inline">
+            <input type="text" name="query">
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="label">Stove type</div>
+          <div class="options checkbox-group">
+            <i class="icon-down-dir js-expand-trigger"></i>
+            <label>
+              <input type="checkbox" class="checkbox" name="types" value="">
+              <span class="string">Charcoal</span>
+              <span class="counter">123</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="types" value="">
+              <span class="string">Chimney</span>
+              <span class="counter">123</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="types" value="">
+              <span class="string">Electric/Induction</span>
+              <span class="counter">123</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="types" value="">
+              <span class="string">Ethanol/Alcohol</span>
+              <span class="counter">123</span>
+            </label>
+            <div class="more-choices">
+              <label>
+                <input type="checkbox" class="checkbox" name="types" value="">
+                <span class="string">Fan/Forced Air</span>
+                <span class="counter">123</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="types" value="">
+                <span class="string">Gas/Biogas/Liquid Petroleum Gas (LPG)</span>
+                <span class="counter">123</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="types" value="">
+                <span class="string">Gasifier/TLUD</span>
+                <span class="counter">123</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="types" value="">
+                <span class="string">Griddle/Plancha</span>
+                <span class="counter">123</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="types" value="">
+                <span class="string">Rocket/Side-Feed</span>
+                <span class="counter">123</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="types" value="">
+                <span class="string">Solar</span>
+                <span class="counter">123</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="types" value="">
+                <span class="string">Traditional</span>
+                <span class="counter">123</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="label inline">Suggested retail price</div>
+          <div class="options inline">
+            <input type="range" name="price">
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="label">Characteristics</div>
+          <div class="options checkbox-group">
+            <i class="icon-down-dir js-expand-trigger"></i>
+            <label>
+              <input type="checkbox" class="checkbox" name="characteristics" value="batch_loaded">
+              <span class="string">Batch loaded </span>
+              <span class="counter">43</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="characteristics" value="biochar_producing">
+              <span class="string">Biochar-producing</span>
+              <span class="counter">17</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="characteristics" value="built_in_place">
+              <span class="string">Built in place</span>
+              <span class="counter">41</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="characteristics" value="ceramic_lined">
+              <span class="string">Ceramic lined</span>
+              <span class="counter">44</span>
+            </label>
+            <div class="more-choices">
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Chimney</span>
+                <span class="counter">47</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Fan</span>
+                <span class="counter">29</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Gasifier (TLUD)</span>
+                <span class="counter">45</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Griddle/plancha</span>
+                <span class="counter">14</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Heating</span>
+                <span class="counter">37</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Household</span>
+                <span class="counter">237</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Induction</span>
+                <span class="counter">2</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Institutional</span>
+                <span class="counter">44</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Multiple burners</span>
+                <span class="counter">47</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Natural draft/rocket</span>
+                <span class="counter">90</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Non-traditional</span>
+                <span class="counter">240</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Portable</span>
+                <span class="counter">210</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Pot skirt</span>
+                <span class="counter">31</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Pressure</span>
+                <span class="counter">4</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Prototype</span>
+                <span class="counter">12</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Side-feed</span>
+                <span class="counter">53</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Solar: Heat-trap box</span>
+                <span class="counter">3</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Solar: Panel</span>
+                <span class="counter">6</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Solar: Parabolic</span>
+                <span class="counter">3</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Sunken pot</span>
+                <span class="counter">19</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Thermoelectric generator</span>
+                <span class="counter">5</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Traditional</span>
+                <span class="counter">22</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">U-shape</span>
+                <span class="counter">1</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Wick</span>
+                <span class="counter">2</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="label">Fuels</div>
+          <div class="options checkbox-group">
+            <i class="icon-down-dir js-expand-trigger"></i>
+            <label>
+              <input type="checkbox" class="checkbox" name="fuels" value="biogas">
+              <span class="string">Biogas</span>
+              <span class="counter">1</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="fuels" value="biomass">
+              <span class="string">Biomass</span>
+              <span class="counter">140</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="fuels" value="briquettes_pellets">
+              <span class="string">Briquettes/pellets</span>
+              <span class="counter">70</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="fuels" value="charcoal">
+              <span class="string">Charcoal</span>
+              <span class="counter">72</span>
+            </label>
+            <div class="more-choices">
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Coal</span>
+                <span class="counter">12</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Crop residues</span>
+                <span class="counter">57</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Diesel</span>
+                <span class="counter">1</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Dung</span>
+                <span class="counter">29</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Electric</span>
+                <span class="counter">2</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Ethanol/alcohol</span>
+                <span class="counter">13</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Kerosene</span>
+                <span class="counter">0</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Liquid petroleum gas</span>
+                <span class="counter">12</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Methane/natural gas</span>
+                <span class="counter">7</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Plant oil</span>
+                <span class="counter">1</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Propane gas</span>
+                <span class="counter">6</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Solar</span>
+                <span class="counter">11</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Wood</span>
+                <span class="counter">142</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="label">Materials</div>
+          <div class="options checkbox-group">
+            <i class="icon-down-dir js-expand-trigger"></i>
+            <label>
+              <input type="checkbox" class="checkbox" name="materials" value="brick">
+              <span class="string">Brick</span>
+              <span class="counter">26</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="materials" value="cement">
+              <span class="string">Cement</span>
+              <span class="counter">47</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="materials" value="ceramic">
+              <span class="string">Ceramic</span>
+              <span class="counter">43</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="materials" value="clay">
+              <span class="string">Clay</span>
+              <span class="counter">44</span>
+            </label>
+            <div class="more-choices">
+              <label>
+                <input type="checkbox" class="checkbox" name="materials" value="metal">
+                <span class="string">Metal</span>
+                <span class="counter">213</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="label">Geography</div>
+          <div class="options checkbox-group">
+            <i class="icon-down-dir js-expand-trigger"></i>
+            <label>
+              <input type="checkbox" class="checkbox" name="regions" value="africa">
+              <span class="string">Africa</span>
+              <span class="counter">136</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="regions" value="asia">
+              <span class="string">Asia</span>
+              <span class="counter">89</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="regions" value="europe_middle_east">
+              <span class="string">Europe/Middle East</span>
+              <span class="counter">21</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="regions" value="lac">
+              <span class="string" title="Latin America &amp; the Caribbean">Latin America &amp; the Caribbean</span>
+              <span class="counter">60</span>
+            </label>
+            <div class="more-choices">
+              <label>
+                <input type="checkbox" class="checkbox" name="regions" value="australia">
+                <span class="string">Australia</span>
+                <span class="counter">20</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="regions" value="north_america">
+                <span class="string">North America</span>
+                <span class="counter">25</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main role="stoves">
+      <!--<div class="grid-item">item 1</div>
+      <div class="grid-item">item 2</div>
+      <div class="grid-item">item 3</div>
+      <div class="grid-item">item 4</div>
+      <div class="grid-item">item 5</div>
+      <div class="grid-item">item 1</div>
+      <div class="grid-item">item 2</div>
+      <div class="grid-item">item 3</div>
+      <div class="grid-item">item 4</div>
+      <div class="grid-item">item 5</div>
+      <div class="grid-item">item 1</div>
+      <div class="grid-item">item 2</div>
+      <div class="grid-item">item 3</div>
+      <div class="grid-item">item 4</div>
+      <div class="grid-item">item 5</div>
+      <div class="grid-item">item 1</div>
+      <div class="grid-item">item 2</div>
+      <div class="grid-item">item 3</div>
+      <div class="grid-item">item 4</div>
+      <div class="grid-item">item 5</div>-->
+    </main>
+  </body>
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/top-nav.js"></script>
+  <script src="js/expand.js"></script>
+</html>

@@ -1,0 +1,96 @@
+.filter-panel {
+  $filter-group-padding: 1em;
+
+  @include outer-container;
+  font-family: $heading-font-family;
+  padding: 1em;
+
+  .panel-header {
+    @include span-columns(12);
+    position: relative;
+    line-height: 1.6em;
+    padding-top: 0.5em !important;
+
+    .count-value { font-size: $base-font-size * 1.6; }
+    .count-label { 
+      color: $medium-gray;
+    }
+    .download {
+      position: absolute;
+      right: 0;
+      bottom: $filter-group-padding;
+      text-align: right;
+      font-size: $base-font-size * 0.9
+    }
+  }
+
+  .filter-group {
+    @include span-columns(12);
+    padding: $filter-group-padding 0;
+    border-bottom: 1px solid $light-gray;
+    font-size: $base-font-size * 0.9;
+
+    .label {
+      &.inline { @include span-columns(4 of 12) }
+      @include span-columns(12 of 12);
+      padding: 0.5em 0;
+    }
+
+    .options {
+      &.inline { @include span-columns(8 of 12) }
+      @include span-columns(12 of 12);
+    }
+
+    .icon-info { color: $action-color; }
+
+    input {
+      margin: 0;
+    }
+  }
+
+  .checkbox-group {
+    position: relative;
+
+    label {
+      @include span-columns(6 of 12);
+      font-family: $heading-font-family;
+      padding: 0.5em 0;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .string {
+      display: inline-block;
+      max-width: 65%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: bottom;
+    }
+
+    i {
+      position: absolute;
+      right: 0;
+      top: 1.75em;
+      font-size: 1.6em;
+      color: $action-color;
+
+        &:hover { color: darken($action-color, 15%); }
+    }
+
+    .checkbox { 
+      margin-right: 0.25em;
+      height: 1.25em;
+      width: 1.35em;
+      vertical-align: bottom;
+    }
+
+    .more-choices { @include span-columns(12 of 12) }
+
+    &.is-expanded {
+      display: block;
+      padding-bottom: 0;
+    }
+  }
+
+}
