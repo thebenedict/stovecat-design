@@ -6,8 +6,9 @@
 
     <title>Clean Cooking Catalog</title>
 
-    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/jquery.nouislider.min.css">
+    <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
     <header class="navigation" role="banner">
@@ -69,66 +70,70 @@
             <label>
               <input type="checkbox" class="checkbox" name="types" value="">
               <span class="string">Charcoal</span>
-              <span class="counter">123</span>
+              <span class="counter">192</span>
             </label>
             <label>
               <input type="checkbox" class="checkbox" name="types" value="">
               <span class="string">Chimney</span>
-              <span class="counter">123</span>
+              <span class="counter">183</span>
             </label>
             <label>
               <input type="checkbox" class="checkbox" name="types" value="">
               <span class="string">Electric/Induction</span>
-              <span class="counter">123</span>
+              <span class="counter">168</span>
             </label>
             <label>
               <input type="checkbox" class="checkbox" name="types" value="">
               <span class="string">Ethanol/Alcohol</span>
-              <span class="counter">123</span>
+              <span class="counter">160</span>
             </label>
             <div class="more-choices">
               <label>
                 <input type="checkbox" class="checkbox" name="types" value="">
                 <span class="string">Fan/Forced Air</span>
-                <span class="counter">123</span>
+                <span class="counter">138</span>
               </label>
               <label>
                 <input type="checkbox" class="checkbox" name="types" value="">
-                <span class="string">Gas/Biogas/Liquid Petroleum Gas (LPG)</span>
-                <span class="counter">123</span>
+                <span class="string" title="Gas/Biogas/Liquid Petroleum Gas (LPG)">Gas/Biogas/Liquid Petroleum Gas (LPG)</span>
+                <span class="counter">109</span>
               </label>
               <label>
                 <input type="checkbox" class="checkbox" name="types" value="">
                 <span class="string">Gasifier/TLUD</span>
-                <span class="counter">123</span>
+                <span class="counter">61</span>
               </label>
               <label>
                 <input type="checkbox" class="checkbox" name="types" value="">
                 <span class="string">Griddle/Plancha</span>
-                <span class="counter">123</span>
+                <span class="counter">60</span>
               </label>
               <label>
                 <input type="checkbox" class="checkbox" name="types" value="">
                 <span class="string">Rocket/Side-Feed</span>
-                <span class="counter">123</span>
+                <span class="counter">57</span>
               </label>
               <label>
                 <input type="checkbox" class="checkbox" name="types" value="">
                 <span class="string">Solar</span>
-                <span class="counter">123</span>
+                <span class="counter">55</span>
               </label>
               <label>
                 <input type="checkbox" class="checkbox" name="types" value="">
                 <span class="string">Traditional</span>
-                <span class="counter">123</span>
+                <span class="counter">42</span>
               </label>
             </div>
           </div>
         </div>
         <div class="filter-group">
-          <div class="label inline">Suggested retail price</div>
-          <div class="options inline">
-            <input type="range" name="price">
+          <div class="label">Suggested retail price</div>
+          <div class="options slider">
+            <div id="price-slider"></div>
+            <div id="price-min-label" class="slider-label left"><span class="units">$</span><span class="value"></span></div>
+            <div id="price-max-label" class="slider-label right"><span class="units">$</span><span class="value"></span></div>
+            <input type="number" id="price-min" class="slider-input" name="price_min">
+            <input type="number" id="price-max" class="slider-input" name="price_max">
           </div>
         </div>
         <div class="filter-group">
@@ -469,6 +474,7 @@
     </main>
   </body>
   <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/jquery.nouislider.all.min.js"></script>
   <script src="js/top-nav.js"></script>
-  <script src="js/expand.js"></script>
+  <script src="js/filters.js"></script>
 </html>

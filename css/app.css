@@ -639,4 +639,61 @@ header.navigation {
   border-radius: 0.5em;
   margin-left: 0.3em; }
 
+.slider {
+  padding: 0 0.5em;
+  margin: 1em 0; }
+  .slider .noUi-horizontal {
+    height: 10px; }
+  .slider .noUi-horizontal .noUi-handle {
+    width: 18px;
+    height: 18px;
+    left: -9px;
+    top: -8px; }
+  .slider .noUi-background {
+    background: #d4cfc4;
+    box-shadow: none; }
+  .slider .noUi-origin {
+    border-radius: 0; }
+  .slider .noUi-target {
+    border-radius: 0;
+    border: 4px solid #e7e7e7;
+    box-shadow: none; }
+  .slider .noUi-target.noUi-connect {
+    box-shadow: none; }
+  .slider .noUi-origin {
+    background: #d4cfc4; }
+    .slider .noUi-origin:first-child {
+      background: #e56120; }
+  .slider .noUi-handle {
+    border: 1px solid #d0d0d0;
+    border-radius: 2px;
+    background: #FFF;
+    cursor: pointer;
+    box-shadow: inset 0 0 1px #f7f7f7, inset 0 1px 7px #eaeaea, 0 3px 6px -3px #BBB; }
+  .slider .noUi-active {
+    box-shadow: inset 0 0 1px #eaeaea, inset 0 1px 7px #ddd, 0 3px 6px -3px #BBB; }
+  .slider .noUi-handle:before,
+  .slider .noUi-handle:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 8px;
+    width: 1px;
+    background: #d0d0d0;
+    left: 6px;
+    top: 4px; }
+  .slider .noUi-handle:after {
+    left: 9px; }
+
+.slider-label {
+  width: auto;
+  position: relative;
+  top: 15px; }
+  .slider-label.left {
+    float: left;
+    left: -0.4em; }
+  .slider-label.right {
+    float: right;
+    right: -0.3em; }
+
 /*# sourceMappingURL=app.css.map */
