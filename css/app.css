@@ -373,7 +373,7 @@ header.navigation {
         top: 1.5em; } }
     @media screen and (min-width: 53.75em) {
       header.navigation ul.submenu .submenu {
-        left: 12.8em;
+        left: 13.8em;
         top: 0; } }
     header.navigation ul.submenu li {
       display: block;
@@ -398,7 +398,7 @@ header.navigation {
             background-color: #01575d;
             padding-left: 1em;
             text-align: left;
-            width: 13em; } }
+            width: 14em; } }
   header.navigation .navigation-tools {
     background: #016f76;
     clear: both;
@@ -493,7 +493,7 @@ header.navigation {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 31.76157%; }
+        width: 48.82117%; }
         .filter-panel .filter-group .label.inline:last-child {
           margin-right: 0; }
       .filter-panel .filter-group .label:last-child {
@@ -507,7 +507,7 @@ header.navigation {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 65.88078%; }
+        width: 48.82117%; }
         .filter-panel .filter-group .options.inline:last-child {
           margin-right: 0; }
       .filter-panel .filter-group .options:last-child {
@@ -559,6 +559,8 @@ header.navigation {
     .filter-panel .checkbox-group.is-expanded {
       display: block;
       padding-bottom: 0; }
+  .filter-panel .slider-group {
+    padding-bottom: 2em; }
 
 .grid-item {
   float: left;
@@ -642,6 +644,14 @@ header.navigation {
 .slider {
   padding: 0 0.5em;
   margin: 1em 0; }
+  .slider.inline {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-right: 0; }
+    .slider.inline:last-child {
+      margin-right: 0; }
   .slider .noUi-horizontal {
     height: 10px; }
   .slider .noUi-horizontal .noUi-handle {
@@ -663,7 +673,15 @@ header.navigation {
   .slider .noUi-origin {
     background: #d4cfc4; }
     .slider .noUi-origin:first-child {
-      background: #e56120; }
+      background: #da89a8; }
+  .slider #iwa-emissions-slider .noUi-origin:first-child {
+    background: #6e90a3; }
+  .slider #iwa-efficiency-slider .noUi-origin:first-child {
+    background: #029ea9; }
+  .slider #iwa-indoor-emissions-slider .noUi-origin:first-child {
+    background: #ffba00; }
+  .slider #iwa-safety-slider .noUi-origin:first-child {
+    background: #e56120; }
   .slider .noUi-handle {
     border: 1px solid #d0d0d0;
     border-radius: 2px;
@@ -684,6 +702,16 @@ header.navigation {
     top: 4px; }
   .slider .noUi-handle:after {
     left: 9px; }
+  .slider .noUi-pips-horizontal {
+    padding: 20px 0;
+    height: 50px;
+    top: 100%;
+    left: 0;
+    width: 100%; }
+  .slider .noUi-marker-normal {
+    margin-left: -1px;
+    width: 2px;
+    height: 2px; }
 
 .slider-label {
   width: auto;

@@ -31,13 +31,13 @@
     font-size: $base-font-size * 0.9;
 
     .label {
-      &.inline { @include span-columns(4 of 12) }
+      &.inline { @include span-columns(6 of 12) }
       @include span-columns(12 of 12);
       padding: 0.5em 0;
     }
 
     .options {
-      &.inline { @include span-columns(8 of 12) }
+      &.inline { @include span-columns(6 of 12) }
       @include span-columns(12 of 12);
     }
 
@@ -91,6 +91,10 @@
       display: block;
       padding-bottom: 0;
     }
+  }
+
+  .slider-group {
+    padding-bottom: 2em;
   }
 
 }

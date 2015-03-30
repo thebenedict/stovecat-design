@@ -33,13 +33,29 @@ $('#price-slider').Link('upper').to($('#price-max-label .value'), function ( val
 	$(this).html( value.split(".")[0] );
 });
 
+//
 
-// $("#slider-tooltip").Link('upper').to('-inline-<div class="tooltip"></div>', function ( value ) {
+$('.iwa-slider').noUiSlider({
+	start: [ 0, 4 ],
+	step: 1,
+	range: {
+		'min': [ 0 ],
+		'max': [ 4 ]
+	}
+});
+$('#iwa-emissions-slider').Link('lower').to($('#iwa-emissions-min'));
+$('#iwa-emissions-slider').Link('upper').to($('#iwa-emissions-max'));
 
-// 	// The tooltip HTML is 'this', so additional
-// 	// markup can be inserted here.
-// 	$(this).html(
-// 		'<strong>Value: </strong>' +
-// 		'<span>' + value + '</span>'
-// 	);
-// });
+$('#iwa-efficiency-slider').Link('lower').to($('#iwa-efficiency-min'));
+$('#iwa-efficiency-slider').Link('upper').to($('#iwa-efficiency-max'));
+
+$('#iwa-indoor-emissions-slider').Link('lower').to($('#iwa-indoor-emissions-min'));
+$('#iwa-indoor-emissions-slider').Link('upper').to($('#iwa-indoor-emissions-max'));
+
+$('#iwa-safety-slider').Link('lower').to($('#iwa-safety-min'));
+$('#iwa-safety-slider').Link('upper').to($('#iwa-safety-max'));
+
+$('#iwa-safety-slider').noUiSlider_pips({
+	mode: 'steps',
+	density: 1
+});

@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/jquery.nouislider.min.css">
+    <link rel="stylesheet" href="css/jquery.nouislider.pips.min.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
@@ -27,12 +28,19 @@
                   <li><a href="javascript:void(0)">stove test results</a></li>
                   <li><a href="javascript:void(0)">fuel test results</a></li>
               </ul>
+            </li>
+            <li class="nav-link more"><a href="javascript:void(0)">resources</a>
+              <ul class="submenu">
+                  <li><a href="javascript:void(0)">about</a></li>
+                  <li><a href="javascript:void(0)">glossary</a></li>
+                  <li><a href="javascript:void(0)">guides</a></li>
+                  <li><a href="javascript:void(0)">standards &amp; testing</a></li>
+              </ul>
             </li> 
           </ul>
         </nav>
         <div class="navigation-tools">
           <a href="javascript:void(0)" class="nav-button">contribute</a>
-          <a href="javascript:void(0)" class="nav-button">resources</a>
         </div>
       </div>
     </header>
@@ -281,6 +289,35 @@
                 <span class="string">Wick</span>
                 <span class="counter">2</span>
               </label>
+            </div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="label">IWA tiers of performance</div>
+          <div class="options slider-group">
+            <div class="label inline">Emissions</div>
+            <div class="slider inline">
+              <div id="iwa-emissions-slider" class="iwa-slider"></div>
+              <input type="number" id="iwa-emissions-min" class="slider-input" name="iwa_emissions_min">
+              <input type="number" id="iwa-emissions-max" class="slider-input" name="iwa_emissions_max">
+            </div>
+            <div class="label inline">Efficiency</div>
+            <div class="slider inline">
+              <div id="iwa-efficiency-slider" class="iwa-slider"></div>
+              <input type="number" id="iwa-efficiency-min" class="slider-input" name="iwa_efficiency_min">
+              <input type="number" id="iwa-efficiency-max" class="slider-input" name="iwa_efficiency_max">
+            </div>
+            <div class="label inline">Indoor emissions</div>
+            <div class="slider inline">
+              <div id="iwa-indoor-emissions-slider" class="iwa-slider"></div>
+              <input type="number" id="iwa-indoor-emissions-min" class="slider-input" name="iwa_indoor_emissions_min">
+              <input type="number" id="iwa-indoor-emissions-max" class="slider-input" name="iwa_indoor_emissions_max">
+            </div>
+            <div class="label inline">Safety</div>
+            <div class="slider inline">
+              <div id="iwa-safety-slider" class="iwa-slider"></div>
+              <input type="number" id="iwa-safety-min" class="slider-input" name="iwa_safety_min">
+              <input type="number" id="iwa-safety-max" class="slider-input" name="iwa_safety_max">
             </div>
           </div>
         </div>

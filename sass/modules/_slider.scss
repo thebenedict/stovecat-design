@@ -2,6 +2,11 @@
 	padding: 0 0.5em;
 	margin: 1em 0;
 
+	&.inline { 
+		@include span-columns(6 of 12);
+		@include omega;
+	}
+
 	//overrides of nouislider.css base styles
 	// placement overrides
 	.noUi-horizontal {
@@ -13,15 +18,6 @@
 		left: -9px;
 		top: -8px;
 	}
-	// .noUi-vertical {
-	// 	width: 18px;
-	// }
-	// .noUi-vertical .noUi-handle {
-	// 	width: 28px;
-	// 	height: 34px;
-	// 	left: -6px;
-	// 	top: -17px;
-	// }
 
 	// style overrides
 	.noUi-background {
@@ -47,7 +43,30 @@
 		&:first-child { background: $strong-accent-color; }
 	}
 
-	// handles and handle stipes overrides
+	#iwa-emissions-slider {
+		.noUi-origin {
+			&:first-child { background: $alliance-blue; }
+		}
+	}
+
+	#iwa-efficiency-slider {
+		.noUi-origin {
+			&:first-child { background: lighten($alliance-green, 15) }
+		}
+	}
+
+	#iwa-indoor-emissions-slider {
+		.noUi-origin {
+			&:first-child { background: $alliance-yellow; }
+		}
+	}
+
+	#iwa-safety-slider {
+		.noUi-origin {
+			&:first-child { background: $alliance-orange; }
+		}
+	}
+	// handles and handle stripes overrides
 	.noUi-handle {
 		border: 1px solid darken($light-gray, 5);
 		border-radius: 2px;
@@ -77,16 +96,21 @@
 	.noUi-handle:after {
 		left: 9px;
 	}
-	// .noUi-vertical .noUi-handle:before,
-	// .noUi-vertical .noUi-handle:after {
-	// 	width: 14px;
-	// 	height: 1px;
-	// 	left: 6px;
-	// 	top: 14px;
-	// }
-	// .noUi-vertical .noUi-handle:after {
-	// 	top: 17px;
-	// }
+
+	// pips overrides
+	.noUi-pips-horizontal {
+	  padding: 20px 0;
+	  height: 50px;
+	  top: 100%;
+	  left: 0;
+	  width: 100%;
+	}
+
+	.noUi-marker-normal {
+	  margin-left: -1px;
+	  width: 2px;
+	  height: 2px;
+	}
 
 }
 
