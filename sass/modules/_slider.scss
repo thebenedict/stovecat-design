@@ -63,7 +63,7 @@
 
 	#iwa-safety-slider {
 		.noUi-origin {
-			&:first-child { background: $alliance-orange; }
+			&:first-child { background: $alliance-pink; }
 		}
 	}
 	// handles and handle stripes overrides
@@ -111,6 +111,9 @@
 	  width: 2px;
 	  height: 2px;
 	}
+
+	.noUi-marker-horizontal.noUi-marker-large { height: 10px; }
+	.noUi-value-horizontal { padding-top: 15px; }
 
 }
 

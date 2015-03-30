@@ -44,7 +44,8 @@
     .icon-info { color: $action-color; }
 
     input {
-      margin: 0;
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -54,9 +55,10 @@
     label {
       @include span-columns(6 of 12);
       font-family: $heading-font-family;
-      padding: 0.5em 0;
+      padding: 0.6em 0;
       font-weight: 400;
       margin: 0;
+      line-height: 1.3em;
     }
 
     .string {
@@ -75,14 +77,9 @@
       font-size: 1.6em;
       color: $action-color;
 
-        &:hover { color: darken($action-color, 15%); }
-    }
+        &:before { margin-right: 0; }
 
-    .checkbox { 
-      margin-right: 0.25em;
-      height: 1.25em;
-      width: 1.35em;
-      vertical-align: bottom;
+        &:hover { color: darken($action-color, 15%); }
     }
 
     .more-choices { @include span-columns(12 of 12) }

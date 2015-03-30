@@ -97,8 +97,30 @@ input[type="search"] {
 
 input[type="checkbox"],
 input[type="radio"] {
-  display: inline;
-  margin-right: 0.375em; }
+  display: inline-block;
+  margin-right: 0.375em;
+  position: relative;
+  -webkit-appearance: none;
+  height: 1.25em;
+  width: 1.25em;
+  vertical-align: bottom;
+  border: 1px solid #999;
+  border-radius: 2px;
+  background-color: white; }
+  input[type="checkbox"]:focus,
+  input[type="radio"]:focus {
+    outline: none; }
+
+input[type="checkbox"]:checked:before {
+  font-family: 'fontello';
+  content: '\e806';
+  position: absolute;
+  font-size: 0.9em;
+  left: 0;
+  top: 2px;
+  text-align: center;
+  width: 1.25em;
+  color: #e56120; }
 
 input[type="file"] {
   padding-bottom: 0.75em;
@@ -515,7 +537,8 @@ header.navigation {
     .filter-panel .filter-group .icon-info {
       color: #999; }
     .filter-panel .filter-group input {
-      margin: 0; }
+      margin-top: 0;
+      margin-bottom: 0; }
   .filter-panel .checkbox-group {
     position: relative; }
     .filter-panel .checkbox-group label {
@@ -524,9 +547,10 @@ header.navigation {
       margin-right: 2.35765%;
       width: 48.82117%;
       font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-      padding: 0.5em 0;
+      padding: 0.6em 0;
       font-weight: 400;
-      margin: 0; }
+      margin: 0;
+      line-height: 1.3em; }
       .filter-panel .checkbox-group label:last-child {
         margin-right: 0; }
     .filter-panel .checkbox-group .string {
@@ -542,13 +566,10 @@ header.navigation {
       top: 1.75em;
       font-size: 1.6em;
       color: #999; }
+      .filter-panel .checkbox-group i:before {
+        margin-right: 0; }
       .filter-panel .checkbox-group i:hover {
         color: #737373; }
-    .filter-panel .checkbox-group .checkbox {
-      margin-right: 0.25em;
-      height: 1.25em;
-      width: 1.35em;
-      vertical-align: bottom; }
     .filter-panel .checkbox-group .more-choices {
       float: left;
       display: block;
@@ -673,7 +694,7 @@ header.navigation {
   .slider .noUi-origin {
     background: #d4cfc4; }
     .slider .noUi-origin:first-child {
-      background: #da89a8; }
+      background: #e56120; }
   .slider #iwa-emissions-slider .noUi-origin:first-child {
     background: #6e90a3; }
   .slider #iwa-efficiency-slider .noUi-origin:first-child {
@@ -681,7 +702,7 @@ header.navigation {
   .slider #iwa-indoor-emissions-slider .noUi-origin:first-child {
     background: #ffba00; }
   .slider #iwa-safety-slider .noUi-origin:first-child {
-    background: #e56120; }
+    background: #da89a8; }
   .slider .noUi-handle {
     border: 1px solid #d0d0d0;
     border-radius: 2px;
@@ -712,6 +733,10 @@ header.navigation {
     margin-left: -1px;
     width: 2px;
     height: 2px; }
+  .slider .noUi-marker-horizontal.noUi-marker-large {
+    height: 10px; }
+  .slider .noUi-value-horizontal {
+    padding-top: 15px; }
 
 .slider-label {
   width: auto;

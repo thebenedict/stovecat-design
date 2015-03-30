@@ -35,6 +35,10 @@ $('#price-slider').Link('upper').to($('#price-max-label .value'), function ( val
 
 //
 
+function smallTicks( value, type ){
+	return 1;
+}
+
 $('.iwa-slider').noUiSlider({
 	start: [ 0, 4 ],
 	step: 1,
@@ -57,5 +61,5 @@ $('#iwa-safety-slider').Link('upper').to($('#iwa-safety-max'));
 
 $('#iwa-safety-slider').noUiSlider_pips({
 	mode: 'steps',
-	density: 1
+	filter: smallTicks,
 });
