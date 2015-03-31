@@ -266,8 +266,8 @@ header.navigation {
   header.navigation .logo {
     float: left;
     max-height: 60px;
-    padding-left: 1em;
-    padding-right: 2em; }
+    padding-left: 1.5em;
+    padding-right: 3em; }
     header.navigation .logo img {
       max-height: 60px;
       padding: 0.8em 0.8em 0.8em 0;
@@ -426,12 +426,12 @@ header.navigation {
     clear: both;
     display: block;
     height: 60px;
-    padding-left: 0.5em;
-    padding-right: 1em; }
+    padding-left: 0.75em;
+    padding-right: 1.5em; }
     header.navigation .navigation-tools .resources {
       color: white;
       line-height: 60px;
-      padding-right: 2em; }
+      padding-right: 3em; }
     @media screen and (min-width: 53.75em) {
       header.navigation .navigation-tools {
         background: transparent;
@@ -470,7 +470,7 @@ header.navigation {
   margin-left: auto;
   margin-right: auto;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  padding: 1em; }
+  padding: 0.5em 1.5em; }
   .filter-panel::after {
     clear: both;
     content: "";
@@ -494,7 +494,8 @@ header.navigation {
       right: 0;
       bottom: 1em;
       text-align: right;
-      font-size: 0.9em; }
+      font-size: 0.9em;
+      line-height: 2em; }
   .filter-panel .filter-group {
     float: left;
     display: block;
@@ -505,6 +506,8 @@ header.navigation {
     font-size: 0.9em; }
     .filter-panel .filter-group:last-child {
       margin-right: 0; }
+    .filter-panel .filter-group.last {
+      border-bottom: none; }
     .filter-panel .filter-group .label {
       float: left;
       display: block;
@@ -748,5 +751,68 @@ header.navigation {
   .slider-label.right {
     float: right;
     right: -0.3em; }
+
+.tooltip-item {
+  position: relative;
+  display: inline-block; }
+  .tooltip-item p {
+    color: #333;
+    line-height: 1.5;
+    margin: 0; }
+  .tooltip-item:focus, .tooltip-item:hover .tooltip {
+    opacity: 1;
+    visibility: visible; }
+  .tooltip-item .tooltip {
+    position: absolute;
+    right: 0;
+    bottom: 3em;
+    left: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background-color: white;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 2px 2px #ddd;
+    color: #333;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    margin: 0 auto;
+    max-width: 16em;
+    opacity: 0;
+    padding: 1em;
+    text-align: center;
+    visibility: hidden;
+    z-index: 10; }
+    .tooltip-item .tooltip p {
+      font-style: normal;
+      margin-bottom: 0; }
+    .tooltip-item .tooltip:after {
+      position: absolute;
+      right: 0;
+      left: 0;
+      border: 8px solid transparent;
+      bottom: -1.3em;
+      color: white;
+      content: '▼';
+      font-size: 1.4em;
+      margin-left: -8px;
+      text-align: center;
+      text-shadow: 0 2px 2px #ddd; }
+    .tooltip-item .tooltip.right {
+      position: absolute;
+      right: -17em;
+      bottom: -2.75em;
+      left: 3em;
+      height: 6.5em; }
+      .tooltip-item .tooltip.right:after {
+        position: absolute;
+        right: 0;
+        bottom: 26px;
+        left: -7px;
+        content: '◄';
+        margin-left: -15px;
+        text-align: left;
+        text-shadow: -2px 2px 2px #ddd; }
 
 /*# sourceMappingURL=app.css.map */

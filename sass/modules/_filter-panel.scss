@@ -3,7 +3,7 @@
 
   @include outer-container;
   font-family: $heading-font-family;
-  padding: 1em;
+  padding: 0.5em 1.5em;
 
   .panel-header {
     @include span-columns(12);
@@ -20,7 +20,8 @@
       right: 0;
       bottom: $filter-group-padding;
       text-align: right;
-      font-size: $base-font-size * 0.9
+      font-size: $base-font-size * 0.9;
+      line-height: 2em;
     }
   }
 
@@ -29,6 +30,8 @@
     padding: $filter-group-padding 0;
     border-bottom: 1px solid $light-gray;
     font-size: $base-font-size * 0.9;
+
+    &.last { border-bottom: none; }
 
     .label {
       &.inline { @include span-columns(6 of 12) }

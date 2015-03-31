@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/jquery.nouislider.min.css">
     <link rel="stylesheet" href="css/jquery.nouislider.pips.min.css">
+    <link rel="stylesheet" href="css/hint.base.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
@@ -66,7 +67,13 @@
           </div>
         </div>
         <div class="filter-group">
-          <div class="label inline">Keyword search <i class="icon-info"></i></div>
+          <div class="label inline">Keyword search
+            <i class="icon-info tooltip-item">
+              <div class="tooltip right">
+              <p>Search by stove name, description, country, characteristics, fuels, etc.</p>
+              </div>
+            </i>
+          </div>
           <div class="options inline">
             <input type="text" name="query">
           </div>
@@ -148,9 +155,13 @@
           <div class="label">Characteristics</div>
           <div class="options checkbox-group">
             <i class="icon-down-dir js-expand-trigger"></i>
-            <label>
+            <label class="tooltip-item">
+              <div class="tooltip right">
+                <p>A stove in which fuel is loaded one time for each use</p>
+              </div>
               <input type="checkbox" class="checkbox" name="characteristics" value="batch_loaded">
-              <span class="string">Batch loaded </span>
+              <span class="string">Batch loaded
+              </span>
               <span class="counter">43</span>
             </label>
             <label>
@@ -447,7 +458,7 @@
             </div>
           </div>
         </div>
-        <div class="filter-group">
+        <div class="filter-group last">
           <div class="label">Geography</div>
           <div class="options checkbox-group">
             <i class="icon-down-dir js-expand-trigger"></i>
@@ -488,8 +499,12 @@
       </div>
     </aside>
     <main role="stoves">
-      <!--<div class="grid-item">item 1</div>
-      <div class="grid-item">item 2</div>
+      <!--<div class="grid-item">
+        <img src="images/stoves/5_star_302.png">
+        <div class="name">5 Star Stoves MK2.1</div>
+        <div class="manufacturer">5 Star Stoves</div>
+      </div>
+      <!--<div class="grid-item">item 2</div>
       <div class="grid-item">item 3</div>
       <div class="grid-item">item 4</div>
       <div class="grid-item">item 5</div>
