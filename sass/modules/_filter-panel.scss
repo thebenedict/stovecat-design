@@ -1,5 +1,6 @@
+$filter-group-padding: 1em;
+
 .filter-panel {
-  $filter-group-padding: 1em;
 
   @include outer-container;
   font-family: $heading-font-family;
@@ -24,77 +25,80 @@
       line-height: 2em;
     }
   }
+}
 
-  .filter-group {
-    @include span-columns(12);
-    padding: $filter-group-padding 0;
-    border-bottom: 1px solid $light-gray;
-    font-size: $base-font-size * 0.9;
+.filter-group {
+  @include span-columns(12);
+  padding: $filter-group-padding 0;
+  border-bottom: 1px solid $light-gray;
+  font-size: $base-font-size * 0.9;
 
-    &.last { border-bottom: none; }
+  &.last { border-bottom: none; }
 
-    .label {
-      &.inline { @include span-columns(6 of 12) }
-      @include span-columns(12 of 12);
-      padding: 0.5em 0;
-    }
-
-    .options {
-      &.inline { @include span-columns(6 of 12) }
-      @include span-columns(12 of 12);
-    }
-
-    .icon-info { color: $action-color; }
-
-    input {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  }
-
-  .checkbox-group {
-    position: relative;
-
-    label {
+  .label {
+    &.inline { 
       @include span-columns(6 of 12);
-      font-family: $heading-font-family;
-      padding: 0.6em 0;
-      font-weight: 400;
       margin: 0;
-      line-height: 1.3em;
     }
-
-    .string {
-      display: inline-block;
-      max-width: 65%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      vertical-align: bottom;
-    }
-
-    i {
-      position: absolute;
-      right: 0;
-      top: 1.75em;
-      font-size: 1.6em;
-      color: $action-color;
-
-        &:before { margin-right: 0; }
-
-        &:hover { color: darken($action-color, 15%); }
-    }
-
-    .more-choices { @include span-columns(12 of 12) }
-
-    &.is-expanded {
-      display: block;
-      padding-bottom: 0;
-    }
+    @include fill-parent;
+    padding: 0.5em 0;
   }
 
-  .slider-group {
-    padding-bottom: 3em; // leave room for pips
+  .options {
+    &.inline { @include span-columns(6 of 12) }
+    @include fill-parent;
   }
 
+  .icon-info { color: $action-color; }
+
+  input {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+.checkbox-group {
+  position: relative;
+
+  label {
+    @include span-columns(6 of 12);
+    font-family: $heading-font-family;
+    padding: 0.6em 0;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.3em;
+  }
+
+  .string {
+    display: inline-block;
+    max-width: 65%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+  }
+
+  i {
+    position: absolute;
+    right: 0;
+    top: 1.75em;
+    font-size: 1.6em;
+    color: $action-color;
+
+      &:before { margin-right: 0; }
+
+      &:hover { color: darken($action-color, 15%); }
+  }
+
+  .more-choices { @include fill-parent }
+
+  &.is-expanded {
+    display: block;
+    padding-bottom: 0;
+  }
+}
+
+.slider-group {
+  padding-bottom: 3em; // leave room for pips
 }

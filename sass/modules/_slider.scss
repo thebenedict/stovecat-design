@@ -45,25 +45,25 @@
 
 	#iwa-emissions-slider {
 		.noUi-origin {
-			&:first-child { background: $alliance-blue; }
+			&:first-child { background: $iwa-emissions-color; }
 		}
 	}
 
 	#iwa-efficiency-slider {
 		.noUi-origin {
-			&:first-child { background: lighten($alliance-green, 15) }
+			&:first-child { background: $iwa-efficiency-color }
 		}
 	}
 
 	#iwa-indoor-emissions-slider {
 		.noUi-origin {
-			&:first-child { background: $alliance-yellow; }
+			&:first-child { background: $iwa-indoor-emissions-color; }
 		}
 	}
 
 	#iwa-safety-slider {
 		.noUi-origin {
-			&:first-child { background: $alliance-pink; }
+			&:first-child { background: $iwa-safety-color; }
 		}
 	}
 	// handles and handle stripes overrides

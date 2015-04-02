@@ -1,8 +1,55 @@
 .grid-item {
 	@include span-columns(6);
-	&:nth-child(even) { @include omega; }
+	@include omega (2n);
 	border: 1px solid $base-accent-color;
-	padding: 0.5em;
 	min-height: 100px;
 	margin-bottom: 1em;
+    font-family: $heading-font-family;
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px darken($base-background-color, 10%);
+    -moz-box-shadow: 0 2px 4px darken($base-background-color, 10%);
+
+	.item-label {
+		@include span-columns(6 of 6);
+		line-height: 1.8em;
+		padding: 0.5em 1em;
+		border-bottom: 1px solid $light-gray;
+	}
+
+	.title { font-weight: 700; }
+
+	.small {
+		font-size: 0.9em;
+		color: $medium-gray;
+	}
+
+	.item-content { 
+		@include span-columns(6 of 6);	
+	}
+
+	img {
+		float: left;
+		width: 32%;
+	}
+
+	.iwa-tiers {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	.iwa-tier {
+	  width: 17%;
+	  float: left;
+	  text-align: center;
+	  line-height: 2em;
+	  font-weight: 700;
+
+	  &.emissions { color: $iwa-emissions-color; }
+	  &.efficiency { color: $iwa-efficiency-color; }
+	  &.indoor-emissions { color: $iwa-indoor-emissions-color; }
+	  &.safety { color: $iwa-safety-color; }
+	}
 }
