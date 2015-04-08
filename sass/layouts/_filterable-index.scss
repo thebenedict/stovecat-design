@@ -10,7 +10,7 @@ aside[role="filters"] {
 }
 
 main[role="filterable-content"] {
-	background: lighten($base-accent-color, 10);
+	background: lighten($base-accent-color, 12);
 	border-left: 1px solid $base-accent-color;
 	position: fixed;
 	top: $navigation-height + 1px;
