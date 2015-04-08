@@ -10,7 +10,6 @@ $filter-group-padding: 1em;
     @include span-columns(12);
     position: relative;
     line-height: 1.6em;
-    padding-top: 0.5em !important;
 
     .count-value { font-size: $base-font-size * 1.6; }
     .count-label { 
@@ -18,7 +17,7 @@ $filter-group-padding: 1em;
     }
     .download {
       position: absolute;
-      right: 0;
+      right: 0.75em;
       bottom: $filter-group-padding;
       text-align: right;
       font-size: $base-font-size * 0.9;
@@ -77,6 +76,7 @@ $filter-group-padding: 1em;
     overflow: hidden;
     text-overflow: ellipsis;
     vertical-align: bottom;
+    margin-left: $filter-group-padding / 2;
   }
 
   i {
@@ -91,7 +91,7 @@ $filter-group-padding: 1em;
       &:hover { color: darken($action-color, 15%); }
   }
 
-  .more-choices { @include fill-parent }
+  .more-choices { @include span-columns(12); }
 
   &.is-expanded {
     display: block;
@@ -99,6 +99,10 @@ $filter-group-padding: 1em;
   }
 }
 
-.slider-group {
-  padding-bottom: 3em; // leave room for pips
+.with-pips {
+  padding-bottom: 4em;
+}
+
+.with-slider-labels {
+  padding-bottom: 2em;
 }

@@ -1,5 +1,5 @@
 aside[role="filters"] {
-	background: lighten($base-accent-color, 13);
+	background: white;
 	position: fixed;
 	top: $navigation-height + 1px;
 	left: 0;
@@ -9,15 +9,46 @@ aside[role="filters"] {
 	width: 35%;
 }
 
-main[role="stoves"] {
+main[role="filterable-content"] {
+	background: lighten($base-accent-color, 10);
+	border-left: 1px solid $base-accent-color;
 	position: fixed;
-	background: white;
 	top: $navigation-height + 1px;
 	right: 0;
 	bottom: 0;
 	overflow-y: scroll;
 	webkit-overflow-scrolling: touch;
 	width: 65%;
-	padding: 1em;
 	@include outer-container;
+}
+
+.grid-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+
+  &::after {
+  	content: "";
+  	display: block;
+  }
+}
+
+.grid {
+	@include span-columns(12 of 12);
+	padding: 1em;
+}
+
+.applied-filters {
+	@include span-columns(12 of 12);
+	@include omega;
+	margin-bottom: 1em;
+	font-size: 0.9em;
+	line-height: 1.6em;
+
+	.section-label { 
+		color: $medium-gray;
+		padding: 1em 0;
+		line-height: 2em;
+	}
 }

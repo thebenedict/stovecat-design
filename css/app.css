@@ -214,8 +214,20 @@ picture {
   margin: 0;
   max-width: 100%; }
 
+.emissions {
+  color: #6e90a3; }
+
+.efficiency {
+  color: #029ea9; }
+
+.indoor-emissions {
+  color: #ffba00; }
+
+.safety {
+  color: #da89a8; }
+
 aside[role="filters"] {
-  background: #fbfaf9;
+  background: white;
   position: fixed;
   top: 61px;
   left: 0;
@@ -224,23 +236,57 @@ aside[role="filters"] {
   webkit-overflow-scrolling: touch;
   width: 35%; }
 
-main[role="stoves"] {
+main[role="filterable-content"] {
+  background: #f4f3f1;
+  border-left: 1px solid #dFdbd3;
   position: fixed;
-  background: white;
   top: 61px;
   right: 0;
   bottom: 0;
   overflow-y: scroll;
   webkit-overflow-scrolling: touch;
   width: 65%;
-  padding: 1em;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  main[role="stoves"]::after {
+  main[role="filterable-content"]::after {
     clear: both;
     content: "";
     display: table; }
+
+.grid-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em; }
+  .grid-wrapper::after {
+    content: "";
+    display: block; }
+
+.grid {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  padding: 1em; }
+  .grid:last-child {
+    margin-right: 0; }
+
+.applied-filters {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 1em;
+  font-size: 0.9em;
+  line-height: 1.6em; }
+  .applied-filters:last-child {
+    margin-right: 0; }
+  .applied-filters .section-label {
+    color: #999;
+    padding: 1em 0;
+    line-height: 2em; }
 
 header.navigation {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
@@ -461,6 +507,52 @@ header.navigation {
       cursor: not-allowed;
       opacity: 0.5; }
 
+.footer {
+  border-top: 0.2em solid #01575d;
+  background: #172e32;
+  padding: 0 1.5em;
+  width: 100%;
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  height: 17em; }
+  @media screen and (min-width: 53.75em) {
+    .footer {
+      height: 4.2em; } }
+  .footer .footer-logo {
+    margin-left: 1em;
+    padding: 0.8em 0; }
+    @media screen and (min-width: 53.75em) {
+      .footer .footer-logo {
+        float: right;
+        margin-bottom: 0; } }
+  .footer ul {
+    line-height: 2.5em;
+    margin: 0 0 1em 0;
+    padding: 0; }
+    @media screen and (min-width: 53.75em) {
+      .footer ul {
+        float: left;
+        line-height: 4em;
+        margin-bottom: 0; } }
+  .footer li {
+    list-style: none;
+    padding-right: 1em; }
+    @media screen and (min-width: 53.75em) {
+      .footer li {
+        display: inline;
+        text-align: left; } }
+  .footer li a {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none; }
+    @media screen and (min-width: 53.75em) {
+      .footer li a {
+        line-height: 4em; } }
+    .footer li a:focus, .footer li a:hover {
+      color: white; }
+
 .filter-panel {
   max-width: 68em;
   margin-left: auto;
@@ -477,8 +569,7 @@ header.navigation {
     margin-right: 2.35765%;
     width: 100%;
     position: relative;
-    line-height: 1.6em;
-    padding-top: 0.5em !important; }
+    line-height: 1.6em; }
     .filter-panel .panel-header:last-child {
       margin-right: 0; }
     .filter-panel .panel-header .count-value {
@@ -487,7 +578,7 @@ header.navigation {
       color: #999; }
     .filter-panel .panel-header .download {
       position: absolute;
-      right: 0;
+      right: 0.75em;
       bottom: 1em;
       text-align: right;
       font-size: 0.9em;
@@ -551,7 +642,8 @@ header.navigation {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    vertical-align: bottom; }
+    vertical-align: bottom;
+    margin-left: 0.5em; }
   .checkbox-group i {
     position: absolute;
     right: 0;
@@ -563,77 +655,87 @@ header.navigation {
     .checkbox-group i:hover {
       color: #737373; }
   .checkbox-group .more-choices {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
     width: 100%; }
+    .checkbox-group .more-choices:last-child {
+      margin-right: 0; }
   .checkbox-group.is-expanded {
     display: block;
     padding-bottom: 0; }
 
-.slider-group {
-  padding-bottom: 3em; }
+.with-pips {
+  padding-bottom: 4em; }
+
+.with-slider-labels {
+  padding-bottom: 2em; }
 
 .grid-item {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 48.82117%;
+  margin-bottom: 1.5em;
   border: 1px solid #dFdbd3;
-  min-height: 100px;
-  margin-bottom: 1em;
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  position: relative;
-  border-radius: 2px;
-  box-shadow: 0 2px 4px #e6e6e6;
-  -moz-box-shadow: 0 2px 4px #e6e6e6; }
+  border-radius: 3px;
+  background: white;
+  box-shadow: 0 2px 4px #d9d9d9;
+  cursor: pointer;
+  position: relative; }
   .grid-item:last-child {
     margin-right: 0; }
   .grid-item:nth-child(2n) {
     margin-right: 0; }
   .grid-item:nth-child(2n+1) {
     clear: left; }
-  .grid-item .item-label {
+  .grid-item .photo {
     float: left;
     display: block;
     margin-right: 4.82916%;
-    width: 100%;
-    line-height: 1.8em;
-    padding: 0.5em 1em;
-    border-bottom: 1px solid #ddd; }
-    .grid-item .item-label:last-child {
+    width: 30.11389%;
+    border-right: 1px solid #dFdbd3;
+    overflow: hidden; }
+    .grid-item .photo:last-child {
       margin-right: 0; }
-  .grid-item .title {
-    font-weight: 700; }
-  .grid-item .small {
-    font-size: 0.9em;
-    color: #999; }
   .grid-item .item-content {
-    float: left;
-    display: block;
-    margin-right: 4.82916%;
-    width: 100%; }
-    .grid-item .item-content:last-child {
-      margin-right: 0; }
-  .grid-item img {
-    float: left;
-    width: 32%; }
-  .grid-item .iwa-tiers {
+    width: 100%;
+    margin-right: 0;
+    padding-right: 1em; }
+  .grid-item .small {
+    color: #999;
+    font-size: 0.9em; }
+  .grid-item .info {
+    width: 100%;
+    padding: 0.5em 0; }
+  .grid-item .iwa {
+    margin-top: 0.5em;
     position: absolute;
     bottom: 0;
+    left: 30%;
+    width: 70%;
+    text-align: right;
+    border-top: 1px solid #dFdbd3;
+    padding: 0 0.5em; }
+    .grid-item .iwa .iwa-tier {
+      padding: 0.5em;
+      display: inline-block;
+      font-size: 0.9em; }
+  .grid-item:after {
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    content: " ";
+    z-index: 10;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
     left: 0;
-    width: 100%; }
-  .grid-item .iwa-tier {
-    width: 17%;
-    float: left;
-    text-align: center;
-    line-height: 2em;
-    font-weight: 700; }
-    .grid-item .iwa-tier.emissions {
-      color: #6e90a3; }
-    .grid-item .iwa-tier.efficiency {
-      color: #029ea9; }
-    .grid-item .iwa-tier.indoor-emissions {
-      color: #ffba00; }
-    .grid-item .iwa-tier.safety {
-      color: #da89a8; }
+    right: 0;
+    background: transparent; }
+  .grid-item:focus:after, .grid-item:hover:after {
+    background: rgba(153, 153, 153, 0.1); }
 
 .button-group input {
   display: none; }
@@ -725,7 +827,7 @@ header.navigation {
     border-radius: 0; }
   .slider .noUi-target {
     border-radius: 0;
-    border: 4px solid #e7e7e7;
+    border: 4px solid #f7f7f7;
     box-shadow: none; }
   .slider .noUi-target.noUi-connect {
     box-shadow: none; }
@@ -786,5 +888,27 @@ header.navigation {
   .slider-label.right {
     float: right;
     right: -0.3em; }
+
+.applied-filter-group {
+  background: white;
+  display: inline-block;
+  margin: 1em 1em 0 1em;
+  border: 1px solid #dFdbd3;
+  border-radius: 3px;
+  padding: 0 1em;
+  position: relative;
+  font-size: 0.9em; }
+  .applied-filter-group .label {
+    margin-right: 0.5em;
+    display: inline-block;
+    padding: 0.5em 0;
+    font-weight: 700; }
+  .applied-filter-group .filter {
+    margin-right: 0.5em;
+    padding-bottom: 0.5em;
+    display: inline-block;
+    cursor: pointer; }
+    .applied-filter-group .filter:hover {
+      color: #737373; }
 
 /*# sourceMappingURL=app.css.map */

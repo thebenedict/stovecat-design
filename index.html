@@ -139,7 +139,36 @@
             </div>
           </div>
         </div>
-        <div class="filter-group">
+        <div class="filter-group with-pips">
+          <div class="label">IWA tiers of performance</div>
+          <div class="options slider-group">
+            <div class="label inline"><i class="icon-clouds-inv emissions"></i> Emissions</div>
+            <div class="slider inline">
+              <div id="iwa-emissions-slider" class="iwa-slider"></div>
+              <input type="number" id="iwa-emissions-min" class="slider-input" name="iwa_emissions_min">
+              <input type="number" id="iwa-emissions-max" class="slider-input" name="iwa_emissions_max">
+            </div>
+            <div class="label inline"><i class="icon-leaf efficiency"></i> Efficiency</div>
+            <div class="slider inline">
+              <div id="iwa-efficiency-slider" class="iwa-slider"></div>
+              <input type="number" id="iwa-efficiency-min" class="slider-input" name="iwa_efficiency_min">
+              <input type="number" id="iwa-efficiency-max" class="slider-input" name="iwa_efficiency_max">
+            </div>
+            <div class="label inline"><i class="icon-home indoor-emissions"></i> Indoor emissions</div>
+            <div class="slider inline">
+              <div id="iwa-indoor-emissions-slider" class="iwa-slider"></div>
+              <input type="number" id="iwa-indoor-emissions-min" class="slider-input" name="iwa_indoor_emissions_min">
+              <input type="number" id="iwa-indoor-emissions-max" class="slider-input" name="iwa_indoor_emissions_max">
+            </div>
+            <div class="label inline"><i class="icon-lifebuoy safety"></i> Safety</div>
+            <div class="slider inline">
+              <div id="iwa-safety-slider" class="iwa-slider"></div>
+              <input type="number" id="iwa-safety-min" class="slider-input" name="iwa_safety_min">
+              <input type="number" id="iwa-safety-max" class="slider-input" name="iwa_safety_max">
+            </div>
+          </div>
+        </div>
+        <div class="filter-group with-slider-labels">
           <div class="label">Suggested retail price</div>
           <div class="options slider">
             <div id="price-slider"></div>
@@ -294,35 +323,6 @@
                 <span class="string">Wick</span>
                 <span class="counter">2</span>
               </label>
-            </div>
-          </div>
-        </div>
-        <div class="filter-group">
-          <div class="label">IWA tiers of performance</div>
-          <div class="options slider-group">
-            <div class="label inline">Emissions</div>
-            <div class="slider inline">
-              <div id="iwa-emissions-slider" class="iwa-slider"></div>
-              <input type="number" id="iwa-emissions-min" class="slider-input" name="iwa_emissions_min">
-              <input type="number" id="iwa-emissions-max" class="slider-input" name="iwa_emissions_max">
-            </div>
-            <div class="label inline">Efficiency</div>
-            <div class="slider inline">
-              <div id="iwa-efficiency-slider" class="iwa-slider"></div>
-              <input type="number" id="iwa-efficiency-min" class="slider-input" name="iwa_efficiency_min">
-              <input type="number" id="iwa-efficiency-max" class="slider-input" name="iwa_efficiency_max">
-            </div>
-            <div class="label inline">Indoor emissions</div>
-            <div class="slider inline">
-              <div id="iwa-indoor-emissions-slider" class="iwa-slider"></div>
-              <input type="number" id="iwa-indoor-emissions-min" class="slider-input" name="iwa_indoor_emissions_min">
-              <input type="number" id="iwa-indoor-emissions-max" class="slider-input" name="iwa_indoor_emissions_max">
-            </div>
-            <div class="label inline">Safety</div>
-            <div class="slider inline">
-              <div id="iwa-safety-slider" class="iwa-slider"></div>
-              <input type="number" id="iwa-safety-min" class="slider-input" name="iwa_safety_min">
-              <input type="number" id="iwa-safety-max" class="slider-input" name="iwa_safety_max">
             </div>
           </div>
         </div>
@@ -492,183 +492,320 @@
         </div>
       </div>
     </aside>
-    <main role="stoves">
-      <div class="grid-item">
-          <div class="item-label">
-          <div class="title">Agni Star Rice Husk Gas Stove</div>
-          <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+    <main role="filterable-content">
+      <div class="grid-wrapper">
+        <div class="applied-filter-group">
+          <span class="label">Applied filters</span>
+          <span class="filter">Batch loaded<i class="icon-cancel"></i></span>
+          <span class="filter">Fan<i class="icon-cancel"></i></span>
+          <span class="filter">Household<i class="icon-cancel"></i></span>
+          <span class="filter">Price: $35 &ndash; 80<i class="icon-cancel"></i></span>
+          <span class="filter"><i class="icon-leaf efficiency"></i>IWA Efficiency: 2 &ndash; 4<i class="icon-cancel"></i></span>
         </div>
-        <div class="item-content">
-          <img src="images/stoves/agni_star_235.png">
-          <div class="iwa-tier emissions"><i class="icon-clouds-inv"></i> 3</div>
-          <div class="iwa-tier efficiency"><i class="icon-leaf"></i> 2</div>
-          <div class="iwa-tier indoor-emissions"><i class="icon-home"></i> 1</div>
-          <div class="iwa-tier safety"><i class="icon-lifebuoy"></i> 4</div>
+        <div class="grid">
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/5_star_302.png">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/agni_star_235.png">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/dona_dora.jpg">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/prakti_double.png">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/envirofit_ch2300.jpg">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/agni_star_235.png">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/dona_dora.jpg">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/prakti_double.png">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/envirofit_ch2300.jpg">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/agni_star_235.png">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/dona_dora.jpg">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/prakti_double.png">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/envirofit_ch2300.jpg">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/agni_star_235.png">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/dona_dora.jpg">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/prakti_double.png">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/stoves/envirofit_ch2300.jpg">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Agni Star Rice Husk Gas Stove</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+                <div class="iwa">
+                  <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+                  <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+                  <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+                  <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      <!--</div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
       </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-     <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">
-        <img src="images/stoves/agni_star_235.png">
-      </div>
-      <div class="grid-item">item 2</div>
-      <div class="grid-item">item 3</div>
-      <div class="grid-item">item 4</div>
-      <div class="grid-item">item 5</div>
-      <div class="grid-item">item 1</div>
-      <div class="grid-item">item 2</div>
-      <div class="grid-item">item 3</div>
-      <div class="grid-item">item 4</div>
-      <div class="grid-item">item 5</div>
-      <div class="grid-item">item 1</div>
-      <div class="grid-item">item 2</div>
-      <div class="grid-item">item 3</div>
-      <div class="grid-item">item 4</div>
-      <div class="grid-item">item 5</div>
-      <div class="grid-item">item 1</div>
-      <div class="grid-item">item 2</div>
-      <div class="grid-item">item 3</div>
-      <div class="grid-item">item 4</div>
-      <div class="grid-item">item 5</div>-->
+      <footer class="footer" role="contentinfo">
+        <ul>
+          <li><a href="javascript:void(0)">stoves</a></li>
+          <li><a href="javascript:void(0)">fuels</a></li>
+          <li><a href="javascript:void(0)">testing</a></li>
+          <li><a href="javascript:void(0)">resources</a></li>
+          <li><a href="javascript:void(0)">contact us</a></li>
+        </ul>
+        <div class="footer-logo">
+          <img src="images/footer-unflogo.png" alt="UNF Logo">
+        </div>
+      </footer>
     </main>
   </body>
   <script src="js/jquery-2.1.3.min.js"></script>

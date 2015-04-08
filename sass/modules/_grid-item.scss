@@ -1,55 +1,118 @@
 .grid-item {
-	@include span-columns(6);
-	@include omega (2n);
-	border: 1px solid $base-accent-color;
-	min-height: 100px;
-	margin-bottom: 1em;
-    font-family: $heading-font-family;
-    position: relative;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px darken($base-background-color, 10%);
-    -moz-box-shadow: 0 2px 4px darken($base-background-color, 10%);
+  $card-hover-background: lighten($light-gray, 8);
 
-	.item-label {
-		@include span-columns(6 of 6);
-		line-height: 1.8em;
-		padding: 0.5em 1em;
-		border-bottom: 1px solid $light-gray;
-	}
+  @include span-columns(6 of 12);
+  @include omega(2n);
+  margin-bottom: 1.5em;
+  border: 1px solid $base-accent-color;
+  border-radius: 3px;
+  background: white;
+  box-shadow: 0 2px 4px darken($base-background-color, 15%);
+  cursor: pointer;
+  position: relative;
 
-	.title { font-weight: 700; }
+  .photo {
+  	@include span-columns(2 of 6);
+  	border-right: 1px solid $base-accent-color;
+  	overflow: hidden;
+  }
 
-	.small {
-		font-size: 0.9em;
-		color: $medium-gray;
-	}
+  .item-content {
+  	@include fill-parent;
+  	@include omega;
+  	padding-right: 1em;
+  }
 
-	.item-content { 
-		@include span-columns(6 of 6);	
-	}
+  .small {
+  	color: $medium-gray;
+  	font-size: 0.9em;
+  }
 
-	img {
-		float: left;
-		width: 32%;
-	}
+  .info {
+  	@include fill-parent;
+  	padding: 0.5em 0;
+  }
 
-	.iwa-tiers {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-	}
+  .iwa {
+  	margin-top: 0.5em;
+  	position: absolute;
+  	bottom: 0;
+  	left: 30%;
+  	width: 70%;
+  	text-align: right;
+  	border-top: 1px solid $base-accent-color;
+  	padding: 0 0.5em;
 
-	.iwa-tier {
-	  width: 17%;
-	  float: left;
-	  text-align: center;
-	  line-height: 2em;
-	  font-weight: 700;
+ 	.iwa-tier { 
+  		padding: 0.5em;
+  		display: inline-block;
+	    font-size: 0.9em;
+  	}
+  }
 
-	  &.emissions { color: $iwa-emissions-color; }
-	  &.efficiency { color: $iwa-efficiency-color; }
-	  &.indoor-emissions { color: $iwa-indoor-emissions-color; }
-	  &.safety { color: $iwa-safety-color; }
-	}
+  &:after { 
+    @include transition (all 0.1s ease-in-out);
+    content: " ";
+    z-index: 10;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+  }
+
+  &:focus,
+  &:hover {
+    &:after {
+      background: rgba($medium-gray, 0.1);
+    }
+  }
 }
+
+      // <div class="grid-item">
+      //   <div class="photo">          
+      //     <img src="images/stoves/agni_star_235.png">
+      //   </div>
+      //   <div class="item-content">
+      //     <div class="info">
+      //       <div class="title">Agni Star Rice Husk Gas Stove</div>
+      //       <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+      //     </div>
+      //     <div class="iwa">
+      //       <div class="iwa-tier emissions"><i class="icon-clouds-inv"></i> 3</div>
+      //       <div class="iwa-tier efficiency"><i class="icon-leaf"></i> 2</div>
+      //       <div class="iwa-tier indoor-emissions"><i class="icon-home"></i> 1</div>
+      //       <div class="iwa-tier safety"><i class="icon-lifebuoy"></i> 4</div>
+      //     </div>
+      //   </div>
+      // </div>
+
+  // .iwa {
+  // 	margin-top: 0.5em;
+  // 	position: absolute;
+  // 	bottom: 0;
+  // 	left: 35%;
+  // 	text-align: left;
+
+ 	// .iwa-tier { 
+  // 		padding: 0.25em 0.75em 0.25em 0.55em;
+  // 		display: inline-block;
+  // 		background: white;
+	 //    border-top-right-radius: 10px;
+	 //    border-top-left-radius: 10px;
+	 //    border-top: 1px solid;
+	 //    border-left: 1px solid;
+	 //    border-right: 1px solid;
+	 //    font-size: 0.9em;
+	 //    font-weight: 700;
+	 //    margin-right: 0.5em;
+	 //    border-color: $base-accent-color;
+  // 	}
+  // }
+
+  // .emissions { color: $iwa-emissions-color; }
+  // .efficiency { color: $iwa-efficiency-color; }
+  // .indoor-emissions { color: $iwa-indoor-emissions-color; }
+  // .safety { color: $iwa-safety-color; }

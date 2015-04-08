@@ -1,0 +1,55 @@
+.grid-item {
+	@include span-columns(3 of 12);
+  @include omega(4n);
+  margin-bottom: 2em; 
+  border: 1px solid $base-accent-color;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px darken($base-background-color, 10%);
+  cursor: pointer;
+
+  .photo {
+    @include fill-parent;
+    text-align: center;
+    overflow: hidden; 
+  }
+
+  img { width: 200%; }
+
+	.item-content {
+    @include span-columns(4 of 4);
+    background: lighten($base-accent-color, 13);
+    border-top: 1px solid $base-accent-color;
+	}
+
+  .title {
+    padding: 0.5rem 1rem 0.25rem 1rem;
+    font-weight: 700;
+  }
+
+  .small {
+  	color: $medium-gray;
+    padding: 0 1rem 0.5rem 1rem;
+    line-height: 1.6em;
+    font-size: 0.8em;
+  }
+
+  .iwa {
+    @include span-columns(4 of 4);
+    padding: 0.5rem 1rem;
+
+  .iwa-tier { 
+    @include span-columns(1 of 4);
+    }
+  }
+
+  [class^="icon-"]:before, [class*=" icon-"]:before {
+    margin-left: 0;
+  }
+
+  .emissions { color: tint($iwa-emissions-color, 10%); }
+  .efficiency { color: tint($iwa-efficiency-color, 10%); }
+  .indoor-emissions { color: tint($iwa-indoor-emissions-color, 10%); }
+  .safety { color: tint($iwa-safety-color, 10%); }
+}
+
+
