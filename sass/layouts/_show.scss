@@ -11,20 +11,26 @@ main[role="show-content"] {
 
   .content {
     @include span-columns(8);
-    @include omega;
-    margin-bottom: $base-spacing * 2;
-    padding-right: 1.5em;
+    margin-bottom: $base-spacing * 4;
   }
 
+  .back {
+    font-size: 0.9em;
+    line-height: 1.6em;
+
+    i::before { margin-left: 0; }
+  }
 
   .content-section {
     @include span-columns(8 of 8);
-    padding: 2em 1em 0;
+    padding-top: 2em;
   }
 
   .wrapper {
-    @include outer-container;
     margin-top: -($navigation-height + 1px);
     padding-top: ($navigation-height + 1px);
   }
+
+  .container {@include outer-container; }
+
 }

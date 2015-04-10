@@ -1,57 +1,61 @@
 .pager {
-	$item-color: $alliance-green;
-	text-align: center;
-	font-family: $heading-font-family;
-	color: $item-color;
+  $item-color: $alliance-green;
+  font-family: $heading-font-family;
+  color: $item-color;
 
-	.count { font-weight: 700; }
+  .count { font-weight: 700; }
 
-	.caption {
-		font-size: 0.9em;
-	}
+  .caption {
+    font-size: 0.9em;
+  }
 
-	.progress {
-		margin-top: $small-spacing;
-		text-align: left;
-	}
+  .progress {
+    margin-top: $small-spacing;
+    text-align: left;
+  }
 
-	.item { 
-		display: inline-block;
-	}
+  .item { 
+    display: inline-block;
+  }
 
-	.item::after {
-		width: $base-spacing;
-		height: $base-spacing;
-		content: "";
-		border-radius: 3px;
-		margin: 0.25em 0.1em;
-		background: $item-color;
-		display: block;
-	}
+  .item::after {
+    @include transition (all 0.2s ease-in-out);
+    width: $base-spacing;
+    height: $base-spacing;
+    content: "";
+    border-radius: 3px;
+    margin: 0.25em 0.1em;
+    background: $item-color;
+    display: block;
+  }
 
-	.item {
-		&.active::after {
-			background: lighten($item-color, 10%);
-		}
+  .item {
+    &.active::after {
+      background: lighten($item-color, 10%);
+    }
 
-		&.active:hover::after {
-			background: lighten($item-color, 15%);
-		}
+    &.active:hover::after {
+      background: lighten($item-color, 15%);
+    }
 
-		&:hover::after { background: lighten($item-color, 5%) }
-	}
+    &:hover::after { background: lighten($item-color, 5%) }
+  }
 
-	.controls { 
-		margin-top: 0.5em;
-		font-size: 0.9em;
-	}
+  .controls {
+    text-align: center;
+    margin-top: 0.5em;
+    font-size: 0.9em;
+  }
+
+  .position {
+    line-height: 1em;
+  }
 
 
-	i[class^='icon'] { 
-		font-size: 1.5em;
+  i[class^='icon'] { 
+    font-size: 1.5em;
 
-		&:hover { color: lighten($item-color, 5%) }
-	}
-	.icon-left-dir { float: left; }
-	.icon-right-dir { float: right; }
+    &:hover { color: lighten($item-color, 5%) }
+    &::before { vertical-align: middle; }
+  }
 }

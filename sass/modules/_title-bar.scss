@@ -1,0 +1,22 @@
+.title-bar {
+	background: lighten($base-accent-color, 8%);
+	font-family: $subheading-font-family;
+	border-bottom: (1px solid $base-accent-color);
+	padding: 1.5em 0;
+
+	.container { @include outer-container; }
+  	.inner-container { 
+  		@include span-columns(10 of 10);
+  		padding: 1.5em 0;
+  	}
+
+  	.title, .subtitle {
+		@include span-columns(10);
+		@include shift(2);
+  	}
+
+	.title {
+		font-size: 1.8em;
+		margin-bottom: $small-spacing / 2;
+	}
+}
