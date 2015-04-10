@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <title>Fuel test result | Clean Cooking Catalog</title>
+    <title>Fuels | Clean Cooking Catalog</title>
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/fontello.css">
@@ -48,7 +48,7 @@
     <aside role="filters">
       <div class="filter-panel">
         <div class="filter-group panel-header">
-          <span class="count-value">86</span><span class="count-label"> fuel test results shown</span>
+          <span class="count-value">108</span><span class="count-label"> fuels shown</span>
           <a href="javascript:void(0)" class="download"><i class="icon-down-circled"></i> Download CSV</a>
         </div>
         <div class="filter-group">
@@ -67,17 +67,12 @@
           </div>
         </div>
         <div class="filter-group">
-          <div class="label inline">Stove
+          <div class="label inline">Keyword search
+            <i class="icon-info">
+            </i>
           </div>
           <div class="options inline">
-            <input type="text" name="stove">
-          </div>
-        </div>
-        <div class="filter-group">
-          <div class="label inline">Testing organization
-          </div>
-          <div class="options inline">
-            <input type="text" name="testing_organization">
+            <input type="text" name="query">
           </div>
         </div>
         <div class="filter-group">
@@ -153,16 +148,6 @@
             </div>
           </div>
         </div>
-        <div class="filter-group with-slider-labels">
-          <div class="label">Test year</div>
-          <div class="options slider">
-            <div id="fuel-test-result-year-slider"></div>
-            <div id="fuel-test-result-min-label" class="slider-label left"><span class="value"></span></div>
-            <div id="fuel-test-result-max-label" class="slider-label right"><span class="value"></span></div>
-            <input id="fuel-test-result-min" class="slider-input" name="fuel_test_result_min">
-            <input id="fuel-test-result-max" class="slider-input" name="fuel_test_result_max">
-          </div>
-        </div>
       </div>
     </aside>
     <main role="filterable-content">
@@ -171,145 +156,17 @@
           <span class="label">No filters applied</span>
         </div>
         <div class="grid">
-          <table class="tables">
-            <thead>
-              <tr>
-                <th>Fuel</th>
-                <th>Type</th>
-                <th>Testing organization</th>
-                <th>Country</th>
-                <th>Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Moto Safi Ethanol Gel</td>
-                <td>Ethanol/Alcohol</td>
-                <td>Kenya Industrial Research and Development Institute (KIRDI)</td>
-                <td>Kenya</td>            
-                <td>2013</td>            
-              </tr>
-              <tr>
-                <td>Freedom Fuel Pellets</td>
-                <td>Pellets/Briquettes</td>
-                <td>Rwanda Bureau of Standards</td>
-                <td>Rwanda</td>            
-                <td>2011</td>            
-              </tr>
-              <tr>
-                <td>&mdash;</td>
-                <td>Kerosene</td>
-                <td>Institute of Standards Cambodia</td>
-                <td>Cambodia</td>            
-                <td>2015</td>            
-              </tr>
-              <tr>
-                <td>Moto Safi Ethanol Gel</td>
-                <td>Ethanol/Alcohol</td>
-                <td>Kenya Industrial Research and Development Institute (KIRDI)</td>
-                <td>Kenya</td>            
-                <td>2013</td>            
-              </tr>
-              <tr>
-                <td>Freedom Fuel Pellets</td>
-                <td>Pellets/Briquettes</td>
-                <td>Rwanda Bureau of Standards</td>
-                <td>Rwanda</td>            
-                <td>2011</td>            
-              </tr>
-              <tr>
-                <td>&mdash;</td>
-                <td>Kerosene</td>
-                <td>Institute of Standards Cambodia</td>
-                <td>Cambodia</td>            
-                <td>2015</td>            
-              </tr>
-              <tr>
-                <td>Moto Safi Ethanol Gel</td>
-                <td>Ethanol/Alcohol</td>
-                <td>Kenya Industrial Research and Development Institute (KIRDI)</td>
-                <td>Kenya</td>            
-                <td>2013</td>            
-              </tr>
-              <tr>
-                <td>Freedom Fuel Pellets</td>
-                <td>Pellets/Briquettes</td>
-                <td>Rwanda Bureau of Standards</td>
-                <td>Rwanda</td>            
-                <td>2011</td>            
-              </tr>
-              <tr>
-                <td>&mdash;</td>
-                <td>Kerosene</td>
-                <td>Institute of Standards Cambodia</td>
-                <td>Cambodia</td>            
-                <td>2015</td>            
-              </tr>
-              <tr>
-                <td>Moto Safi Ethanol Gel</td>
-                <td>Ethanol/Alcohol</td>
-                <td>Kenya Industrial Research and Development Institute (KIRDI)</td>
-                <td>Kenya</td>            
-                <td>2013</td>            
-              </tr>
-              <tr>
-                <td>Freedom Fuel Pellets</td>
-                <td>Pellets/Briquettes</td>
-                <td>Rwanda Bureau of Standards</td>
-                <td>Rwanda</td>            
-                <td>2011</td>            
-              </tr>
-              <tr>
-                <td>&mdash;</td>
-                <td>Kerosene</td>
-                <td>Institute of Standards Cambodia</td>
-                <td>Cambodia</td>            
-                <td>2015</td>            
-              </tr>
-              <tr>
-                <td>Moto Safi Ethanol Gel</td>
-                <td>Ethanol/Alcohol</td>
-                <td>Kenya Industrial Research and Development Institute (KIRDI)</td>
-                <td>Kenya</td>            
-                <td>2013</td>            
-              </tr>
-              <tr>
-                <td>Freedom Fuel Pellets</td>
-                <td>Pellets/Briquettes</td>
-                <td>Rwanda Bureau of Standards</td>
-                <td>Rwanda</td>            
-                <td>2011</td>            
-              </tr>
-              <tr>
-                <td>&mdash;</td>
-                <td>Kerosene</td>
-                <td>Institute of Standards Cambodia</td>
-                <td>Cambodia</td>            
-                <td>2015</td>            
-              </tr>
-              <tr>
-                <td>Moto Safi Ethanol Gel</td>
-                <td>Ethanol/Alcohol</td>
-                <td>Kenya Industrial Research and Development Institute (KIRDI)</td>
-                <td>Kenya</td>            
-                <td>2013</td>            
-              </tr>
-              <tr>
-                <td>Freedom Fuel Pellets</td>
-                <td>Pellets/Briquettes</td>
-                <td>Rwanda Bureau of Standards</td>
-                <td>Rwanda</td>            
-                <td>2011</td>            
-              </tr>
-              <tr>
-                <td>&mdash;</td>
-                <td>Kerosene</td>
-                <td>Institute of Standards Cambodia</td>
-                <td>Cambodia</td>            
-                <td>2015</td>            
-              </tr>
-            </tbody>
-          </table>
+          <div class="grid-item">
+            <div class="photo">          
+              <img src="images/fuels/motopoa_gel_white.jpg">
+            </div>
+            <div class="item-content">
+              <div class="info">
+                <div class="title">Moto Safi</div>
+                <div class="small">Placeholder manufacturer</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <footer class="footer" role="contentinfo">

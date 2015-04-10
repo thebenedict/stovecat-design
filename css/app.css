@@ -394,8 +394,7 @@ header.navigation {
     z-index: 9999999; }
     @media screen and (min-width: 53.75em) {
       header.navigation nav {
-        float: left;
-        margin-left: 1em; } }
+        float: left; } }
   header.navigation ul.navigation-menu {
     font-size: 0.9em;
     -webkit-transform-style: preserve-3d;
