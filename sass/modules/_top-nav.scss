@@ -90,6 +90,7 @@ header.navigation {
 
     @include media ($horizontal-bar-mode) {
       float: left;
+      margin-left: 1em;
     }
   }
 
