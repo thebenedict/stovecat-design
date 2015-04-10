@@ -315,7 +315,8 @@ main[role="show-content"] .content {
   margin-right: 2.35765%;
   width: 65.88078%;
   margin-right: 0;
-  margin-bottom: 3em; }
+  margin-bottom: 3em;
+  padding-right: 1.5em; }
   main[role="show-content"] .content:last-child {
     margin-right: 0; }
 main[role="show-content"] .content-section {
@@ -983,15 +984,15 @@ header.navigation {
     float: left;
     display: block;
     margin-right: 3.57866%;
-    width: 35.26334%;
-    color: #999; }
+    width: 35.26334%; }
     .data-field .label:last-child {
       margin-right: 0; }
   .data-field .value {
     float: left;
     display: block;
     margin-right: 3.57866%;
-    width: 61.158%; }
+    width: 61.158%;
+    color: #01575d; }
     .data-field .value:last-child {
       margin-right: 0; }
   .data-field .filename {

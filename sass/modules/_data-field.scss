@@ -8,11 +8,11 @@
 
   .label {
     @include span-columns(3 of 8);
-    color: $medium-gray;
   }
 
   .value {
     @include span-columns(5 of 8);
+    color: $alliance-green;
   }
 
   .filename {
