@@ -20,7 +20,7 @@ button {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Open Sans";
   font-size: 1em;
   font-weight: 600;
   line-height: 1;
@@ -49,7 +49,7 @@ input,
 label,
 select {
   display: block;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Open Sans";
   font-size: 1em; }
 
 label {
@@ -68,7 +68,7 @@ textarea {
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Open Sans";
   font-size: 1em;
   margin-bottom: 0.75em;
   padding: 0.5em;
@@ -183,7 +183,7 @@ body {
   font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
   color: #333;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Open Sans";
   font-size: 1em;
   line-height: 1.5; }
 
@@ -193,7 +193,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Open Sans", "Open Sans";
   font-size: 1em;
   line-height: 1.2;
   margin: 0 0 0.75em; }
@@ -338,7 +338,7 @@ main[role="show-content"] .wrapper {
     display: table; }
 
 header.navigation {
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Open Sans", "Open Sans";
   background-color: #01575d;
   border-bottom: 1px solid #00282b;
   min-height: 60px;
@@ -563,7 +563,7 @@ header.navigation {
   width: 100%;
   display: inline-block;
   text-transform: uppercase;
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Open Sans", "Open Sans";
   font-size: 0.8em;
   font-weight: 700;
   height: 17em; }
@@ -606,7 +606,7 @@ header.navigation {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Open Sans", "Open Sans";
   padding: 0.5em 1.5em; }
   .filter-panel::after {
     clear: both;
@@ -678,7 +678,7 @@ header.navigation {
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
-    font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-family: "Open Sans", "Open Sans";
     padding: 0.6em 0;
     font-weight: 400;
     margin: 0;
@@ -1037,7 +1037,7 @@ header.navigation {
 
 .pager {
   text-align: center;
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Open Sans", "Open Sans";
   color: #6c8fa3; }
   .pager .count {
     font-weight: 700; }
