@@ -20,6 +20,8 @@
 <glyph glyph-name="attention" unicode="&#xe80b;" d="m957-24q10-16 0-34-10-16-30-16l-892 0q-18 0-28 16-13 18-2 34l446 782q8 18 30 18t30-18z m-420 50l0 100-110 0 0-100 110 0z m0 174l0 300-110 0 0-300 110 0z" horiz-adv-x="962" />
 <glyph glyph-name="cancel" unicode="&#xe80c;" d="m452 194q18-18 18-43t-18-43q-18-16-43-16t-43 16l-132 152-132-152q-18-16-43-16t-43 16q-16 18-16 43t16 43l138 156-138 158q-16 18-16 43t16 43q18 16 43 16t43-16l132-152 132 152q18 16 43 16t43-16q18-18 18-43t-18-43l-138-158z" horiz-adv-x="470" />
 <glyph glyph-name="cancel-squared" unicode="&#xe80d;" d="m700 750q42 0 71-29t29-71l0-600q0-40-29-70t-71-30l-600 0q-40 0-70 30t-30 70l0 600q0 42 30 71t70 29l600 0z m-146-638l86 86-154 152 154 154-86 86-154-152-152 152-88-86 154-154-154-152 88-86 152 152z" horiz-adv-x="800" />
+<glyph glyph-name="left-dir" unicode="&#xe80e;" d="m400 580l0-460-400 230z" horiz-adv-x="400" />
+<glyph glyph-name="right-dir" unicode="&#xe80f;" d="m0 580l400-230-400-230 0 460z" horiz-adv-x="400" />
 </font>
 </defs>
 </svg>

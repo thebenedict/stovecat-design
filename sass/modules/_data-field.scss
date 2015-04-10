@@ -1,0 +1,35 @@
+.data-field {
+  @include span-columns(8 of 8);
+  padding: 0.25em 0;
+
+  .label, .value {
+    display: inline-block;
+  }
+
+  .label {
+    @include span-columns(3 of 8);
+    color: $medium-gray;
+  }
+
+  .value {
+    @include span-columns(5 of 8);
+  }
+
+  .filename {
+    @include span-columns(6 of 8);
+    padding: 0.35em 0;
+  }
+
+  .download-link-wrapper {
+    @include span-columns(2 of 8);
+  }
+
+  .download-link {
+    @include button('flat', $alliance-blue);
+    font-weight: 700;
+    font-size: 0.9em;
+    text-align: center;
+  }
+
+  i::before { margin-left: 0; }
+}

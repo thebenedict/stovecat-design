@@ -53,3 +53,12 @@ picture {
   margin: 0;
   max-width: 100%;
 }
+
+.subheading {
+  font-size: $subheading-font-size;
+  font-family: $subheading-font-family;
+  line-height: $heading-line-height;
+  padding-bottom: $small-spacing / 2;
+  margin-bottom: $small-spacing;
+  border-bottom: 1px solid $base-accent-color;
+}

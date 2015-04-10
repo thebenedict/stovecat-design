@@ -33,6 +33,23 @@ $('#price-slider').Link('upper').to($('#price-max-label .value'), function ( val
 	$(this).html( value.split(".")[0] );
 });
 
+$('#fuel-test-result-year-slider').noUiSlider({
+	start: [ 1980, 2015 ],
+	step: 1,
+	range: {
+		'min': [ 1980 ],
+		'max': [ 2015 ]
+	}
+});
+$('#fuel-test-result-year-slider').Link('lower').to($('#fuel-test-result-min'));
+$('#fuel-test-result-year-slider').Link('lower').to($('#fuel-test-result-min-label .value'), function ( value ) {
+	$(this).html( value.split(".")[0] );
+});
+$('#fuel-test-result-year-slider').Link('upper').to($('#fuel-test-result-max'));
+$('#fuel-test-result-year-slider').Link('upper').to($('#fuel-test-result-max-label .value'), function ( value ) {
+	$(this).html( value.split(".")[0] );
+});
+
 //
 
 function smallTicks( value, type ){

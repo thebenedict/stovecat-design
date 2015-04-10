@@ -1,0 +1,29 @@
+main[role="show-content"] {
+  .sidebar {
+    @include span-columns(2);
+    margin-top: 2rem;
+
+    img {
+      margin-top: 1.75em;
+      border: 1px solid $base-accent-color;
+    }
+  }
+
+  .content {
+    @include span-columns(8);
+    @include omega;
+    margin-bottom: $base-spacing * 2;
+  }
+
+
+  .content-section {
+    @include span-columns(8 of 8);
+    padding: 2em 1em 0;
+  }
+
+  .wrapper {
+    @include outer-container;
+    margin-top: -($navigation-height + 1px);
+    padding-top: ($navigation-height + 1px);
+  }
+}

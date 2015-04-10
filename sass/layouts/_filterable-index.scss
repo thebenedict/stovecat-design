@@ -6,37 +6,23 @@ aside[role="filters"] {
 	bottom: 0;
 	overflow-y: scroll;
 	webkit-overflow-scrolling: touch;
-	width: 35%;
+	width: 30%;
 }
 
 main[role="filterable-content"] {
 	background: lighten($base-accent-color, 12);
 	border-left: 1px solid $base-accent-color;
 	position: fixed;
-	top: $navigation-height + 1px;
 	right: 0;
 	bottom: 0;
 	overflow-y: scroll;
 	webkit-overflow-scrolling: touch;
-	width: 65%;
-	@include outer-container;
-}
-
-.grid-wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -4em;
-
-  &::after {
-  	content: "";
-  	display: block;
-  }
+	width: 70%;
 }
 
 .grid {
 	@include span-columns(12 of 12);
-	padding: 1em;
+	padding: 1.5em;
 }
 
 .applied-filters {

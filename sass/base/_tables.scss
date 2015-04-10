@@ -9,17 +9,27 @@ table {
 th {
   border-bottom: 1px solid darken($base-border-color, 15%);
   font-weight: 600;
-  padding: $small-spacing 0;
+  padding: $small-spacing;
   text-align: left;
 }
 
 td {
   border-bottom: $base-border;
-  padding: $small-spacing 0;
+  padding: $small-spacing;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 tr,
 td,
 th {
   vertical-align: middle;
+}
+
+tbody {
+  tr {
+    cursor: pointer;
+    &:hover { background: white; }
+  }
 }

@@ -1,0 +1,57 @@
+.pager {
+	$item-color: $alliance-blue;
+	text-align: center;
+	font-family: $heading-font-family;
+	color: $item-color;
+
+	.count { font-weight: 700; }
+
+	.caption {
+		font-size: 0.9em;
+	}
+
+	.progress {
+		margin-top: $small-spacing;
+		text-align: left;
+	}
+
+	.item { 
+		display: inline-block;
+	}
+
+	.item::after {
+		width: $base-spacing;
+		height: $base-spacing;
+		content: "";
+		border-radius: 3px;
+		margin: 0.25em 0.1em;
+		background: $item-color;
+		display: block;
+	}
+
+	.item {
+		&.active::after {
+			background: darken($item-color, 15%);
+		}
+
+		&.active:hover::after {
+			background: darken($item-color, 10%);
+		}
+
+		&:hover::after { background: lighten($item-color, 15%) }
+	}
+
+	.controls { 
+		margin-top: 0.5em;
+		font-size: 0.9em;
+	}
+
+
+	i[class^='icon'] { 
+		font-size: 1.5em;
+
+		&:hover { color: lighten($item-color, 15%) }
+	}
+	.icon-left-dir { float: left; }
+	.icon-right-dir { float: right; }
+}

@@ -2,3 +2,20 @@
 .efficiency { color: $iwa-efficiency-color; }
 .indoor-emissions { color: $iwa-indoor-emissions-color; }
 .safety { color: $iwa-safety-color; }
+
+main {
+  top: $navigation-height + 1px;
+
+  .wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -3.3em;
+
+
+    &::after {
+      content: "";
+      display: block;
+    }
+  }
+}

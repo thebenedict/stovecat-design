@@ -1,12 +1,14 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400|Trocchi);
 
 // Typography
 $base-font-family: $helvetica;
 $heading-font-family: 'Open Sans', $base-font-family;
+$subheading-font-family: 'Trocchi', sans-serif;
 
 // Font Sizes
 $base-font-size: 1em;
 $title-font-size: $base-font-size * 1.1;
+$subheading-font-size: $base-font-size * 1.1;
 
 // Line height
 $base-line-height: 1.5;
@@ -26,7 +28,7 @@ $light-gray: #ddd;
 $alliance-green: #01575d;
 $alliance-tan: #dFdbd3;
 $alliance-orange: #e56120;
-$alliance-blue: #6e90a3;
+$alliance-blue: #6c8fa3;
 $alliance-yellow: #ffba00;
 $alliance-pink: #da89a8;
 $alliance-dark-blue: #172e32;
