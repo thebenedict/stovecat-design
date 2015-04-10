@@ -1000,7 +1000,7 @@ header.navigation {
     display: block;
     margin-right: 3.57866%;
     width: 74.10533%;
-    padding: 0.35em 0; }
+    padding: 0.3em 0; }
     .data-field .filename:last-child {
       margin-right: 0; }
   .data-field .download-link-wrapper {
@@ -1011,24 +1011,25 @@ header.navigation {
     .data-field .download-link-wrapper:last-child {
       margin-right: 0; }
   .data-field .download-link {
-    background-color: #6c8fa3;
+    background-color: #dFdbd3;
     border-radius: 3px;
     border: 0;
-    color: white;
+    color: #333333;
     display: inline-block;
     font-size: inherit;
     font-weight: bold;
     padding: 7px 18px;
     text-decoration: none;
     background-clip: padding-box;
+    text-transform: uppercase;
     font-weight: 700;
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-align: center; }
     .data-field .download-link:hover:not(:disabled) {
-      background-color: #779cb1;
+      background-color: #ebe7e1;
       cursor: pointer; }
     .data-field .download-link:active:not(:disabled), .data-field .download-link:focus:not(:disabled) {
-      background-color: #638192;
+      background-color: #d2cec6;
       cursor: pointer; }
     .data-field .download-link:disabled {
       cursor: not-allowed;
@@ -1039,7 +1040,7 @@ header.navigation {
 .pager {
   text-align: center;
   font-family: "Open Sans", "Open Sans";
-  color: #6c8fa3; }
+  color: #01575d; }
   .pager .count {
     font-weight: 700; }
   .pager .caption {
@@ -1055,21 +1056,21 @@ header.navigation {
     content: "";
     border-radius: 3px;
     margin: 0.25em 0.1em;
-    background: #6c8fa3;
+    background: #01575d;
     display: block; }
   .pager .item.active::after {
-    background: #4b6778; }
+    background: #02868f; }
   .pager .item.active:hover::after {
-    background: #557587; }
+    background: #029ea9; }
   .pager .item:hover::after {
-    background: #9bb3c0; }
+    background: #016f76; }
   .pager .controls {
     margin-top: 0.5em;
     font-size: 0.9em; }
   .pager i[class^='icon'] {
     font-size: 1.5em; }
     .pager i[class^='icon']:hover {
-      color: #9bb3c0; }
+      color: #016f76; }
   .pager .icon-left-dir {
     float: left; }
   .pager .icon-right-dir {

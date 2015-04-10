@@ -17,7 +17,7 @@
 
   .filename {
     @include span-columns(6 of 8);
-    padding: 0.35em 0;
+    padding: 0.3em 0;
   }
 
   .download-link-wrapper {
@@ -25,9 +25,10 @@
   }
 
   .download-link {
-    @include button('flat', $alliance-blue);
+    @include button('flat', $base-accent-color);
+    text-transform: uppercase;
     font-weight: 700;
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-align: center;
   }
 

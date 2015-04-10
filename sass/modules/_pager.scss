@@ -1,5 +1,5 @@
 .pager {
-	$item-color: $alliance-blue;
+	$item-color: $alliance-green;
 	text-align: center;
 	font-family: $heading-font-family;
 	color: $item-color;
@@ -31,14 +31,14 @@
 
 	.item {
 		&.active::after {
-			background: darken($item-color, 15%);
+			background: lighten($item-color, 10%);
 		}
 
 		&.active:hover::after {
-			background: darken($item-color, 10%);
+			background: lighten($item-color, 15%);
 		}
 
-		&:hover::after { background: lighten($item-color, 15%) }
+		&:hover::after { background: lighten($item-color, 5%) }
 	}
 
 	.controls { 
@@ -50,7 +50,7 @@
 	i[class^='icon'] { 
 		font-size: 1.5em;
 
-		&:hover { color: lighten($item-color, 15%) }
+		&:hover { color: lighten($item-color, 5%) }
 	}
 	.icon-left-dir { float: left; }
 	.icon-right-dir { float: right; }
