@@ -4,15 +4,40 @@
 
   .label, .value {
     display: inline-block;
+
+    &.full-width {
+      @include fill-parent;
+      float: left;
+    }
   }
 
   .label {
     @include span-columns(3 of 8);
+
+    &.full-width {
+      margin-bottom: 0.25em;
+    }
   }
 
   .value {
     @include span-columns(5 of 8);
     color: $alliance-green;
+  }
+
+  a {
+    color: $alliance-green;
+    transition: color 0.1s linear;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: lighten($alliance-green, 15%);
+    }
+  }
+
+  .small {
+    color: $medium-gray;
+    font-size: 0.8em;
   }
 
   .filename {

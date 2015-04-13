@@ -10,6 +10,11 @@
   i::before { margin-left: 0; }
 }
 
+.icon-info { 
+  color: $medium-gray;
+  font-size: 0.9em;
+}
+
 main {
   top: $navigation-height + 1px;
 

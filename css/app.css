@@ -250,6 +250,10 @@ picture {
   .back i::before {
     margin-left: 0; }
 
+.icon-info {
+  color: #999;
+  font-size: 0.9em; }
+
 main {
   top: 61px; }
   main .wrapper {
@@ -318,7 +322,8 @@ main[role="full-width-content"] .sidebar {
   main[role="full-width-content"] .sidebar:last-child {
     margin-right: 0; }
   main[role="full-width-content"] .sidebar img {
-    border: 1px solid #dFdbd3; }
+    border: 1px solid #dFdbd3;
+    border-radius: 3px; }
 main[role="full-width-content"] .content {
   float: left;
   display: block;
@@ -545,7 +550,7 @@ header.navigation {
     display: inline;
     float: right;
     font-size: 0.8em;
-    margin-top: 1.2em;
+    margin-top: 1em;
     margin-left: 1em;
     padding: 0.5em 0.65em;
     text-transform: uppercase; }
@@ -982,6 +987,9 @@ header.navigation {
     margin-right: 0; }
   .data-field .label, .data-field .value {
     display: inline-block; }
+    .data-field .label.full-width, .data-field .value.full-width {
+      width: 100%;
+      float: left; }
   .data-field .label {
     float: left;
     display: block;
@@ -989,6 +997,8 @@ header.navigation {
     width: 35.26334%; }
     .data-field .label:last-child {
       margin-right: 0; }
+    .data-field .label.full-width {
+      margin-bottom: 0.25em; }
   .data-field .value {
     float: left;
     display: block;
@@ -997,6 +1007,14 @@ header.navigation {
     color: #01575d; }
     .data-field .value:last-child {
       margin-right: 0; }
+  .data-field a {
+    color: #01575d;
+    transition: color 0.1s linear; }
+    .data-field a:active, .data-field a:focus, .data-field a:hover {
+      color: #029ea9; }
+  .data-field .small {
+    color: #999;
+    font-size: 0.8em; }
   .data-field .filename {
     float: left;
     display: block;
@@ -1118,5 +1136,28 @@ header.navigation {
   width: 100%;
   float: left;
   padding-bottom: 2em; }
+  .content-section .inline-photo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    border: 1px solid #dFdbd3;
+    border-radius: 3px; }
+    .content-section .inline-photo:last-child {
+      margin-right: 0; }
+  .content-section .inline-map {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    height: 218px;
+    text-align: center;
+    padding: 5em 0;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #333;
+    background: #f08c7a; }
+    .content-section .inline-map:last-child {
+      margin-right: 0; }
 
 /*# sourceMappingURL=app.css.map */

@@ -2,4 +2,21 @@
   @include fill-parent;
   float: left;
   padding-bottom: 2em;
+
+  .inline-photo {
+  	@include span-columns(3);
+  	border: 1px solid $base-accent-color;
+  	border-radius: 3px;	
+  }
+
+  .inline-map {
+  	@include span-columns(9);
+  	height: 218px;
+  	text-align: center;
+  	padding: 5em 0;
+  	font-size: 1.2em;
+  	font-weight: 700;
+  	color: $dark-gray;
+  	background: tint(desaturate(tomato, 20%), 20%);
+  }
 }
