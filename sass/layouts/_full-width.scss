@@ -1,29 +1,17 @@
-main[role="show-content"] {
+main[role="full-width-content"] {
   .sidebar {
     @include span-columns(2);
-    margin-top: 2rem;
+    padding: $base-spacing 0;
 
     img {
-      margin-top: 1.75em;
       border: 1px solid $base-accent-color;
     }
   }
 
   .content {
     @include span-columns(8);
+    padding: $base-spacing 0;
     margin-bottom: $base-spacing * 4;
-  }
-
-  .back {
-    font-size: 0.9em;
-    line-height: 1.6em;
-
-    i::before { margin-left: 0; }
-  }
-
-  .content-section {
-    @include span-columns(8 of 8);
-    padding-top: 2em;
   }
 
   .wrapper {
@@ -32,5 +20,4 @@ main[role="show-content"] {
   }
 
   .container {@include outer-container; }
-
 }

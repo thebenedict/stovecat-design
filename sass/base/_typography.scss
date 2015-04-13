@@ -61,4 +61,8 @@ picture {
   padding-bottom: $small-spacing / 2;
   margin-bottom: $small-spacing;
   border-bottom: 1px solid $base-accent-color;
+
+  &.large {
+    font-size: $subheading-font-size * 1.5;
+  }
 }

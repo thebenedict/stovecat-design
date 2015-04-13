@@ -3,6 +3,13 @@
 .indoor-emissions { color: $iwa-indoor-emissions-color; }
 .safety { color: $iwa-safety-color; }
 
+.back {
+  font-size: 0.9em;
+  margin-bottom: $base-spacing;
+
+  i::before { margin-left: 0; }
+}
+
 main {
   top: $navigation-height + 1px;
 

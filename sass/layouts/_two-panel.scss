@@ -1,0 +1,52 @@
+aside[role="content-assist"] {
+  background: white;
+  position: fixed;
+  top: $navigation-height + 1px;
+  left: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  webkit-overflow-scrolling: touch;
+  width: 30%;
+}
+
+main[role="content"] {
+  background: lighten($base-accent-color, 12);
+  border-left: 1px solid $base-accent-color;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  webkit-overflow-scrolling: touch;
+  width: 70%;
+
+  &.show { 
+    background: white;
+  }
+
+  .content {
+    @include outer-container;
+    padding: $base-spacing;
+    margin-bottom: $base-spacing * 4;
+  }
+
+}
+
+.grid {
+  @include fill-parent;
+  float: left;
+  padding: 1.5em;
+}
+
+.applied-filters {
+  @include fill-parent;
+  float: left;
+  margin-bottom: 1em;
+  font-size: 0.9em;
+  line-height: 1.6em;
+
+  .section-label { 
+    color: $medium-gray;
+    padding: 1em 0;
+    line-height: 2em;
+  }
+}

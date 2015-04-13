@@ -229,6 +229,8 @@ picture {
   padding-bottom: 0.375em;
   margin-bottom: 0.75em;
   border-bottom: 1px solid #dFdbd3; }
+  .subheading.large {
+    font-size: 1.65em; }
 
 .emissions {
   color: #6c8fa3; }
@@ -242,6 +244,12 @@ picture {
 .safety {
   color: #da89a8; }
 
+.back {
+  font-size: 0.9em;
+  margin-bottom: 1.5em; }
+  .back i::before {
+    margin-left: 0; }
+
 main {
   top: 61px; }
   main .wrapper {
@@ -253,7 +261,7 @@ main {
       content: "";
       display: block; }
 
-aside[role="filters"] {
+aside[role="content-assist"] {
   background: white;
   position: fixed;
   top: 61px;
@@ -263,7 +271,7 @@ aside[role="filters"] {
   webkit-overflow-scrolling: touch;
   width: 30%; }
 
-main[role="filterable-content"] {
+main[role="content"] {
   background: #f9f8f6;
   border-left: 1px solid #dFdbd3;
   position: fixed;
@@ -272,72 +280,62 @@ main[role="filterable-content"] {
   overflow-y: scroll;
   webkit-overflow-scrolling: touch;
   width: 70%; }
+  main[role="content"].show {
+    background: white; }
+  main[role="content"] .content {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+    margin-bottom: 6em; }
+    main[role="content"] .content::after {
+      clear: both;
+      content: "";
+      display: table; }
 
 .grid {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
   width: 100%;
+  float: left;
   padding: 1.5em; }
-  .grid:last-child {
-    margin-right: 0; }
 
 .applied-filters {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
   width: 100%;
-  margin-right: 0;
+  float: left;
   margin-bottom: 1em;
   font-size: 0.9em;
   line-height: 1.6em; }
-  .applied-filters:last-child {
-    margin-right: 0; }
   .applied-filters .section-label {
     color: #999;
     padding: 1em 0;
     line-height: 2em; }
 
-main[role="show-content"] .sidebar {
+main[role="full-width-content"] .sidebar {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 14.70196%;
-  margin-top: 2rem; }
-  main[role="show-content"] .sidebar:last-child {
+  padding: 1.5em 0; }
+  main[role="full-width-content"] .sidebar:last-child {
     margin-right: 0; }
-  main[role="show-content"] .sidebar img {
-    margin-top: 1.75em;
+  main[role="full-width-content"] .sidebar img {
     border: 1px solid #dFdbd3; }
-main[role="show-content"] .content {
+main[role="full-width-content"] .content {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 65.88078%;
+  padding: 1.5em 0;
   margin-bottom: 6em; }
-  main[role="show-content"] .content:last-child {
+  main[role="full-width-content"] .content:last-child {
     margin-right: 0; }
-main[role="show-content"] .back {
-  font-size: 0.9em;
-  line-height: 1.6em; }
-  main[role="show-content"] .back i::before {
-    margin-left: 0; }
-main[role="show-content"] .content-section {
-  float: left;
-  display: block;
-  margin-right: 3.57866%;
-  width: 100%;
-  padding-top: 2em; }
-  main[role="show-content"] .content-section:last-child {
-    margin-right: 0; }
-main[role="show-content"] .wrapper {
+main[role="full-width-content"] .wrapper {
   margin-top: -61px;
   padding-top: 61px; }
-main[role="show-content"] .container {
+main[role="full-width-content"] .container {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  main[role="show-content"] .container::after {
+  main[role="full-width-content"] .container::after {
     clear: both;
     content: "";
     display: table; }
@@ -1115,5 +1113,10 @@ header.navigation {
   .title-bar .title {
     font-size: 1.8em;
     margin-bottom: 0.375em; }
+
+.content-section {
+  width: 100%;
+  float: left;
+  padding-bottom: 2em; }
 
 /*# sourceMappingURL=app.css.map */

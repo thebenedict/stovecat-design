@@ -1,10 +1,10 @@
 .grid-item {
   $card-hover-background: lighten($light-gray, 8);
   @include media ($xlarge-screen) {
-    @include span-columns(6 of 12);
+    @include span-columns(6);
   }
 
-  @include span-columns(12 of 12);
+  @include span-columns(12);
   max-width: 34em;
   @include omega(2n);
   margin-bottom: 1.5em;
