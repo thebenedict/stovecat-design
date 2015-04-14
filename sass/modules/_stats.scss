@@ -1,0 +1,37 @@
+.stats {
+  $stats-color: $alliance-orange;
+
+  padding: ($base-spacing / 2) 0;
+
+  ul {
+    padding: 0;
+    height: 2.75em;
+    display: inline-block;
+  }
+
+  li {
+    border-right: 1px solid transparentize($base-font-color, 0.8);
+    color: $stats-color;
+    display: inline;
+    float: left;
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 1.1em;
+    padding: 0 0.7em;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  span {
+    color: $base-font-color;
+    display: block;
+    font-size: 0.7em;
+    font-weight: normal;
+  }
+}

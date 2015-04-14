@@ -1,19 +1,19 @@
 .grid-item {
-  $card-hover-background: lighten($light-gray, 8);
+
   @include media ($xlarge-screen) {
     @include span-columns(6);
   }
 
   @include span-columns(12);
-  max-width: 34em;
   @include omega(2n);
+  @include overlay-on-hover(rgba($medium-gray, 0.1));
+  max-width: 34em;
   margin-bottom: 1.5em;
   border: 1px solid $base-accent-color;
   border-radius: 3px;
   background: white;
   box-shadow: 0 2px 4px darken($base-background-color, 15%);
   cursor: pointer;
-  position: relative;
 
   .photo {
   	@include span-columns(2 of 6);
@@ -52,25 +52,5 @@
   		display: inline-block;
 	    font-size: 0.9em;
   	}
-  }
-
-  &:after { 
-    @include transition (all 0.1s ease-in-out);
-    content: " ";
-    z-index: 10;
-    display: block;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: transparent;
-  }
-
-  &:focus,
-  &:hover {
-    &:after {
-      background: rgba($medium-gray, 0.1);
-    }
   }
 }
