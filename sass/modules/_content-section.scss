@@ -2,21 +2,41 @@
   @include fill-parent;
   float: left;
   padding-bottom: 2em;
+  position: relative;
+}
 
-  .inline-photo {
-  	@include span-columns(3);
-  	border: 1px solid $base-accent-color;
-  	border-radius: 3px;	
+.content-table-row {
+  @include outer-container();
+  @include row(table);
+
+  img {
+    border: 1px solid $base-accent-color;
+    border-radius: 3px;
   }
 
   .inline-map {
-  	@include span-columns(9);
-  	height: 218px;
-  	text-align: center;
-  	padding: 5em 0;
-  	font-size: 1.2em;
-  	font-weight: 700;
-  	color: $dark-gray;
-  	background: tint(desaturate(tomato, 20%), 20%);
+    @include fill-parent;
+    float: left;
+    position: relative;
   }
 }
+
+.table-cell {
+  &.inline-photo-wrapper {
+    @include span-columns(3);
+  }
+
+  &.space {
+    @include span-columns(1);
+  }
+
+  &.inline-map-wrapper {
+    @include span-columns(7);
+    @include reset-display;
+  }
+}
+
+
+
+
+
