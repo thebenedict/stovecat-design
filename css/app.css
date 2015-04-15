@@ -1011,14 +1011,14 @@ header.navigation {
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%;
-    color: #01575d; }
+    color: #016f76; }
     .data-field .value:last-child {
       margin-right: 0; }
   .data-field a {
-    color: #01575d;
+    color: #016f76;
     transition: color 0.1s linear; }
     .data-field a:active, .data-field a:focus, .data-field a:hover {
-      color: #029ea9; }
+      color: #02b5c2; }
   .data-field .small {
     color: #999;
     font-size: 0.8em; }

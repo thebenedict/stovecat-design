@@ -1,4 +1,6 @@
 .data-field {
+  $value-color: lighten($alliance-green, 5%);
+
   @include fill-parent;
   float: left;
   padding: 0.25em 0;
@@ -24,17 +26,17 @@
 
   .value {
     @include span-columns(8);
-    color: $alliance-green;
+    color: $value-color;
   }
 
   a {
-    color: $alliance-green;
+    color: $value-color;
     transition: color 0.1s linear;
 
     &:active,
     &:focus,
     &:hover {
-      color: lighten($alliance-green, 15%);
+      color: lighten($alliance-green, 20%);
     }
   }
 
