@@ -5,6 +5,7 @@
   position: relative;
 
   &.last { padding-bottom: 0; }
+  &.description { padding-bottom: $small-spacing; }
 
   .controls {
     @include fill-parent;

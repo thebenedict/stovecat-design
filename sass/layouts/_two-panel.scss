@@ -29,6 +29,11 @@ main[role="content"] {
     margin-bottom: $base-spacing * 4;
   }
 
+  .stats-wrapper {
+    @include fill-parent;
+    float: left;
+  }
+
   .stats {
     @include fill-parent;
     margin-bottom: $base-spacing;

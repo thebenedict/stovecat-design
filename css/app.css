@@ -296,6 +296,9 @@ main[role="content"] {
       clear: both;
       content: "";
       display: table; }
+  main[role="content"] .stats-wrapper {
+    width: 100%;
+    float: left; }
   main[role="content"] .stats {
     width: 100%;
     margin-bottom: 1.5em;
@@ -1106,8 +1109,7 @@ header.navigation {
 .title-bar {
   background: #f0eeeb;
   font-family: "Trocchi", sans-serif;
-  border-bottom: 1px solid #dFdbd3;
-  padding: 1.5em 0; }
+  border-bottom: 1px solid #dFdbd3; }
   .title-bar .container {
     max-width: 68em;
     margin-left: auto;
@@ -1121,7 +1123,7 @@ header.navigation {
     display: block;
     margin-right: 2.84259%;
     width: 100%;
-    padding: 1.5em 0; }
+    padding: 2em 0; }
     .title-bar .inner-container:last-child {
       margin-right: 0; }
   .title-bar .title, .title-bar .subtitle {
@@ -1143,6 +1145,8 @@ header.navigation {
   position: relative; }
   .content-section.last {
     padding-bottom: 0; }
+  .content-section.description {
+    padding-bottom: 0.75em; }
   .content-section .controls {
     width: 100%;
     float: left;

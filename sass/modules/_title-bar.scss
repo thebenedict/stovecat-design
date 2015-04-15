@@ -2,12 +2,11 @@
 	background: lighten($base-accent-color, 8%);
 	font-family: $subheading-font-family;
 	border-bottom: (1px solid $base-accent-color);
-	padding: 1.5em 0;
 
 	.container { @include outer-container; }
   	.inner-container { 
   		@include span-columns(10 of 10);
-  		padding: 1.5em 0;
+  		padding: 2em 0;
   	}
 
   	.title, .subtitle {
