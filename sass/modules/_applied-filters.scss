@@ -1,0 +1,37 @@
+.applied-filters {
+  $filter-padding: 0.5em;
+
+  @include fill-parent;
+  float: left;
+  padding: 1.4em $base-spacing 0.8em $base-spacing;
+  background: lighten($base-accent-color, 8%);
+  border-bottom: 1px solid $base-accent-color;
+
+  .label { 
+    @include span-columns(2 of 12);
+    font-size: 0.85em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $medium-gray;
+  }
+
+  .filters {
+    @include span-columns(8 of 12);
+    font-size: 0.9em;
+  }
+
+  .controls {
+    @include span-columns(2 of 12);
+  }
+
+  .filter {
+    margin-right: $filter-padding;
+    margin-bottom: $filter-padding;
+    display: inline-block;
+    cursor: pointer;
+
+    &:hover {
+      color: darken($action-color, 15%);
+    }
+  }
+}
