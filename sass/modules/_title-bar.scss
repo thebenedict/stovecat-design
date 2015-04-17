@@ -17,5 +17,7 @@
 	.title {
 		font-size: 1.8em;
 		margin-bottom: $small-spacing / 2;
+
+		&.alone { margin-bottom: 0; }
 	}
 }

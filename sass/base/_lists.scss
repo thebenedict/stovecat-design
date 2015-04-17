@@ -29,3 +29,8 @@ dl {
     margin: 0;
   }
 }
+
+.standard-list {
+  @extend %default-ul;
+  line-height: $base-line-height;
+}

@@ -13,6 +13,11 @@ main[role="full-width-content"] {
     @include span-columns(8);
     padding: $base-spacing 0;
     margin-bottom: $base-spacing * 4;
+
+    &.longform {
+      line-height: $base-line-height * 1.2;
+      margin-bottom: $base-spacing;
+    }
   }
 
   .wrapper {
@@ -20,5 +25,5 @@ main[role="full-width-content"] {
     padding-top: ($navigation-height + 1px);
   }
 
-  .container {@include outer-container; }
+  .container { @include outer-container; }
 }

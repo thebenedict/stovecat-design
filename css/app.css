@@ -135,6 +135,11 @@ ol {
   list-style-type: none;
   margin: 0;
   padding: 0; }
+  ul.standard-list,
+  ol.standard-list {
+    list-style-type: disc;
+    margin-bottom: 0.75em;
+    padding-left: 1.5em; }
 dl {
   margin-bottom: 0.75em; }
   dl dt {
@@ -142,6 +147,9 @@ dl {
     margin-top: 0.75em; }
   dl dd {
     margin: 0; }
+
+.standard-list {
+  line-height: 1.5; }
 
 table {
   -webkit-font-feature-settings: "kern", "liga", "tnum";
@@ -221,6 +229,9 @@ img,
 picture {
   margin: 0;
   max-width: 100%; }
+
+.strong {
+  font-weight: 700; }
 
 .subheading {
   font-size: 1.1em;
@@ -330,6 +341,9 @@ main[role="full-width-content"] .content {
   margin-bottom: 6em; }
   main[role="full-width-content"] .content:last-child {
     margin-right: 0; }
+  main[role="full-width-content"] .content.longform {
+    line-height: 1.8;
+    margin-bottom: 1.5em; }
 main[role="full-width-content"] .wrapper {
   margin-top: -61px;
   padding-top: 61px; }
@@ -562,7 +576,6 @@ header.navigation {
       opacity: 0.5; }
 
 .footer {
-  border-top: 0.2em solid #01575d;
   background: #172e32;
   padding: 0 1.5rem;
   width: 100%;
@@ -605,6 +618,50 @@ header.navigation {
       .footer li a {
         line-height: 4em; } }
     .footer li a:focus, .footer li a:hover {
+      color: white; }
+
+.prefooter {
+  width: 100%;
+  padding: 2em 1.5em;
+  border-top: 1px solid #376e78;
+  background: url("/images/briquette-background-transparent.png"), -webkit-linear-gradient(#274e55, #172e32), center no-repeat #24484e scroll;
+  background: url("/images/briquette-background-transparent.png"), linear-gradient(#274e55, #172e32), center no-repeat #24484e scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white; }
+  .prefooter .inner {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    .prefooter .inner::after {
+      clear: both;
+      content: "";
+      display: table; }
+  .prefooter .logo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .prefooter .logo:last-child {
+      margin-right: 0; }
+    .prefooter .logo img {
+      max-width: 148px; }
+  .prefooter .contact {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    line-height: 1.8em; }
+    .prefooter .contact:last-child {
+      margin-right: 0; }
+    .prefooter .contact .title {
+      font-weight: 700;
+      margin-bottom: 0.25em; }
+  .prefooter a {
+    color: #defdff;
+    transition: color 0.1s linear; }
+    .prefooter a:active, .prefooter a:focus, .prefooter a:hover {
       color: white; }
 
 .filter-panel {
@@ -747,7 +804,8 @@ header.navigation {
       .grid-item:nth-child(3n+1) {
         clear: left; } }
   .grid-item:hover, .grid-item:active {
-    border-top-color: #02868f; }
+    border-top-color: #02868f;
+    box-shadow: inset 0 -1px #02868f; }
     .grid-item:hover .iwa, .grid-item:active .iwa {
       box-shadow: inset 0 -1px #02868f; }
     .grid-item:hover .title, .grid-item:active .title {
@@ -796,7 +854,8 @@ header.navigation {
     float: left;
     background: #f0eeeb;
     padding: 0.5em 1em;
-    text-shadow: 1px 1px 0 #ddd; }
+    text-shadow: 1px 1px 0 #ddd;
+    z-index: -1; }
     .grid-item .iwa .iwa-tier {
       float: left;
       display: block;
@@ -973,10 +1032,12 @@ header.navigation {
     display: block;
     margin-right: 2.35765%;
     width: 14.70196%;
+    white-space: nowrap;
     font-size: 0.85em;
     font-weight: 700;
     text-transform: uppercase;
-    color: #999; }
+    color: #999;
+    margin-bottom: 0.5em; }
     .applied-filters .label:last-child {
       margin-right: 0; }
   .applied-filters .filters {
@@ -1030,11 +1091,6 @@ header.navigation {
     color: #016f76; }
     .data-field .value:last-child {
       margin-right: 0; }
-  .data-field a {
-    color: #016f76;
-    transition: color 0.1s linear; }
-    .data-field a:active, .data-field a:focus, .data-field a:hover {
-      color: #02b5c2; }
   .data-field .small {
     color: #999;
     font-size: 0.8em; }
@@ -1153,6 +1209,8 @@ header.navigation {
   .title-bar .title {
     font-size: 1.8em;
     margin-bottom: 0.375em; }
+    .title-bar .title.alone {
+      margin-bottom: 0; }
 
 .content-section {
   width: 100%;
@@ -1163,6 +1221,12 @@ header.navigation {
     padding-bottom: 0; }
   .content-section.description {
     padding-bottom: 0.75em; }
+  .content-section a {
+    color: #016f76;
+    transition: color 0.1s linear;
+    text-decoration: underline; }
+    .content-section a:active, .content-section a:focus, .content-section a:hover {
+      color: #02b5c2; }
   .content-section .controls {
     width: 100%;
     float: left;

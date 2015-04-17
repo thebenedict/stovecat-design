@@ -29,17 +29,6 @@
     color: $value-color;
   }
 
-  a {
-    color: $value-color;
-    transition: color 0.1s linear;
-
-    &:active,
-    &:focus,
-    &:hover {
-      color: lighten($alliance-green, 20%);
-    }
-  }
-
   .small {
     color: $medium-gray;
     font-size: 0.8em;

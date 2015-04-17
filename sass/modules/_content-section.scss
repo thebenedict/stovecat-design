@@ -7,6 +7,18 @@
   &.last { padding-bottom: 0; }
   &.description { padding-bottom: $small-spacing; }
 
+  a {
+    color: lighten($alliance-green, 5%);
+    transition: color 0.1s linear;
+    text-decoration: underline;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: lighten($alliance-green, 20%);
+    }
+  }
+
   .controls {
     @include fill-parent;
     float: left;

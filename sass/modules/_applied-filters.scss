@@ -9,10 +9,13 @@
 
   .label { 
     @include span-columns(2 of 12);
+    white-space: nowrap;
     font-size: 0.85em;
     font-weight: 700;
     text-transform: uppercase;
     color: $medium-gray;
+    margin-bottom: $filter-padding;
+
   }
 
   .filters {
