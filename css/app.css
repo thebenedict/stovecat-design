@@ -623,7 +623,7 @@ header.navigation {
 .prefooter {
   width: 100%;
   padding: 2em 1.5em;
-  border-top: 1px solid #376e78;
+  border-top: 1px solid #478e9b;
   background: url("/images/briquette-background-transparent.png"), -webkit-linear-gradient(#274e55, #172e32), center no-repeat #24484e scroll;
   background: url("/images/briquette-background-transparent.png"), linear-gradient(#274e55, #172e32), center no-repeat #24484e scroll;
   background-position: center;
