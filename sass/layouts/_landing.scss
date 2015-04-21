@@ -107,9 +107,9 @@ main[role="landing"] {
     font-size: 1.7em;
     text-shadow: 1px 1px 0 $dark-gray;
 
-    &.stoves { @include background(url("/images/cambodia-briquettes.jpg") center no-repeat); }
-    &.fuels { @include background(url("/images/uganda-briquettes.jpg") center no-repeat); }
-    &.test-results { @include background(url("/images/epa-lab.jpg") right no-repeat); }
+    &.stoves { @include background(url("../images/cambodia-briquettes.jpg") center no-repeat); }
+    &.fuels { @include background(url("../images/uganda-briquettes.jpg") center no-repeat); }
+    &.test-results { @include background(url("../images/epa-lab.jpg") right no-repeat); }
 
     .text {
       @include background(linear-gradient(rgba($dark-gray, 0.75), transparent) bottom no-repeat);
