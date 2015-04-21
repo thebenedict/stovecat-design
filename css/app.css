@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400|Trocchi);
+@import url(http://fonts.googleapis.com/css?family=Trocchi);
 html {
   box-sizing: border-box; }
 
@@ -20,7 +20,7 @@ button {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Open Sans";
+  font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
   font-weight: 600;
   line-height: 1;
@@ -49,7 +49,7 @@ input,
 label,
 select {
   display: block;
-  font-family: "Open Sans";
+  font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em; }
 
 label {
@@ -68,7 +68,7 @@ textarea {
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
-  font-family: "Open Sans";
+  font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
   margin-bottom: 0.75em;
   padding: 0.5em;
@@ -191,7 +191,7 @@ body {
   font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
   color: #333;
-  font-family: "Open Sans";
+  font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
   line-height: 1.5; }
 
@@ -201,7 +201,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans", "Open Sans";
+  font-family: "novecento_sans_widemedium";
   font-size: 1em;
   line-height: 1.2;
   margin: 0 0 0.75em; }
@@ -235,7 +235,7 @@ picture {
 
 .subheading {
   font-size: 1.1em;
-  font-family: "Trocchi", sans-serif;
+  font-family: "Trocchi", serif;
   line-height: 1.2;
   padding-bottom: 0.375em;
   margin-bottom: 0.75em;
@@ -372,7 +372,8 @@ main[role="landing"] .content {
   width: 100%;
   float: left; }
 main[role="landing"] .hero {
-  background: #01575d;
+  background: -webkit-linear-gradient(#016a71, #01575d), bottom no-repeat;
+  background: linear-gradient(#016a71, #01575d), bottom no-repeat;
   color: white;
   padding: 3em 0;
   text-transform: uppercase; }
@@ -495,7 +496,7 @@ main[role="landing"] .site-section {
   width: 31.76157%;
   position: relative;
   cursor: pointer;
-  font-family: "Trocchi", sans-serif;
+  font-family: "Trocchi", serif;
   min-height: 375px;
   padding: 0.75em;
   color: white;
@@ -595,7 +596,7 @@ main[role="landing"] .site-section {
     margin: 0; }
 
 header.navigation {
-  font-family: "Open Sans", "Open Sans";
+  font-family: "novecento_sans_widemedium";
   background-color: #01575d;
   border-bottom: 1px solid #00282b;
   min-height: 60px;
@@ -819,7 +820,7 @@ header.navigation {
   width: 100%;
   display: inline-block;
   text-transform: uppercase;
-  font-family: "Open Sans", "Open Sans";
+  font-family: "novecento_sans_widemedium";
   font-size: 0.8em;
   font-weight: 700;
   height: 17em; }
@@ -907,7 +908,7 @@ header.navigation {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  font-family: "Open Sans", "Open Sans";
+  font-family: "novecento_sans_widemedium";
   padding: 0.5em 1.5em; }
   .filter-panel::after {
     clear: both;
@@ -979,7 +980,7 @@ header.navigation {
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
-    font-family: "Open Sans", "Open Sans";
+    font-family: "novecento_sans_widemedium";
     padding: 0.6em 0;
     font-weight: 400;
     margin: 0;
@@ -1376,7 +1377,7 @@ header.navigation {
     margin-left: 0; }
 
 .pager {
-  font-family: "Open Sans", "Open Sans";
+  font-family: "novecento_sans_widemedium";
   color: #01575d; }
   .pager .count {
     font-weight: 700; }
@@ -1419,7 +1420,7 @@ header.navigation {
 
 .title-bar {
   background: #f0eeeb;
-  font-family: "Trocchi", sans-serif;
+  font-family: "Trocchi", serif;
   border-bottom: 1px solid #dFdbd3; }
   .title-bar .container {
     max-width: 68em;

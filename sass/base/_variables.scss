@@ -1,9 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400|Trocchi);
+@import url(http://fonts.googleapis.com/css?family=Trocchi);
 
 // Typography
-$base-font-family: 'Open Sans';//$helvetica;
-$heading-font-family: 'Open Sans', $base-font-family;
-$subheading-font-family: 'Trocchi', sans-serif;
+$base-font-family: 'Gotham SSm A', 'Gotham SSm B', $helvetica;
+$heading-font-family: 'novecento_sans_widemedium';//, $base-font-family;
+$subheading-font-family: 'Trocchi', serif;
 
 // Font Sizes
 $base-font-size: 1em;
