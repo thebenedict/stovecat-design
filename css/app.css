@@ -356,6 +356,232 @@ main[role="full-width-content"] .container {
     content: "";
     display: table; }
 
+main[role="landing"] .content {
+  width: 100%;
+  float: left; }
+main[role="landing"] .hero {
+  background: #01575d;
+  color: white;
+  padding: 3em 0;
+  text-transform: uppercase; }
+  main[role="landing"] .hero .inner {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    main[role="landing"] .hero .inner::after {
+      clear: both;
+      content: "";
+      display: table; }
+  main[role="landing"] .hero .logo {
+    display: block;
+    margin-bottom: 2em; }
+    main[role="landing"] .hero .logo::after {
+      clear: both;
+      content: "";
+      display: table; }
+    main[role="landing"] .hero .logo img {
+      max-width: 130px; }
+  main[role="landing"] .hero .text {
+    display: block;
+    line-height: 2.4em; }
+    main[role="landing"] .hero .text::after {
+      clear: both;
+      content: "";
+      display: table; }
+  main[role="landing"] .hero .title {
+    font-size: 1.7em;
+    font-weight: 700; }
+  main[role="landing"] .hero .subtitle {
+    font-size: 1.2em; }
+main[role="landing"] .row {
+  width: 100%;
+  float: left; }
+  main[role="landing"] .row.shaded {
+    background: #f0eeeb; }
+  main[role="landing"] .row .inner {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3em 0 6em 0; }
+    main[role="landing"] .row .inner::after {
+      clear: both;
+      content: "";
+      display: table; }
+  main[role="landing"] .row .large-section {
+    width: 60%;
+    float: left;
+    min-height: 550px; }
+    main[role="landing"] .row .large-section.contribute {
+      background: url("/images/field.jpg") top left no-repeat;
+      background: url("/images/field.jpg") top left no-repeat;
+      background-size: cover; }
+  main[role="landing"] .row .small-section {
+    width: 40%;
+    float: left;
+    padding: 3em; }
+  main[role="landing"] .row .description {
+    font-size: 1.2em;
+    margin-bottom: 2.25em;
+    max-width: 38em;
+    float: left;
+    clear: both; }
+  main[role="landing"] .row .title {
+    width: 100%;
+    float: left;
+    text-transform: uppercase;
+    color: #999;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 1.5em; }
+  main[role="landing"] .row .learn-more-btn {
+    background-color: #02868f;
+    border-radius: 3px;
+    border: 0;
+    color: white;
+    display: inline-block;
+    font-size: inherit;
+    font-weight: bold;
+    padding: 7px 18px;
+    text-decoration: none;
+    background-clip: padding-box;
+    font-size: 0.9rem;
+    text-transform: uppercase; }
+    main[role="landing"] .row .learn-more-btn:hover:not(:disabled) {
+      background-color: #009fab;
+      cursor: pointer; }
+    main[role="landing"] .row .learn-more-btn:active:not(:disabled), main[role="landing"] .row .learn-more-btn:focus:not(:disabled) {
+      background-color: #046d74;
+      cursor: pointer; }
+    main[role="landing"] .row .learn-more-btn:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
+    main[role="landing"] .row .learn-more-btn.about {
+      background-color: #dFdbd3;
+      border-radius: 3px;
+      border: 0;
+      color: #333333;
+      display: inline-block;
+      font-size: inherit;
+      font-weight: bold;
+      padding: 7px 18px;
+      text-decoration: none;
+      background-clip: padding-box;
+      font-size: 0.9rem; }
+      main[role="landing"] .row .learn-more-btn.about:hover:not(:disabled) {
+        background-color: #ebe7e1;
+        cursor: pointer; }
+      main[role="landing"] .row .learn-more-btn.about:active:not(:disabled), main[role="landing"] .row .learn-more-btn.about:focus:not(:disabled) {
+        background-color: #d2cec6;
+        cursor: pointer; }
+      main[role="landing"] .row .learn-more-btn.about:disabled {
+        cursor: not-allowed;
+        opacity: 0.5; }
+main[role="landing"] .site-section {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  position: relative;
+  cursor: pointer;
+  font-family: "Trocchi", sans-serif;
+  min-height: 375px;
+  padding: 0.75em;
+  color: white;
+  background-size: cover;
+  font-size: 1.7em;
+  text-shadow: 1px 1px 0 #333; }
+  main[role="landing"] .site-section:last-child {
+    margin-right: 0; }
+  main[role="landing"] .site-section:after {
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    content: " ";
+    z-index: 10;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent; }
+  main[role="landing"] .site-section:focus:after, main[role="landing"] .site-section:hover:after {
+    background: rgba(51, 51, 51, 0.5); }
+  main[role="landing"] .site-section.stoves {
+    background: url("/images/cambodia-briquettes.jpg") center no-repeat;
+    background: url("/images/cambodia-briquettes.jpg") center no-repeat; }
+  main[role="landing"] .site-section.fuels {
+    background: url("/images/uganda-briquettes.jpg") center no-repeat;
+    background: url("/images/uganda-briquettes.jpg") center no-repeat; }
+  main[role="landing"] .site-section.test-results {
+    background: url("/images/epa-lab.jpg") right no-repeat;
+    background: url("/images/epa-lab.jpg") right no-repeat; }
+  main[role="landing"] .site-section .text {
+    background: -webkit-linear-gradient(rgba(51, 51, 51, 0.75), transparent) bottom no-repeat;
+    background: linear-gradient(rgba(51, 51, 51, 0.75), transparent) bottom no-repeat;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    padding: 0.75em;
+    z-index: 11; }
+  main[role="landing"] .site-section .options {
+    background: -webkit-linear-gradient(transparent, rgba(51, 51, 51, 0.85)) bottom no-repeat;
+    background: linear-gradient(transparent, rgba(51, 51, 51, 0.85)) bottom no-repeat;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    font-size: 1.3rem;
+    padding: 3rem 1rem 1rem 1rem;
+    z-index: 11;
+    line-height: 2.3rem; }
+  main[role="landing"] .site-section a {
+    color: white; }
+    main[role="landing"] .site-section a:hover {
+      color: #02b5c2; }
+
+.user-grid {
+  width: 100%;
+  float: left;
+  border: 1px solid #dFdbd3;
+  border-radius: 3px; }
+  .user-grid .item {
+    display: block;
+    height: 260px;
+    width: 33.33%;
+    float: left;
+    padding: 2em;
+    background: white;
+    border-right: 1px solid #dFdbd3;
+    border-bottom: 1px solid #dFdbd3;
+    text-align: center; }
+    .user-grid .item img {
+      height: 4.5em; }
+    .user-grid .item .icon {
+      margin-bottom: 1.5em; }
+    .user-grid .item.last-row {
+      border-bottom: none; }
+    .user-grid .item:nth-child(1) {
+      border-top-left-radius: 3px; }
+    .user-grid .item:nth-child(3) {
+      border-top-right-radius: 3px; }
+    .user-grid .item:nth-child(4) {
+      border-bottom-left-radius: 3px; }
+    .user-grid .item:nth-child(6) {
+      border-bottom-right-radius: 3px; }
+    .user-grid .item:nth-child(3n) {
+      border-right: none; }
+  .user-grid .name {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #999;
+    margin-bottom: 1.5em; }
+  .user-grid .caption {
+    margin: 0; }
+
 header.navigation {
   font-family: "Open Sans", "Open Sans";
   background-color: #01575d;
@@ -622,8 +848,9 @@ header.navigation {
 
 .prefooter {
   width: 100%;
+  float: left;
   padding: 2em 1.5em;
-  border-top: 1px solid #478e9b;
+  border-top: 1px solid #376e78;
   background: url("/images/briquette-background-transparent.png"), -webkit-linear-gradient(#274e55, #172e32), center no-repeat #24484e scroll;
   background: url("/images/briquette-background-transparent.png"), linear-gradient(#274e55, #172e32), center no-repeat #24484e scroll;
   background-position: center;
@@ -1233,7 +1460,8 @@ header.navigation {
     text-align: right;
     font-size: 0.9em;
     margin: 0.75em 0; }
-    .content-section .controls i:before {
+    .content-section .controls i::before {
+      text-decoration: none;
       margin-left: 0; }
 
 .content-table-row {

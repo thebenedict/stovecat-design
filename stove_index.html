@@ -1,0 +1,801 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>Stoves | Clean Cooking Catalog</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/jquery.nouislider.min.css">
+    <link rel="stylesheet" href="css/jquery.nouislider.pips.min.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <header class="navigation" role="banner">
+      <div class="navigation-wrapper">
+        <a href="javascript:void(0)" class="logo">
+          <img src="images/squished-logo.png" alt="Global Alliance Logo Image">
+          <div class="site-name">clean cooking catalog</div>
+        </a>
+        <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">menu</a>
+        <nav role="navigation">
+          <ul id="js-navigation-menu" class="navigation-menu show">
+            <li class="nav-link"><a href="javascript:void(0)">stoves</a></li>
+            <li class="nav-link"><a href="javascript:void(0)">fuels</a></li>
+            <li class="nav-link more"><a href="javascript:void(0)">testing</a>
+              <ul class="submenu">
+                  <li><a href="javascript:void(0)">stove test results</a></li>
+                  <li><a href="javascript:void(0)">fuel test results</a></li>
+              </ul>
+            </li>
+            <li class="nav-link more"><a href="javascript:void(0)">resources</a>
+              <ul class="submenu">
+                  <li><a href="javascript:void(0)">about</a></li>
+                  <li><a href="javascript:void(0)">glossary</a></li>
+                  <li><a href="javascript:void(0)">guides</a></li>
+                  <li><a href="javascript:void(0)">standards &amp; testing</a></li>
+              </ul>
+            </li> 
+          </ul>
+        </nav>
+        <div class="navigation-tools">
+          <a href="javascript:void(0)" class="nav-button">contribute</a>
+        </div>
+      </div>
+    </header>
+    <aside role="content-assist">
+      <div class="filter-panel">
+        <div class="filter-group panel-header">
+          <span class="count-value">262</span><span class="count-label"> stoves shown</span>
+          <a href="javascript:void(0)" class="download"><i class="icon-down-circled"></i> Download CSV</a>
+        </div>
+        <div class="filter-group">
+          <div class="label inline">View as</div>
+          <div class="options inline">
+            <div class="button-group">
+              <label>
+                <input type="radio" name="button-group" value="item" checked>
+                <span class="button-group-item"><i class="icon-list"></i> List</span>
+              </label>
+              <label>
+                <input type="radio" name="button-group" value="other-item">
+                <span class="button-group-item"><i class="icon-globe"></i> Map</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="label inline">Keyword search
+            <i class="icon-info">
+            </i>
+          </div>
+          <div class="options inline">
+            <input type="text" name="query">
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="label">Stove type</div>
+          <div class="options checkbox-group">
+            <i class="icon-down-dir js-expand-trigger"></i>
+            <label>
+              <input type="checkbox" class="checkbox" name="types" value="">
+              <span class="string">Charcoal</span>
+              <span class="counter">192</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="types" value="">
+              <span class="string">Chimney</span>
+              <span class="counter">183</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="types" value="">
+              <span class="string">Electric/Induction</span>
+              <span class="counter">168</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="types" value="">
+              <span class="string">Ethanol/Alcohol</span>
+              <span class="counter">160</span>
+            </label>
+            <div class="more-choices">
+              <label>
+                <input type="checkbox" class="checkbox" name="types" value="">
+                <span class="string">Fan/Forced Air</span>
+                <span class="counter">138</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="types" value="">
+                <span class="string" title="Gas/Biogas/Liquid Petroleum Gas (LPG)">Gas/Biogas/Liquid Petroleum Gas (LPG)</span>
+                <span class="counter">109</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="types" value="">
+                <span class="string">Gasifier/TLUD</span>
+                <span class="counter">61</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="types" value="">
+                <span class="string">Griddle/Plancha</span>
+                <span class="counter">60</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="types" value="">
+                <span class="string">Rocket/Side-feed</span>
+                <span class="counter">57</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="types" value="">
+                <span class="string">Solar</span>
+                <span class="counter">55</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="types" value="">
+                <span class="string">Traditional</span>
+                <span class="counter">42</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="filter-group with-pips">
+          <div class="label">IWA tiers of performance</div>
+          <div class="options slider-group">
+            <div class="label inline"><i class="icon-clouds-inv emissions"></i> Emissions</div>
+            <div class="slider inline">
+              <div id="iwa-emissions-slider" class="iwa-slider"></div>
+              <input type="number" id="iwa-emissions-min" class="slider-input" name="iwa_emissions_min">
+              <input type="number" id="iwa-emissions-max" class="slider-input" name="iwa_emissions_max">
+            </div>
+            <div class="label inline"><i class="icon-leaf efficiency"></i> Efficiency</div>
+            <div class="slider inline">
+              <div id="iwa-efficiency-slider" class="iwa-slider"></div>
+              <input type="number" id="iwa-efficiency-min" class="slider-input" name="iwa_efficiency_min">
+              <input type="number" id="iwa-efficiency-max" class="slider-input" name="iwa_efficiency_max">
+            </div>
+            <div class="label inline"><i class="icon-home indoor-emissions"></i> Indoor emissions</div>
+            <div class="slider inline">
+              <div id="iwa-indoor-emissions-slider" class="iwa-slider"></div>
+              <input type="number" id="iwa-indoor-emissions-min" class="slider-input" name="iwa_indoor_emissions_min">
+              <input type="number" id="iwa-indoor-emissions-max" class="slider-input" name="iwa_indoor_emissions_max">
+            </div>
+            <div class="label inline"><i class="icon-lifebuoy safety"></i> Safety</div>
+            <div class="slider inline">
+              <div id="iwa-safety-slider" class="iwa-slider"></div>
+              <input type="number" id="iwa-safety-min" class="slider-input" name="iwa_safety_min">
+              <input type="number" id="iwa-safety-max" class="slider-input" name="iwa_safety_max">
+            </div>
+          </div>
+        </div>
+        <div class="filter-group with-slider-labels">
+          <div class="label">Suggested retail price</div>
+          <div class="options slider">
+            <div id="price-slider"></div>
+            <div id="price-min-label" class="slider-label left"><span class="units">$</span><span class="value"></span></div>
+            <div id="price-max-label" class="slider-label right"><span class="units">$</span><span class="value"></span></div>
+            <input type="number" id="price-min" class="slider-input" name="price_min">
+            <input type="number" id="price-max" class="slider-input" name="price_max">
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="label">Characteristics</div>
+          <div class="options checkbox-group">
+            <i class="icon-down-dir js-expand-trigger"></i>
+            <label>
+              <input type="checkbox" class="checkbox" name="characteristics" value="batch_loaded">
+              <span class="string">Batch loaded</span>
+              <span class="counter">43</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="characteristics" value="biochar_producing">
+              <span class="string">Biochar-producing</span>
+              <span class="counter">17</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="characteristics" value="built_in_place">
+              <span class="string">Built in place</span>
+              <span class="counter">41</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="characteristics" value="ceramic_lined">
+              <span class="string">Ceramic lined</span>
+              <span class="counter">44</span>
+            </label>
+            <div class="more-choices">
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Chimney</span>
+                <span class="counter">47</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Fan</span>
+                <span class="counter">29</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Gasifier (TLUD)</span>
+                <span class="counter">45</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Griddle/plancha</span>
+                <span class="counter">14</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Heating</span>
+                <span class="counter">37</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Household</span>
+                <span class="counter">237</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Induction</span>
+                <span class="counter">2</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Institutional</span>
+                <span class="counter">44</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Multiple colors</span>
+                <span class="counter">12</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Multiple burners</span>
+                <span class="counter">47</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Natural draft/rocket</span>
+                <span class="counter">90</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Non-traditional</span>
+                <span class="counter">240</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Portable</span>
+                <span class="counter">210</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Pot skirt</span>
+                <span class="counter">31</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Pressure</span>
+                <span class="counter">4</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Prototype</span>
+                <span class="counter">12</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Side-feed</span>
+                <span class="counter">53</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Solar: Heat-trap box</span>
+                <span class="counter">3</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Solar: Panel</span>
+                <span class="counter">6</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Solar: Parabolic</span>
+                <span class="counter">3</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Sunken pot</span>
+                <span class="counter">19</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Thermoelectric generator</span>
+                <span class="counter">5</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Traditional</span>
+                <span class="counter">22</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">U-shape</span>
+                <span class="counter">1</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="characteristics" value="">
+                <span class="string">Wick</span>
+                <span class="counter">2</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="label">Fuels</div>
+          <div class="options checkbox-group">
+            <i class="icon-down-dir js-expand-trigger"></i>
+            <label>
+              <input type="checkbox" class="checkbox" name="fuels" value="biogas">
+              <span class="string">Biogas</span>
+              <span class="counter">1</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="fuels" value="biomass">
+              <span class="string">Biomass</span>
+              <span class="counter">140</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="fuels" value="briquettes_pellets">
+              <span class="string">Briquettes/pellets</span>
+              <span class="counter">70</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="fuels" value="charcoal">
+              <span class="string">Charcoal</span>
+              <span class="counter">72</span>
+            </label>
+            <div class="more-choices">
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Coal</span>
+                <span class="counter">12</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Crop residues</span>
+                <span class="counter">57</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Diesel</span>
+                <span class="counter">1</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Dung</span>
+                <span class="counter">29</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Electric</span>
+                <span class="counter">2</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Ethanol/alcohol</span>
+                <span class="counter">13</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Kerosene</span>
+                <span class="counter">0</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Liquid petroleum gas</span>
+                <span class="counter">12</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Methane/natural gas</span>
+                <span class="counter">7</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Plant oil</span>
+                <span class="counter">1</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Propane gas</span>
+                <span class="counter">6</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Solar</span>
+                <span class="counter">11</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="fuels" value="">
+                <span class="string">Wood</span>
+                <span class="counter">142</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="label">Materials</div>
+          <div class="options checkbox-group">
+            <i class="icon-down-dir js-expand-trigger"></i>
+            <label>
+              <input type="checkbox" class="checkbox" name="materials" value="brick">
+              <span class="string">Brick</span>
+              <span class="counter">26</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="materials" value="cement">
+              <span class="string">Cement</span>
+              <span class="counter">47</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="materials" value="ceramic">
+              <span class="string">Ceramic</span>
+              <span class="counter">43</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="materials" value="clay">
+              <span class="string">Clay</span>
+              <span class="counter">44</span>
+            </label>
+            <div class="more-choices">
+              <label>
+                <input type="checkbox" class="checkbox" name="materials" value="metal">
+                <span class="string">Metal</span>
+                <span class="counter">213</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="filter-group last">
+          <div class="label">Geography</div>
+          <div class="options checkbox-group">
+            <i class="icon-down-dir js-expand-trigger"></i>
+            <label>
+              <input type="checkbox" class="checkbox" name="regions" value="africa">
+              <span class="string">Africa</span>
+              <span class="counter">136</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="regions" value="asia">
+              <span class="string">Asia</span>
+              <span class="counter">89</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="regions" value="europe_middle_east">
+              <span class="string">Europe/Middle East</span>
+              <span class="counter">21</span>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="regions" value="lac">
+              <span class="string" title="Latin America &amp; the Caribbean">Latin America &amp; the Caribbean</span>
+              <span class="counter">60</span>
+            </label>
+            <div class="more-choices">
+              <label>
+                <input type="checkbox" class="checkbox" name="regions" value="australia">
+                <span class="string">Australia</span>
+                <span class="counter">20</span>
+              </label>
+              <label>
+                <input type="checkbox" class="checkbox" name="regions" value="north_america">
+                <span class="string">North America</span>
+                <span class="counter">25</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main role="content">
+      <div class="wrapper">
+        <div class="applied-filters">
+          <div class="label">applied filters:</div>
+          <div class="filters">
+            <span class="filter">Batch loaded<i class="icon-cancel"></i></span>
+            <span class="filter">Household<i class="icon-cancel"></i></span>
+            <span class="filter">Price: $35 &ndash; 80<i class="icon-cancel"></i></span>
+            <span class="filter"><i class="icon-leaf efficiency"></i>IWA Efficiency: 2 &ndash; 4<i class="icon-cancel"></i></span>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="grid-item">
+            <div class="title">Agni Star Rice Husk Gas Stove</div>
+            <div class="item-content">
+              <div class="info">
+                <div class="small">Gassifier / TLUD</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+              </div>
+              <div class="photo">          
+                <img src="images/stoves/agni_star_235.png">
+              </div>
+            </div>
+            <div class="iwa">
+              <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+              <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+              <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+              <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+            </div> 
+          </div>
+          <div class="grid-item">
+            <div class="title">Envirofit CH-2300</div>
+            <div class="item-content">
+              <div class="info">
+                <div class="small">Charcoal</div>
+                <div class="small">Envirofit International</div>
+              </div>
+              <div class="photo">          
+                <img src="images/stoves/envirofit_CH2300.jpg">
+              </div>
+            </div>
+            <div class="iwa">
+              <div class="iwa-tier emissions">2 <i class="icon-clouds-inv"></i></div>
+              <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+              <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+              <div class="iwa-tier safety">2 <i class="icon-lifebuoy"></i></div>
+            </div> 
+          </div>
+          <div class="grid-item">
+            <div class="title">Doña Dora 24</div>
+            <div class="item-content">
+              <div class="info">
+                <div class="small">Chimney</div>
+                <div class="small">Doña Dora</div>
+              </div>
+              <div class="photo">          
+                <img src="images/stoves/dona_dora.jpg">
+              </div>
+            </div>
+            <div class="iwa">
+              <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+              <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+              <div class="iwa-tier indoor-emissions">4 <i class="icon-home"></i></div>
+              <div class="iwa-tier safety">2 <i class="icon-lifebuoy"></i></div>
+            </div> 
+          </div>
+          <div class="grid-item">
+            <div class="title">Moto Safi</div>
+            <div class="item-content">
+              <div class="info">
+                <div class="small">Ethanol / Alcohol</div>
+                <div class="small">Consumers' Choice Limited</div>
+              </div>
+              <div class="photo">          
+                <img src="images/stoves/moto_safi.jpg">
+              </div>
+            </div>
+            <div class="iwa">
+              <div class="iwa-tier emissions">4 <i class="icon-clouds-inv"></i></div>
+              <div class="iwa-tier efficiency">3 <i class="icon-leaf"></i></div>
+              <div class="iwa-tier indoor-emissions">3 <i class="icon-home"></i></div>
+              <div class="iwa-tier safety">1 <i class="icon-lifebuoy"></i></div>
+            </div> 
+          </div>
+          <div class="grid-item">
+            <div class="title">Safi E-Cooker</div>
+            <div class="item-content">
+              <div class="info">
+                <div class="small">Ethanol / Alcohol</div>
+                <div class="small">Safi International AS</div>
+              </div>
+              <div class="photo">          
+                <img src="images/stoves/safi_e_cooker.jpg">
+              </div>
+            </div>
+            <div class="iwa">
+              <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+              <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+              <div class="iwa-tier indoor-emissions">3 <i class="icon-home"></i></div>
+              <div class="iwa-tier safety">3 <i class="icon-lifebuoy"></i></div>
+            </div> 
+          </div>
+          <div class="grid-item">
+            <div class="title">Agni Star Rice Husk Gas Stove</div>
+            <div class="item-content">
+              <div class="info">
+                <div class="small">Gassifier / TLUD</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+              </div>
+              <div class="photo">          
+                <img src="images/stoves/agni_star_235.png">
+              </div>
+            </div>
+            <div class="iwa">
+              <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+              <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+              <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+              <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+            </div> 
+          </div>
+          <div class="grid-item">
+            <div class="title">Envirofit CH-2300</div>
+            <div class="item-content">
+              <div class="info">
+                <div class="small">Charcoal</div>
+                <div class="small">Envirofit International</div>
+              </div>
+              <div class="photo">          
+                <img src="images/stoves/envirofit_CH2300.jpg">
+              </div>
+            </div>
+            <div class="iwa">
+              <div class="iwa-tier emissions">2 <i class="icon-clouds-inv"></i></div>
+              <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+              <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+              <div class="iwa-tier safety">2 <i class="icon-lifebuoy"></i></div>
+            </div> 
+          </div>
+          <div class="grid-item">
+            <div class="title">Doña Dora 24</div>
+            <div class="item-content">
+              <div class="info">
+                <div class="small">Chimney</div>
+                <div class="small">Doña Dora</div>
+              </div>
+              <div class="photo">          
+                <img src="images/stoves/dona_dora.jpg">
+              </div>
+            </div>
+            <div class="iwa">
+              <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+              <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+              <div class="iwa-tier indoor-emissions">4 <i class="icon-home"></i></div>
+              <div class="iwa-tier safety">2 <i class="icon-lifebuoy"></i></div>
+            </div> 
+          </div>
+          <div class="grid-item">
+            <div class="title">Moto Safi</div>
+            <div class="item-content">
+              <div class="info">
+                <div class="small">Ethanol / Alcohol</div>
+                <div class="small">Consumers' Choice Limited</div>
+              </div>
+              <div class="photo">          
+                <img src="images/stoves/moto_safi.jpg">
+              </div>
+            </div>
+            <div class="iwa">
+              <div class="iwa-tier emissions">4 <i class="icon-clouds-inv"></i></div>
+              <div class="iwa-tier efficiency">3 <i class="icon-leaf"></i></div>
+              <div class="iwa-tier indoor-emissions">3 <i class="icon-home"></i></div>
+              <div class="iwa-tier safety">1 <i class="icon-lifebuoy"></i></div>
+            </div> 
+          </div>
+          <div class="grid-item">
+            <div class="title">Safi E-Cooker</div>
+            <div class="item-content">
+              <div class="info">
+                <div class="small">Ethanol / Alcohol</div>
+                <div class="small">Safi International AS</div>
+              </div>
+              <div class="photo">          
+                <img src="images/stoves/safi_e_cooker.jpg">
+              </div>
+            </div>
+            <div class="iwa">
+              <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+              <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+              <div class="iwa-tier indoor-emissions">3 <i class="icon-home"></i></div>
+              <div class="iwa-tier safety">3 <i class="icon-lifebuoy"></i></div>
+            </div> 
+          </div>
+          <div class="grid-item">
+            <div class="title">Agni Star Rice Husk Gas Stove</div>
+            <div class="item-content">
+              <div class="info">
+                <div class="small">Gassifier / TLUD</div>
+                <div class="small">Navdurga Metal Industries (NDMI-Bharat)</div>
+              </div>
+              <div class="photo">          
+                <img src="images/stoves/agni_star_235.png">
+              </div>
+            </div>
+            <div class="iwa">
+              <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+              <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+              <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+              <div class="iwa-tier safety">4 <i class="icon-lifebuoy"></i></div>
+            </div> 
+          </div>
+          <div class="grid-item">
+            <div class="title">Envirofit CH-2300</div>
+            <div class="item-content">
+              <div class="info">
+                <div class="small">Charcoal</div>
+                <div class="small">Envirofit International</div>
+              </div>
+              <div class="photo">          
+                <img src="images/stoves/envirofit_CH2300.jpg">
+              </div>
+            </div>
+            <div class="iwa">
+              <div class="iwa-tier emissions">2 <i class="icon-clouds-inv"></i></div>
+              <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+              <div class="iwa-tier indoor-emissions">1 <i class="icon-home"></i></div>
+              <div class="iwa-tier safety">2 <i class="icon-lifebuoy"></i></div>
+            </div> 
+          </div>
+          <div class="grid-item">
+            <div class="title">Doña Dora 24</div>
+            <div class="item-content">
+              <div class="info">
+                <div class="small">Chimney</div>
+                <div class="small">Doña Dora</div>
+              </div>
+              <div class="photo">          
+                <img src="images/stoves/dona_dora.jpg">
+              </div>
+            </div>
+            <div class="iwa">
+              <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+              <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+              <div class="iwa-tier indoor-emissions">4 <i class="icon-home"></i></div>
+              <div class="iwa-tier safety">2 <i class="icon-lifebuoy"></i></div>
+            </div> 
+          </div>
+          <div class="grid-item">
+            <div class="title">Moto Safi</div>
+            <div class="item-content">
+              <div class="info">
+                <div class="small">Ethanol / Alcohol</div>
+                <div class="small">Consumers' Choice Limited</div>
+              </div>
+              <div class="photo">          
+                <img src="images/stoves/moto_safi.jpg">
+              </div>
+            </div>
+            <div class="iwa">
+              <div class="iwa-tier emissions">4 <i class="icon-clouds-inv"></i></div>
+              <div class="iwa-tier efficiency">3 <i class="icon-leaf"></i></div>
+              <div class="iwa-tier indoor-emissions">3 <i class="icon-home"></i></div>
+              <div class="iwa-tier safety">1 <i class="icon-lifebuoy"></i></div>
+            </div> 
+          </div>
+          <div class="grid-item">
+            <div class="title">Safi E-Cooker</div>
+            <div class="item-content">
+              <div class="info">
+                <div class="small">Ethanol / Alcohol</div>
+                <div class="small">Safi International AS</div>
+              </div>
+              <div class="photo">          
+                <img src="images/stoves/safi_e_cooker.jpg">
+              </div>
+            </div>
+            <div class="iwa">
+              <div class="iwa-tier emissions">3 <i class="icon-clouds-inv"></i></div>
+              <div class="iwa-tier efficiency">2 <i class="icon-leaf"></i></div>
+              <div class="iwa-tier indoor-emissions">3 <i class="icon-home"></i></div>
+              <div class="iwa-tier safety">3 <i class="icon-lifebuoy"></i></div>
+            </div> 
+          </div>
+        </div>
+      </div>
+      <footer class="footer" role="contentinfo">
+        <ul>
+          <li><a href="javascript:void(0)">stoves</a></li>
+          <li><a href="javascript:void(0)">fuels</a></li>
+          <li><a href="javascript:void(0)">testing</a></li>
+          <li><a href="javascript:void(0)">resources</a></li>
+          <li><a href="javascript:void(0)">contact us</a></li>
+        </ul>
+        <div class="footer-logo">
+          <img src="images/footer-unflogo.png" alt="UNF Logo">
+        </div>
+      </footer>
+    </main>
+  </body>
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/jquery.nouislider.all.min.js"></script>
+  <script src="js/top-nav.js"></script>
+  <script src="js/filters.js"></script>
+</html>

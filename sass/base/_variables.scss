@@ -39,14 +39,17 @@ $iwa-efficiency-color: lighten($alliance-green, 15);
 $iwa-indoor-emissions-color: $alliance-yellow;
 $iwa-safety-color: $alliance-pink;
 
-// Font Colors
+// Font colors
 $base-background-color: #fff;
 $base-font-color: $dark-gray;
 $action-color: $medium-gray;
 
-// Accent Colors
+// Accent colors
 $base-accent-color: $alliance-tan;
 $strong-accent-color: $alliance-orange;
+
+// Background colors
+$light-background-color: lighten($alliance-tan, 8%);
 
 // Border
 $base-border-color: $light-gray;

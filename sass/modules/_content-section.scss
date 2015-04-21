@@ -26,7 +26,8 @@
     font-size: 0.9em;
     margin: $small-spacing 0;
 
-    i:before {
+    i::before {
+      text-decoration: none;
       margin-left: 0;
     }
   }

@@ -1,0 +1,193 @@
+main[role="landing"] {
+  .content {
+    @include fill-parent;
+    float: left;
+  }
+
+  .hero {
+    background: $alliance-green;
+    color: white;
+    padding: 3em 0;
+    text-transform: uppercase;
+    
+    .inner { @include outer-container; }
+
+    .logo {
+      @include row;
+      margin-bottom:2em;
+
+      img { max-width: 130px; }
+    }
+
+    .text {
+      @include row;
+      line-height: 2.4em;
+    }
+
+    .title {
+      font-size: 1.7em;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 1.2em;
+    }
+
+  }
+
+  .row {
+    @include fill-parent;
+    float: left;
+
+    &.shaded { background: lighten($alliance-tan, 8%); }
+    .inner {
+      @include outer-container;
+      padding: ($base-spacing * 2) 0 ($base-spacing * 4) 0;
+    }
+
+    .large-section {
+      width: 60%;
+      float: left;
+      min-height: 550px;
+
+      &.contribute { 
+        @include background(url("/images/field.jpg") top left no-repeat); 
+        background-size: cover;
+      }
+    }
+    
+
+    .small-section {
+      width: 40%;
+      float: left;
+      padding: 3em;
+    }
+
+    .description {
+      font-size: 1.2em;
+      margin-bottom: $base-spacing * 1.5;
+      max-width: 38em;
+      float:left;
+      clear: both;
+    }
+
+    .title {
+      @include fill-parent;
+      float: left;
+      text-transform: uppercase;
+      color: $medium-gray;
+      font-weight: 700;
+      font-size: 1.2em;
+      margin-bottom: $base-spacing;
+    }
+
+    .learn-more-btn {
+      @include button(flat, lighten($alliance-green, 10%));
+      font-size: 0.9rem;
+      text-transform: uppercase;
+
+      &.about { 
+        @include button(flat, $base-accent-color);
+        font-size: 0.9rem;
+      }
+
+    }
+
+  }
+
+  .site-section {
+    @include span-columns(4);
+    @include overlay-on-hover(rgba($dark-gray, 0.5));
+    cursor: pointer;
+    font-family: $subheading-font-family;
+    min-height: 375px;
+    padding: $small-spacing;
+    color: white;
+    background-size: cover;
+    font-size: 1.7em;
+    text-shadow: 1px 1px 0 $dark-gray;
+
+    &.stoves { @include background(url("/images/cambodia-briquettes.jpg") center no-repeat); }
+    &.fuels { @include background(url("/images/uganda-briquettes.jpg") center no-repeat); }
+    &.test-results { @include background(url("/images/epa-lab.jpg") right no-repeat); }
+
+    .text {
+      @include background(linear-gradient(rgba($dark-gray, 0.75), transparent) bottom no-repeat);
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      text-align: right;
+      padding: $small-spacing;
+      z-index: 11;
+    }
+
+    .options {
+      @include background(linear-gradient(transparent, rgba($dark-gray, 0.85)) bottom no-repeat);
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      text-align: right;
+      font-size: 1.3rem;
+      padding: 3rem 1rem 1rem 1rem;
+      z-index: 11;
+      line-height: 2.3rem;
+    }
+
+    a { 
+      color: white;
+
+      &:hover {
+        color: lighten($alliance-green, 20%);
+      }
+    }
+  }
+}
+
+.user-grid {
+  @include fill-parent;
+  float: left;
+  border: 1px solid $base-accent-color;
+  border-radius: 3px;
+
+  .item {
+    display: block;
+    height: 260px;
+    width: 33.33%;
+    float: left;
+    padding: 2em;
+    background: white;
+    border-right: 1px solid $base-accent-color;
+    border-bottom: 1px solid $base-accent-color;
+    text-align: center;
+
+    img { height: 4.5em;}
+
+    .icon { margin-bottom: $base-spacing; }
+
+    &.last-row {
+      border-bottom: none;
+    }
+
+    &:nth-child(1) { border-top-left-radius: 3px; }
+    &:nth-child(3) { border-top-right-radius: 3px; }
+    &:nth-child(4) { border-bottom-left-radius: 3px; }
+    &:nth-child(6) { border-bottom-right-radius: 3px; }
+
+    &:nth-child(3n) {
+      border-right: none;
+    }
+  }
+
+  .name {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $medium-gray;
+    margin-bottom: $base-spacing;
+  }
+
+  .caption { margin: 0; }
+
+
+}
