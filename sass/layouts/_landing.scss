@@ -51,11 +51,10 @@ main[role="landing"] {
       min-height: 550px;
 
       &.contribute { 
-        @include background(url("/images/field.jpg") top left no-repeat); 
+        @include background(url("../images/field.jpg") top left no-repeat); 
         background-size: cover;
       }
     }
-    
 
     .small-section {
       width: 40%;

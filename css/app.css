@@ -412,8 +412,8 @@ main[role="landing"] .row {
     float: left;
     min-height: 550px; }
     main[role="landing"] .row .large-section.contribute {
-      background: url("/images/field.jpg") top left no-repeat;
-      background: url("/images/field.jpg") top left no-repeat;
+      background: url("../images/field.jpg") top left no-repeat;
+      background: url("../images/field.jpg") top left no-repeat;
       background-size: cover; }
   main[role="landing"] .row .small-section {
     width: 40%;
