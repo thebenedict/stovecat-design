@@ -2,13 +2,12 @@ aside[role="content-assist"] {
   @include media ($medium-screen-up) {
     width: 30%;
     display: block !important;
-    top: $navigation-height + 1px;
   }
 
   display: none;
   background: white;
   position: fixed;
-  top: $navigation-height * 2;
+  top: $navigation-height + 1px;
   left: 0;
   bottom: 0;
   overflow-y: scroll;
@@ -18,7 +17,6 @@ aside[role="content-assist"] {
 main[role="content"] {
   @include media ($medium-screen-up) {
     width: 70%;
-    top: $navigation-height + 1;
     display: block !important;
   }
 
@@ -27,7 +25,7 @@ main[role="content"] {
   position: fixed;
   right: 0;
   bottom: 0;
-  top: $navigation-height * 2;
+  top: $navigation-height + 1;
   overflow-y: scroll;
   webkit-overflow-scrolling: touch;
 
