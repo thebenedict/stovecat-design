@@ -32,7 +32,10 @@ header.navigation {
     float: left;
     max-height: $navigation-height;
     padding-left: $navigation-padding;
-    padding-right: $navigation-padding * 2;
+    padding-right: $navigation-padding / 2;
+    @include media($horizontal-bar-mode) {
+      padding-right: $navigation-padding * 2;
+    }
 
     img {
       max-height: $navigation-height;
