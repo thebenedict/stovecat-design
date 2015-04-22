@@ -26,13 +26,10 @@
     @include media ($xlarge-screen) {
       @include span-columns(8 of 12);
     }
+    @Include span-columns(10 of 12);
     @include fill-parent;
     float: left;
     font-size: 0.9em;
-  }
-
-  .controls {
-    @include span-columns(2 of 12);
   }
 
   .filter {

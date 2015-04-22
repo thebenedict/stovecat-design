@@ -1378,6 +1378,7 @@ header.navigation {
         .applied-filters .label:last-child {
           margin-right: 0; } }
   .applied-filters .filters {
+    @Include span-columns(10 of 12);
     width: 100%;
     float: left;
     font-size: 0.9em; }
@@ -1389,13 +1390,6 @@ header.navigation {
         width: 65.88078%; }
         .applied-filters .filters:last-child {
           margin-right: 0; } }
-  .applied-filters .controls {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 14.70196%; }
-    .applied-filters .controls:last-child {
-      margin-right: 0; }
   .applied-filters .filter {
     margin-right: 0.5em;
     margin-bottom: 0.5em;
