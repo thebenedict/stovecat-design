@@ -65,8 +65,8 @@ main[role="content"] {
   }
   @include fill-parent;
   position: fixed;
-  bottom: 1.25rem;
-  padding: 1rem 1.5rem;
+  bottom: 1rem;
+  padding: 0 1.5rem;
   text-align: center;
   -webkit-transform: translateZ(0);
 }

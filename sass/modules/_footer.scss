@@ -5,14 +5,14 @@
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;
-  padding: 0.5 1.5rem 3rem 1.5rem;
+  padding: 1em 1.5rem 3rem 1.5rem;
   width: 100%;
   display: inline-block;
   text-transform: uppercase;
   font-family: $heading-font-family;
   font-size: 0.8em;
   font-weight: 700;
-  height: 24em;
+  height: 23em;
   @include media($large-screen-up) {
     height: 4.2em;
   }

@@ -345,8 +345,8 @@ main[role="content"] {
 .pane-controls {
   width: 100%;
   position: fixed;
-  bottom: 1.25rem;
-  padding: 1rem 1.5rem;
+  bottom: 1rem;
+  padding: 0 1.5rem;
   text-align: center;
   -webkit-transform: translateZ(0); }
   @media screen and (min-width: 60.0625em) {
@@ -867,14 +867,14 @@ header.navigation {
 
 .footer {
   background: #172e32;
-  padding: 0.5 1.5rem 3rem 1.5rem;
+  padding: 1em 1.5rem 3rem 1.5rem;
   width: 100%;
   display: inline-block;
   text-transform: uppercase;
   font-family: "novecento_sans_widemedium";
   font-size: 0.8em;
   font-weight: 700;
-  height: 24em; }
+  height: 23em; }
   @media screen and (min-width: 60.0625em) {
     .footer {
       height: 4.2em; } }
