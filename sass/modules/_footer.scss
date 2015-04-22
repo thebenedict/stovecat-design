@@ -1,21 +1,19 @@
 .footer {
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
   $footer-background: $alliance-dark-blue;
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;
-  padding: 0 1.5rem;
+  padding: 0.5 1.5rem 3rem 1.5rem;
   width: 100%;
   display: inline-block;
   text-transform: uppercase;
   font-family: $heading-font-family;
   font-size: 0.8em;
   font-weight: 700;
-  height: 17em;
-  @include media($large-screen) {
+  height: 24em;
+  @include media($large-screen-up) {
     height: 4.2em;
   }
 
@@ -23,7 +21,7 @@
     margin-left: 1em;
     padding: 0.8em 0;
 
-    @include media($large-screen) {
+    @include media($large-screen-up) {
       float: right;
       margin-bottom: 0;
     }
@@ -35,7 +33,7 @@
     margin: 0 0 1em 0;
     padding: 0;
       
-    @include media($large-screen) {
+    @include media($large-screen-up) {
         float: left;
         line-height: 4em;
         margin-bottom: 0;
@@ -46,7 +44,7 @@
     list-style: none;
     padding-right: 1em;
 
-    @include media($large-screen) {
+    @include media($large-screen-up) {
       display: inline;
       text-align: left;
     }
@@ -55,7 +53,7 @@
   li a {
     color: $footer-link-color;
     text-decoration: none;
-    @include media($large-screen) {
+    @include media($large-screen-up) {
         line-height: 4em;
     }
     &:focus,

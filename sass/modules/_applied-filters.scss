@@ -8,7 +8,11 @@
   border-bottom: 1px solid $base-accent-color;
 
   .label { 
-    @include span-columns(2 of 12);
+    @include media ($xlarge-screen) {
+      @include span-columns(2 of 12);
+    }
+    @include fill-parent;
+    float: left;
     white-space: nowrap;
     font-size: 0.85em;
     font-weight: 700;
@@ -19,7 +23,11 @@
   }
 
   .filters {
-    @include span-columns(8 of 12);
+    @include media ($xlarge-screen) {
+      @include span-columns(8 of 12);
+    }
+    @include fill-parent;
+    float: left;
     font-size: 0.9em;
   }
 

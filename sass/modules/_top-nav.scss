@@ -1,15 +1,4 @@
 header.navigation {
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
-  $dark-gray: #333 !default;
-  $large-screen: em(860) !default;
-  
-  a {
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $navigation-padding: 1.5em;
   $navigation-background: $alliance-green;
   $navigation-color: white;
@@ -22,7 +11,7 @@ header.navigation {
   $navigation-active-link-color: transparentize(white, 0.5);
   $navigation-submenu-padding: 1em;
   $navigation-submenu-width: 14em;
-  $horizontal-bar-mode: $large-screen;
+  $horizontal-bar-mode: $medium-screen-up;
 
   font-family: $heading-font-family;
   background-color: $navigation-background;
@@ -30,6 +19,7 @@ header.navigation {
   min-height: $navigation-height;
   width: 100%;
   z-index: 999;
+  position: relative;
 
   .navigation-wrapper {
     @include clearfix;
@@ -51,12 +41,14 @@ header.navigation {
     }
 
     .site-name {
+      @include media($horizontal-bar-mode) {
         font-size: $title-font-size;
-        display: inline-block;
-        line-height: $navigation-height;
-        z-index: 9999999;
-        color: white;
-
+      }
+      font-size: $title-font-size * 0.9;
+      display: inline-block;
+      line-height: $navigation-height;
+      z-index: 9999999;
+      color: white;
     }
   }
 
@@ -71,10 +63,7 @@ header.navigation {
     margin: 0;
     padding-right: 1em;
     text-transform: uppercase;
-
-    @include media ($horizontal-bar-mode) {
-      display: none;
-    }
+    font-size: 0.9em; 
 
     &:focus,
     &:hover {
@@ -161,7 +150,7 @@ header.navigation {
   li.more.nav-link {
     padding-right: 0;
 
-    @include media($large-screen) {
+    @include media($horizontal-bar-mode) {
       padding-right: $navigation-submenu-padding;
     }
 
@@ -196,7 +185,7 @@ header.navigation {
       padding-right: 1.6em;
       position: relative;
 
-      @include media($large-screen) {
+      @include media($horizontal-bar-mode) {
         margin-right: $navigation-submenu-padding;
       }
 
@@ -287,7 +276,7 @@ header.navigation {
       padding-right: $navigation-padding * 2;
     }
 
-    @include media($large-screen) {
+    @include media($horizontal-bar-mode) {
       background: transparent;
       clear: none;
       float: right;

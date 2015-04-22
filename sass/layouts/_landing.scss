@@ -5,7 +5,7 @@ main[role="landing"] {
   }
 
   .hero {
-    @include background(linear-gradient(lighten($alliance-green, 4%), $alliance-green), bottom no-repeat);
+    @include background(linear-gradient(lighten($alliance-green, 4%), lighten($alliance-green, 2%)), bottom no-repeat);
     color: white;
     padding: 3em 0;
     text-transform: uppercase;
@@ -14,9 +14,9 @@ main[role="landing"] {
 
     .logo {
       @include row;
-      margin-bottom:2em;
+      margin-bottom: 1em;
 
-      img { max-width: 130px; }
+      img { max-width: 120px; }
     }
 
     .text {
@@ -99,7 +99,7 @@ main[role="landing"] {
     @include overlay-on-hover(rgba($dark-gray, 0.5));
     cursor: pointer;
     font-family: $subheading-font-family;
-    min-height: 375px;
+    min-height: 365px;
     padding: $small-spacing;
     color: white;
     background-size: cover;
@@ -108,7 +108,7 @@ main[role="landing"] {
 
     &.stoves { @include background(url("../images/cambodia-briquettes.jpg") center no-repeat); }
     &.fuels { @include background(url("../images/uganda-briquettes.jpg") center no-repeat); }
-    &.test-results { @include background(url("../images/epa-lab.jpg") right no-repeat); }
+    &.test-results { @include background(url("../images/epa-lab.jpg") 55% no-repeat); }
 
     .text {
       @include background(linear-gradient(rgba($dark-gray, 0.75), transparent) bottom no-repeat);

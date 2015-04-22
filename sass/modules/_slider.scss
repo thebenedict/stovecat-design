@@ -1,134 +1,139 @@
 .slider {
-	padding: 0 0.5em;
-	margin: 1em 0;
+  padding: 0 0.5em;
+  margin: 1em 0;
 
-	&.inline { 
-		@include span-columns(6 of 12);
-		@include omega;
-	}
+  @include media($xlarge-screen) {
+    &.inline { 
+      @include span-columns(6 of 12);
+      @include omega;
+    }
+  }
 
-	//overrides of nouislider.css base styles
-	// placement overrides
-	.noUi-horizontal {
-		height: 10px;
-	}
-	.noUi-horizontal .noUi-handle {
-		width: 18px;
-		height: 18px;
-		left: -9px;
-		top: -8px;
-	}
+  @include fill-parent;
+  float: left;
 
-	// style overrides
-	.noUi-background {
-		background: darken($base-accent-color, 5);
-		box-shadow: none;
-	}
-	.noUi-origin {
-		border-radius: 0;
-	}
-	.noUi-target {
-		border-radius: 0;
-		border: 4px solid lighten($light-gray, 10);
-		box-shadow: none;
-	}
-	.noUi-target.noUi-connect {
-		box-shadow: none;
-	}
+  //overrides of nouislider.css base styles
+  // placement overrides
+  .noUi-horizontal {
+    height: 10px;
+  }
+  .noUi-horizontal .noUi-handle {
+    width: 18px;
+    height: 18px;
+    left: -9px;
+    top: -8px;
+  }
 
-	// hack to style active portion of slider
-	.noUi-origin {
-		background: darken($base-accent-color, 5);
+  // style overrides
+  .noUi-background {
+    background: darken($base-accent-color, 5);
+    box-shadow: none;
+  }
+  .noUi-origin {
+    border-radius: 0;
+  }
+  .noUi-target {
+    border-radius: 0;
+    border: 4px solid lighten($light-gray, 10);
+    box-shadow: none;
+  }
+  .noUi-target.noUi-connect {
+    box-shadow: none;
+  }
 
-		&:first-child { background: $strong-accent-color; }
-	}
+  // hack to style active portion of slider
+  .noUi-origin {
+    background: darken($base-accent-color, 5);
 
-	#iwa-emissions-slider {
-		.noUi-origin {
-			&:first-child { background: $iwa-emissions-color; }
-		}
-	}
+    &:first-child { background: $strong-accent-color; }
+  }
 
-	#iwa-efficiency-slider {
-		.noUi-origin {
-			&:first-child { background: $iwa-efficiency-color }
-		}
-	}
+  #iwa-emissions-slider {
+    .noUi-origin {
+      &:first-child { background: $iwa-emissions-color; }
+    }
+  }
 
-	#iwa-indoor-emissions-slider {
-		.noUi-origin {
-			&:first-child { background: $iwa-indoor-emissions-color; }
-		}
-	}
+  #iwa-efficiency-slider {
+    .noUi-origin {
+      &:first-child { background: $iwa-efficiency-color }
+    }
+  }
 
-	#iwa-safety-slider {
-		.noUi-origin {
-			&:first-child { background: $iwa-safety-color; }
-		}
-	}
-	// handles and handle stripes overrides
-	.noUi-handle {
-		border: 1px solid darken($light-gray, 5);
-		border-radius: 2px;
-		background: #FFF;
-		cursor: pointer;
-		box-shadow: inset 0 0 1px lighten($light-gray, 10),
-					inset 0 1px 7px lighten($light-gray, 5),
-					0 3px 6px -3px #BBB;
-	}
-	.noUi-active {
-		box-shadow: inset 0 0 1px lighten($light-gray, 5),
-					inset 0 1px 7px $light-gray,
-					0 3px 6px -3px #BBB;
-	}
+  #iwa-indoor-emissions-slider {
+    .noUi-origin {
+      &:first-child { background: $iwa-indoor-emissions-color; }
+    }
+  }
 
-	.noUi-handle:before,
-	.noUi-handle:after {
-		content: "";
-		display: block;
-		position: absolute;
-		height: 8px;
-		width: 1px;
-		background: darken($light-gray, 5);
-		left: 6px;
-		top: 4px;
-	}
-	.noUi-handle:after {
-		left: 9px;
-	}
+  #iwa-safety-slider {
+    .noUi-origin {
+      &:first-child { background: $iwa-safety-color; }
+    }
+  }
+  // handles and handle stripes overrides
+  .noUi-handle {
+    border: 1px solid darken($light-gray, 5);
+    border-radius: 2px;
+    background: #FFF;
+    cursor: pointer;
+    box-shadow: inset 0 0 1px lighten($light-gray, 10),
+          inset 0 1px 7px lighten($light-gray, 5),
+          0 3px 6px -3px #BBB;
+  }
+  .noUi-active {
+    box-shadow: inset 0 0 1px lighten($light-gray, 5),
+          inset 0 1px 7px $light-gray,
+          0 3px 6px -3px #BBB;
+  }
 
-	// pips overrides
-	.noUi-pips-horizontal {
-	  padding: 20px 0;
-	  height: 50px;
-	  top: 100%;
-	  left: 0;
-	  width: 100%;
-	}
+  .noUi-handle:before,
+  .noUi-handle:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 8px;
+    width: 1px;
+    background: darken($light-gray, 5);
+    left: 6px;
+    top: 4px;
+  }
+  .noUi-handle:after {
+    left: 9px;
+  }
 
-	.noUi-marker-normal {
-	  margin-left: -1px;
-	  width: 2px;
-	  height: 2px;
-	}
+  // pips overrides
+  .noUi-pips-horizontal {
+    padding: 20px 0;
+    height: 50px;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
 
-	.noUi-marker-horizontal.noUi-marker-large { height: 10px; }
-	.noUi-value-horizontal { padding-top: 15px; }
+  .noUi-marker-normal {
+    margin-left: -1px;
+    width: 2px;
+    height: 2px;
+  }
+
+  .noUi-marker-horizontal.noUi-marker-large { height: 10px; }
+  .noUi-value-horizontal { padding-top: 15px; }
 
 }
 
 
 .slider-label {
-	width: auto;
-	position: relative;
-	top: 15px;
+  width: auto;
+  position: relative;
+  top: 15px;
 
-	&.left { 
-		float: left;
-		left: -0.4em;
-	}
-	&.right {
-		float: right;
-		right: -0.3em;
-	}
+  &.left { 
+    float: left;
+    left: -0.4em;
+  }
+  &.right {
+    float: right;
+    right: -0.3em;
+  }
 }

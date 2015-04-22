@@ -80,3 +80,11 @@ $('#iwa-safety-slider').noUiSlider_pips({
 	mode: 'steps',
 	filter: smallTicks,
 });
+
+//pane-toggle
+//*************
+
+$(".pane-toggle").click(function() {
+  $("main[role='content']").toggle();
+  $("aside[role='content-assist']").toggle(); 
+})

@@ -1,22 +1,35 @@
 aside[role="content-assist"] {
+  @include media ($medium-screen-up) {
+    width: 30%;
+    display: block !important;
+    top: $navigation-height + 1px;
+  }
+
+  display: none;
   background: white;
   position: fixed;
-  top: $navigation-height + 1px;
+  top: $navigation-height * 2;
   left: 0;
   bottom: 0;
   overflow-y: scroll;
   webkit-overflow-scrolling: touch;
-  width: 30%;
 }
 
 main[role="content"] {
+  @include media ($medium-screen-up) {
+    width: 70%;
+    top: $navigation-height + 1;
+    display: block !important;
+  }
+
+  width: 100%;
   border-left: 1px solid $base-accent-color;
   position: fixed;
   right: 0;
   bottom: 0;
+  top: $navigation-height * 2;
   overflow-y: scroll;
   webkit-overflow-scrolling: touch;
-  width: 70%;
 
   &.show { 
     background: white;
@@ -46,4 +59,22 @@ main[role="content"] {
   @include fill-parent;
   float: left;
   padding: 1.5em;
+}
+
+.pane-controls {
+  @include media($medium-screen-up) {
+    display: none;
+  }
+  @include fill-parent;
+  position: fixed;
+  bottom: 1.25rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  -webkit-transform: translateZ(0);
+}
+
+.pane-toggle {
+  @include button(flat, $strong-accent-color);
+  display: block;
+  text-transform: uppercase;
 }

@@ -1,4 +1,5 @@
 $filter-group-padding: 1em;
+$inline-filter-mode: $xlarge-screen;
 
 .filter-panel {
   @include outer-container;
@@ -6,21 +7,38 @@ $filter-group-padding: 1em;
   padding: 0.5em 1.5em;
 
   .panel-header {
-    @include span-columns(12);
+    @include fill-parent;
+    float: left;
     position: relative;
     line-height: 1.6em;
+    padding: ($filter-group-padding - 0.25em) 0;
+
+    .count {
+      @include fill-parent;
+      float: left;
+      @include media ($inline-filter-mode) {
+        @include span-columns(6);
+        margin-bottom: 0;
+      }
+      padding: 0.25rem 0;
+    }
 
     .count-value { font-size: $base-font-size * 1.6; }
     .count-label { 
       color: $medium-gray;
     }
+
     .download {
-      position: absolute;
-      right: 0.75em;
-      bottom: $filter-group-padding;
-      text-align: right;
+      @include fill-parent;
+      float: left;
+      @include media ($inline-filter-mode) {
+        @include span-columns(6);
+        @include omega;
+        text-align: right;
+      }      
       font-size: $base-font-size * 0.9;
-      line-height: 2em;
+      line-height: 2.3em;
+      padding: 0.25rem 0;
     }
   }
 }
@@ -34,17 +52,19 @@ $filter-group-padding: 1em;
   &.last { border-bottom: none; }
 
   .label {
-    &.inline { 
-      @include span-columns(6 of 12);
-      margin: 0;
-    }
     @include fill-parent;
+    float:left;
     padding: 0.5em 0;
   }
 
   .options {
-    &.inline { @include span-columns(6 of 12) }
     @include fill-parent;
+    float: left;
+  }
+
+  @include media ($inline-filter-mode) {
+    .options.inline,
+    .label.inline { @include span-columns(6 of 12) } 
   }
 
   .icon-info { color: $action-color; }
@@ -57,11 +77,20 @@ $filter-group-padding: 1em;
 
 
 .checkbox-group {
+  @include fill-parent;
+  float: left;
   position: relative;
 
   label {
-    @include span-columns(6 of 12);
-    font-family: $heading-font-family;
+    @include media ($inline-filter-mode) {
+      width: 50%;
+      float: left;
+      padding-right: 1.2em;
+    }
+
+    @include fill-parent;
+    float: left;
+    font-family: $base-font-family;
     padding: 0.6em 0;
     font-weight: 400;
     margin: 0;
@@ -79,9 +108,13 @@ $filter-group-padding: 1em;
   }
 
   i {
+    @include media($inline-filter-mode) {
+      top: 1.75em;
+    }
+
     position: absolute;
     right: 0;
-    top: 1.75em;
+    top: 4.75em;
     font-size: 1.6em;
     color: $action-color;
 

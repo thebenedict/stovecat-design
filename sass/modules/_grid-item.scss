@@ -1,17 +1,21 @@
 .grid-item {
   @include transition (all 0.15s ease-in-out);
 
-  // @include media ($large-screen) {
-  //   @include span-columns(6);
-  //   @include omega(2n);
-  // }
-
   @include media ($xlarge-screen) {
     @include span-columns(4);
     @include omega(3n);
   }
 
-  max-width: 34em;
+  @include media ($up-to-xlarge) {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+
+  @include media($small-screen) {
+    @include fill-parent;
+    float: left;
+  }
+
   margin-bottom: 1.5em;
   background: white;
   cursor: pointer;

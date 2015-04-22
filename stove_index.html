@@ -50,8 +50,12 @@
     <aside role="content-assist">
       <div class="filter-panel">
         <div class="filter-group panel-header">
-          <span class="count-value">262</span><span class="count-label"> stoves shown</span>
-          <a href="javascript:void(0)" class="download"><i class="icon-down-circled"></i> Download CSV</a>
+          <div class="count">
+            <span class="count-value">262</span><span class="count-label"> stoves shown</span>
+          </div>
+          <div class="download">
+            <a href="javascript:void(0)"><i class="icon-down-circled"></i> Download CSV</a>
+          </div>
         </div>
         <div class="filter-group">
           <div class="label inline">View as</div>
@@ -495,8 +499,11 @@
               </label>
             </div>
           </div>
-        </div>
+        </div>    
       </div>
+      <div class="pane-controls">
+        <div class="pane-toggle">show stoves</div>
+      </div>  
     </aside>
     <main role="content">
       <div class="wrapper">
@@ -780,6 +787,9 @@
               <div class="iwa-tier safety">3 <i class="icon-lifebuoy"></i></div>
             </div> 
           </div>
+        </div>
+        <div class="pane-controls">
+          <div class="pane-toggle">show filters</div>
         </div>
       </div>
       <footer class="footer" role="contentinfo">
