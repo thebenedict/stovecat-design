@@ -6,8 +6,14 @@ main[role="landing"] {
 
   .hero {
     @include background(linear-gradient(lighten($alliance-green, 4%), lighten($alliance-green, 2%)), bottom no-repeat);
+    @include media($xlarge-screen) {
+      padding: ($base-spacing * 2) 0;
+    }
+    @include media($medium-screen-up) {
+      font-size: 100%;
+    }
+    padding: ($base-spacing * 2) $base-spacing;
     color: white;
-    padding: 3em 0;
     text-transform: uppercase;
     
     .inner { @include outer-container; }
@@ -27,11 +33,14 @@ main[role="landing"] {
     .title {
       font-size: 1.7em;
       font-weight: 700;
+      margin-bottom: 0.25em;
     }
 
     .subtitle {
       font-size: 1.2em;
     }
+
+    font-size: 85%;
 
   }
 
@@ -42,14 +51,25 @@ main[role="landing"] {
     &.shaded { background: lighten($alliance-tan, 8%); }
     .inner {
       @include outer-container;
-      padding: ($base-spacing * 2) 0 ($base-spacing * 4) 0;
+      @include media($xlarge-screen) {
+        padding: ($base-spacing * 2) 0 ($base-spacing * 4) 0;
+      }
+      @include media($small-screen) {
+        padding-bottom: $base-spacing * 2;
+      }
+      padding: ($base-spacing * 2) $base-spacing ($base-spacing * 4) $base-spacing;
     }
 
     .large-section {
-      width: 60%;
+      @include media($large-screen-up) {
+        width: 60%;
+        min-height: 550px;
+      }
+      @include media($medium-screen) { min-height: 400px; }
+      @include media($small-screen) { min-height: 250px; }
+      @include fill-parent;
       float: left;
-      min-height: 550px;
-
+      min-height: 300px;
       &.contribute { 
         @include background(url("../images/field.jpg") top left no-repeat); 
         background-size: cover;
@@ -57,9 +77,14 @@ main[role="landing"] {
     }
 
     .small-section {
-      width: 40%;
+      @include media($large-screen-up) {
+        width: 40%;        
+        padding: 3em;
+
+      }
+      @include fill-parent;
       float: left;
-      padding: 3em;
+      padding: 2em $base-spacing 1em $base-spacing;
     }
 
     .description {
@@ -67,7 +92,9 @@ main[role="landing"] {
       margin-bottom: $base-spacing * 1.5;
       max-width: 38em;
       float:left;
-      clear: both;
+      clear: right;
+
+      &.site-description { margin-bottom: $small-spacing; }
     }
 
     .title {
@@ -76,8 +103,10 @@ main[role="landing"] {
       text-transform: uppercase;
       color: $medium-gray;
       font-weight: 700;
-      font-size: 1.2em;
+      font-size: 1.2rem;
       margin-bottom: $base-spacing;
+
+      &.site-title  { margin-bottom: $small-spacing; }
     }
 
     .learn-more-btn {
@@ -94,17 +123,47 @@ main[role="landing"] {
 
   }
 
+  .site-sections {
+    @include media($medium-screen) {
+      @include span-columns(7 of 12);
+    }
+    @include fill-parent;
+    float: let;
+  }
+
+  .site-description {
+    @include media($medium-screen) {
+      @include span-columns(5 of 12);
+    }
+    @include fill-parent;
+    float: let;    
+  }
+
   .site-section {
-    @include span-columns(4);
-    @include overlay-on-hover(rgba($dark-gray, 0.5));
+    @include media($large-screen-up) {
+      @include span-columns(4 of 12);
+      min-height: 365px;
+      margin-bottom: 0;
+    }
+
+    @include media($medium-screen) {
+      font-size: 1.4rem;
+    }
+
+    @include fill-parent;
+    float: left;
+
+    @include overlay-on-hover(rgba($dark-gray, 0.3));
+    box-shadow: 0 2px 4px darken($medium-gray, 10%);
     cursor: pointer;
     font-family: $subheading-font-family;
-    min-height: 365px;
+    min-height: 180px;
     padding: $small-spacing;
     color: white;
     background-size: cover;
-    font-size: 1.7em;
+    font-size: 1.7rem;
     text-shadow: 1px 1px 0 $dark-gray;
+    margin-bottom: $small-spacing;
 
     &.stoves { @include background(url("../images/cambodia-briquettes.jpg") center no-repeat); }
     &.fuels { @include background(url("../images/uganda-briquettes.jpg") center no-repeat); }
@@ -119,10 +178,15 @@ main[role="landing"] {
       text-align: right;
       padding: $small-spacing;
       z-index: 11;
+      border-radius: inherit;
     }
 
     .options {
+      @include media($large-screen-up) {
+        display: block;
+      }
       @include background(linear-gradient(transparent, rgba($dark-gray, 0.85)) bottom no-repeat);
+      display: none;
       width: 100%;
       position: absolute;
       bottom: 0;
@@ -153,7 +217,7 @@ main[role="landing"] {
   .item {
     display: block;
     height: 260px;
-    width: 33.33%;
+    width: 100%;
     float: left;
     padding: 2em;
     background: white;
@@ -161,21 +225,67 @@ main[role="landing"] {
     border-bottom: 1px solid $base-accent-color;
     text-align: center;
 
-    img { height: 4.5em;}
+    img { 
+      @include media($medium-screen-up) {
+        height: 4.5em;
+      }
+      height: 3.5em;
+    }
 
     .icon { margin-bottom: $base-spacing; }
 
-    &.last-row {
-      border-bottom: none;
+    @include media($small-screen) {
+      width: 100%;
+      border-right: none;
+      height: 235px;
+      padding: 1.5em;
+      &:first-child { 
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+      }
+      &:last-child { 
+        border-bottom-right-radius: 3px; 
+        border-bottom-left-radius: 3px;
+        border-bottom: none;
+      }
     }
 
-    &:nth-child(1) { border-top-left-radius: 3px; }
-    &:nth-child(3) { border-top-right-radius: 3px; }
-    &:nth-child(4) { border-bottom-left-radius: 3px; }
-    &:nth-child(6) { border-bottom-right-radius: 3px; }
+    @include media($medium-screen) {
+      width: 50%;
+      &:nth-child(1) { border-top-left-radius: 3px; }
+      &:nth-child(2) { border-top-right-radius: 3px; }
+      &:nth-child(5) {
+        border-bottom-left-radius: 3px;
+        border-bottom: none;
+      }
+      &:nth-child(6) { 
+        border-bottom-right-radius: 3px;
+        border-bottom: none;
+      }
+      &:nth-child(2n) {
+        border-right: none;
+      }
+    }
 
-    &:nth-child(3n) {
-      border-right: none;
+    @include media($large-screen-up) {
+      width: 33.3%;
+      &:nth-child(1) { border-top-left-radius: 3px; }
+      &:nth-child(3) { border-top-right-radius: 3px; }
+      &:nth-child(4) { 
+        border-bottom-left-radius: 3px;
+        border-bottom: none;
+      }
+      &:nth-child(5) { 
+        border-bottom: none;
+      }
+      &:nth-child(6) { 
+        border-bottom-right-radius: 3px; 
+        border-bottom: none;
+      }
+
+      &:nth-child(3n) {
+        border-right: none;
+      }
     }
   }
 

@@ -1,33 +1,46 @@
 .prefooter {
-	@include fill-parent;
-	float: left;
-	padding: 2em $base-spacing;
+  @include fill-parent;
+  float: left;
+  padding: 2em $base-spacing;
     border-top: 1px solid lighten($alliance-dark-blue, 20%);
-	@include background(url("../images/briquette-background-transparent.png"), 
-		linear-gradient(lighten($alliance-dark-blue, 10%), $alliance-dark-blue),
-		center no-repeat lighten($alliance-dark-blue, 8%) scroll);	
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: white;
+  @include background(url("../images/briquette-background-transparent.png"), 
+    linear-gradient(lighten($alliance-dark-blue, 10%), $alliance-dark-blue),
+    center no-repeat lighten($alliance-dark-blue, 8%) scroll);  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 
-	.inner { @include outer-container; }
+  @include media($small-screen) {
+    text-align: center;
+  }
 
-	.logo {
-		@include span-columns(4);
+  .inner { @include outer-container; }
 
-		img { max-width: 148px; }
-	}
+  .section {
+    @include media($small-screen) {
+      @include fill-parent;
+      float: left;
+      &:not(:last-child) { margin-bottom: $small-spacing; }
+    }
 
-	.contact {
-		@include span-columns(4);
-		line-height: 1.8em;
+    @include media($medium-screen-up) {
+      @include span-columns(4);
+    }
+  }
 
-		.title { 
-			font-weight: 700;
-			margin-bottom: 0.25em;
-		}
-	}
+  .logo {
+    img { max-width: 148px; }
+  }
+
+  .contact {
+    line-height: 1.8em;
+
+    .title { 
+      font-weight: 700;
+      margin-bottom: 0.25em;
+    }
+  }
 
   a {
     color: lighten($alliance-green, 75%);

@@ -19,4 +19,4 @@ $xlarge-screen: new-breakpoint(min-width em($third-breakpoint + 1));
 $up-to-xlarge: new-breakpoint(max-width em($third-breakpoint));
 
 $large-screen-up: new-breakpoint(min-width em($second-breakpoint + 1));
-$medium-screen-up: new-breakpoint(min-width em($second-breakpoint + 1));
+$medium-screen-up: new-breakpoint(min-width em($first-breakpoint + 1));

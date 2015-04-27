@@ -282,10 +282,8 @@ main {
   height: 100%;
   top: 0;
   left: 0;
-  /* edit: added z-index */
   z-index: 99;
-  /* edit: fixes overlap error in IE7/8, 
-     make sure you have an empty gif */
+  /* fixes overlap error in IE7/8 */
   background-image: url("../images/empty.gif"); }
 
 aside[role="content-assist"] {
@@ -297,7 +295,7 @@ aside[role="content-assist"] {
   bottom: 0;
   overflow-y: scroll;
   webkit-overflow-scrolling: touch; }
-  @media screen and (min-width: 60.0625em) {
+  @media screen and (min-width: 35.0625em) {
     aside[role="content-assist"] {
       width: 30%;
       display: block !important; } }
@@ -311,7 +309,7 @@ main[role="content"] {
   top: 61px;
   overflow-y: scroll;
   webkit-overflow-scrolling: touch; }
-  @media screen and (min-width: 60.0625em) {
+  @media screen and (min-width: 35.0625em) {
     main[role="content"] {
       width: 70%;
       display: block !important; } }
@@ -349,7 +347,7 @@ main[role="content"] {
   padding: 0 1.5rem;
   text-align: center;
   -webkit-transform: translateZ(0); }
-  @media screen and (min-width: 60.0625em) {
+  @media screen and (min-width: 35.0625em) {
     .pane-controls {
       display: none; } }
 
@@ -417,9 +415,16 @@ main[role="landing"] .content {
 main[role="landing"] .hero {
   background: -webkit-linear-gradient(#016a71, #016067), bottom no-repeat;
   background: linear-gradient(#016a71, #016067), bottom no-repeat;
+  padding: 3em 1.5em;
   color: white;
-  padding: 3em 0;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: 85%; }
+  @media screen and (min-width: 76.3125em) {
+    main[role="landing"] .hero {
+      padding: 3em 0; } }
+  @media screen and (min-width: 35.0625em) {
+    main[role="landing"] .hero {
+      font-size: 100%; } }
   main[role="landing"] .hero .inner {
     max-width: 68em;
     margin-left: auto;
@@ -446,7 +451,8 @@ main[role="landing"] .hero {
       display: table; }
   main[role="landing"] .hero .title {
     font-size: 1.7em;
-    font-weight: 700; }
+    font-weight: 700;
+    margin-bottom: 0.25em; }
   main[role="landing"] .hero .subtitle {
     font-size: 1.2em; }
 main[role="landing"] .row {
@@ -458,37 +464,61 @@ main[role="landing"] .row {
     max-width: 68em;
     margin-left: auto;
     margin-right: auto;
-    padding: 3em 0 6em 0; }
+    padding: 3em 1.5em 6em 1.5em; }
     main[role="landing"] .row .inner::after {
       clear: both;
       content: "";
       display: table; }
+    @media screen and (min-width: 76.3125em) {
+      main[role="landing"] .row .inner {
+        padding: 3em 0 6em 0; } }
+    @media screen and (max-width: 35em) {
+      main[role="landing"] .row .inner {
+        padding-bottom: 3em; } }
   main[role="landing"] .row .large-section {
-    width: 60%;
+    width: 100%;
     float: left;
-    min-height: 550px; }
+    min-height: 300px; }
+    @media screen and (min-width: 60.0625em) {
+      main[role="landing"] .row .large-section {
+        width: 60%;
+        min-height: 550px; } }
+    @media screen and (min-width: 35.0625em) and (max-width: 60em) {
+      main[role="landing"] .row .large-section {
+        min-height: 400px; } }
+    @media screen and (max-width: 35em) {
+      main[role="landing"] .row .large-section {
+        min-height: 250px; } }
     main[role="landing"] .row .large-section.contribute {
       background: url("../images/field.jpg") top left no-repeat;
       background: url("../images/field.jpg") top left no-repeat;
       background-size: cover; }
   main[role="landing"] .row .small-section {
-    width: 40%;
+    width: 100%;
     float: left;
-    padding: 3em; }
+    padding: 2em 1.5em 1em 1.5em; }
+    @media screen and (min-width: 60.0625em) {
+      main[role="landing"] .row .small-section {
+        width: 40%;
+        padding: 3em; } }
   main[role="landing"] .row .description {
     font-size: 1.2em;
     margin-bottom: 2.25em;
     max-width: 38em;
     float: left;
-    clear: both; }
+    clear: right; }
+    main[role="landing"] .row .description.site-description {
+      margin-bottom: 0.75em; }
   main[role="landing"] .row .title {
     width: 100%;
     float: left;
     text-transform: uppercase;
     color: #999;
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin-bottom: 1.5em; }
+    main[role="landing"] .row .title.site-title {
+      margin-bottom: 0.75em; }
   main[role="landing"] .row .learn-more-btn {
     background-color: #02868f;
     border-radius: 3px;
@@ -532,22 +562,55 @@ main[role="landing"] .row {
       main[role="landing"] .row .learn-more-btn.about:disabled {
         cursor: not-allowed;
         opacity: 0.5; }
+main[role="landing"] .site-sections {
+  width: 100%;
+  float: let; }
+  @media screen and (min-width: 35.0625em) and (max-width: 60em) {
+    main[role="landing"] .site-sections {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 57.35098%; }
+      main[role="landing"] .site-sections:last-child {
+        margin-right: 0; } }
+main[role="landing"] .site-description {
+  width: 100%;
+  float: let; }
+  @media screen and (min-width: 35.0625em) and (max-width: 60em) {
+    main[role="landing"] .site-description {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 40.29137%; }
+      main[role="landing"] .site-description:last-child {
+        margin-right: 0; } }
 main[role="landing"] .site-section {
+  width: 100%;
   float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
   position: relative;
+  box-shadow: 0 2px 4px gray;
   cursor: pointer;
   font-family: "Trocchi", serif;
-  min-height: 365px;
+  min-height: 180px;
   padding: 0.75em;
   color: white;
   background-size: cover;
-  font-size: 1.7em;
-  text-shadow: 1px 1px 0 #333; }
-  main[role="landing"] .site-section:last-child {
-    margin-right: 0; }
+  font-size: 1.7rem;
+  text-shadow: 1px 1px 0 #333;
+  margin-bottom: 0.75em; }
+  @media screen and (min-width: 60.0625em) {
+    main[role="landing"] .site-section {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      min-height: 365px;
+      margin-bottom: 0; }
+      main[role="landing"] .site-section:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 35.0625em) and (max-width: 60em) {
+    main[role="landing"] .site-section {
+      font-size: 1.4rem; } }
   main[role="landing"] .site-section:after {
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
@@ -562,7 +625,7 @@ main[role="landing"] .site-section {
     right: 0;
     background: transparent; }
   main[role="landing"] .site-section:focus:after, main[role="landing"] .site-section:hover:after {
-    background: rgba(51, 51, 51, 0.5); }
+    background: rgba(51, 51, 51, 0.3); }
   main[role="landing"] .site-section.stoves {
     background: url("../images/cambodia-briquettes.jpg") center no-repeat;
     background: url("../images/cambodia-briquettes.jpg") center no-repeat; }
@@ -581,10 +644,12 @@ main[role="landing"] .site-section {
     right: 0;
     text-align: right;
     padding: 0.75em;
-    z-index: 11; }
+    z-index: 11;
+    border-radius: inherit; }
   main[role="landing"] .site-section .options {
     background: -webkit-linear-gradient(transparent, rgba(51, 51, 51, 0.85)) bottom no-repeat;
     background: linear-gradient(transparent, rgba(51, 51, 51, 0.85)) bottom no-repeat;
+    display: none;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -594,6 +659,9 @@ main[role="landing"] .site-section {
     padding: 3rem 1rem 1rem 1rem;
     z-index: 11;
     line-height: 2.3rem; }
+    @media screen and (min-width: 60.0625em) {
+      main[role="landing"] .site-section .options {
+        display: block; } }
   main[role="landing"] .site-section a {
     color: white; }
     main[role="landing"] .site-section a:hover {
@@ -607,7 +675,7 @@ main[role="landing"] .site-section {
   .user-grid .item {
     display: block;
     height: 260px;
-    width: 33.33%;
+    width: 100%;
     float: left;
     padding: 2em;
     background: white;
@@ -615,21 +683,57 @@ main[role="landing"] .site-section {
     border-bottom: 1px solid #dFdbd3;
     text-align: center; }
     .user-grid .item img {
-      height: 4.5em; }
+      height: 3.5em; }
+      @media screen and (min-width: 35.0625em) {
+        .user-grid .item img {
+          height: 4.5em; } }
     .user-grid .item .icon {
       margin-bottom: 1.5em; }
-    .user-grid .item.last-row {
-      border-bottom: none; }
-    .user-grid .item:nth-child(1) {
-      border-top-left-radius: 3px; }
-    .user-grid .item:nth-child(3) {
-      border-top-right-radius: 3px; }
-    .user-grid .item:nth-child(4) {
-      border-bottom-left-radius: 3px; }
-    .user-grid .item:nth-child(6) {
-      border-bottom-right-radius: 3px; }
-    .user-grid .item:nth-child(3n) {
-      border-right: none; }
+    @media screen and (max-width: 35em) {
+      .user-grid .item {
+        width: 100%;
+        border-right: none;
+        height: 235px;
+        padding: 1.5em; }
+        .user-grid .item:first-child {
+          border-top-right-radius: 3px;
+          border-top-left-radius: 3px; }
+        .user-grid .item:last-child {
+          border-bottom-right-radius: 3px;
+          border-bottom-left-radius: 3px;
+          border-bottom: none; } }
+    @media screen and (min-width: 35.0625em) and (max-width: 60em) {
+      .user-grid .item {
+        width: 50%; }
+        .user-grid .item:nth-child(1) {
+          border-top-left-radius: 3px; }
+        .user-grid .item:nth-child(2) {
+          border-top-right-radius: 3px; }
+        .user-grid .item:nth-child(5) {
+          border-bottom-left-radius: 3px;
+          border-bottom: none; }
+        .user-grid .item:nth-child(6) {
+          border-bottom-right-radius: 3px;
+          border-bottom: none; }
+        .user-grid .item:nth-child(2n) {
+          border-right: none; } }
+    @media screen and (min-width: 60.0625em) {
+      .user-grid .item {
+        width: 33.3%; }
+        .user-grid .item:nth-child(1) {
+          border-top-left-radius: 3px; }
+        .user-grid .item:nth-child(3) {
+          border-top-right-radius: 3px; }
+        .user-grid .item:nth-child(4) {
+          border-bottom-left-radius: 3px;
+          border-bottom: none; }
+        .user-grid .item:nth-child(5) {
+          border-bottom: none; }
+        .user-grid .item:nth-child(6) {
+          border-bottom-right-radius: 3px;
+          border-bottom: none; }
+        .user-grid .item:nth-child(3n) {
+          border-right: none; } }
   .user-grid .name {
     text-transform: uppercase;
     font-weight: bold;
@@ -659,7 +763,7 @@ header.navigation {
     max-height: 60px;
     padding-left: 1.5em;
     padding-right: 0.75em; }
-    @media screen and (min-width: 60.0625em) {
+    @media screen and (min-width: 35.0625em) {
       header.navigation .logo {
         padding-right: 3em; } }
     header.navigation .logo img {
@@ -672,7 +776,7 @@ header.navigation {
       line-height: 60px;
       z-index: 9999999;
       color: white; }
-      @media screen and (min-width: 60.0625em) {
+      @media screen and (min-width: 35.0625em) {
         header.navigation .logo .site-name {
           font-size: 1.1em; } }
   header.navigation .navigation-menu-button {
@@ -685,7 +789,7 @@ header.navigation {
     padding-right: 1em;
     text-transform: uppercase;
     font-size: 0.8em; }
-    @media screen and (min-width: 60.0625em) {
+    @media screen and (min-width: 35.0625em) {
       header.navigation .navigation-menu-button {
         display: none; } }
     header.navigation .navigation-menu-button:focus, header.navigation .navigation-menu-button:hover {
@@ -694,7 +798,7 @@ header.navigation {
     float: none;
     min-height: 60px;
     z-index: 9999999; }
-    @media screen and (min-width: 60.0625em) {
+    @media screen and (min-width: 35.0625em) {
       header.navigation nav {
         float: left; } }
   header.navigation ul.navigation-menu {
@@ -709,7 +813,7 @@ header.navigation {
     z-index: 9999; }
     header.navigation ul.navigation-menu.show {
       display: block; }
-    @media screen and (min-width: 60.0625em) {
+    @media screen and (min-width: 35.0625em) {
       header.navigation ul.navigation-menu {
         display: inline;
         margin: 0;
@@ -723,7 +827,7 @@ header.navigation {
     text-align: right;
     width: 100%;
     z-index: 9999; }
-    @media screen and (min-width: 60.0625em) {
+    @media screen and (min-width: 35.0625em) {
       header.navigation ul li.nav-link {
         background: transparent;
         display: inline;
@@ -734,7 +838,7 @@ header.navigation {
       color: white;
       display: inline-block;
       font-weight: 700; }
-      @media screen and (min-width: 60.0625em) {
+      @media screen and (min-width: 35.0625em) {
         header.navigation ul li.nav-link a {
           padding-right: 1em; } }
       header.navigation ul li.nav-link a:focus, header.navigation ul li.nav-link a:hover {
@@ -744,7 +848,7 @@ header.navigation {
     padding-bottom: 3px; }
   header.navigation li.more.nav-link {
     padding-right: 0; }
-    @media screen and (min-width: 60.0625em) {
+    @media screen and (min-width: 35.0625em) {
       header.navigation li.more.nav-link {
         padding-right: 1em; } }
     header.navigation li.more.nav-link > ul > li:first-child a {
@@ -769,7 +873,7 @@ header.navigation {
     header.navigation li.more > a {
       padding-right: 1.6em;
       position: relative; }
-      @media screen and (min-width: 60.0625em) {
+      @media screen and (min-width: 35.0625em) {
         header.navigation li.more > a {
           margin-right: 1em; } }
       header.navigation li.more > a:after {
@@ -779,26 +883,26 @@ header.navigation {
         right: 0.5em; }
     header.navigation li.more:focus > .submenu, header.navigation li.more:hover > .submenu {
       display: block; }
-    @media screen and (min-width: 60.0625em) {
+    @media screen and (min-width: 35.0625em) {
       header.navigation li.more {
         padding-right: 0.8em;
         position: relative; } }
   header.navigation ul.submenu {
     display: none;
     padding-left: 0; }
-    @media screen and (min-width: 60.0625em) {
+    @media screen and (min-width: 35.0625em) {
       header.navigation ul.submenu {
         left: -1em;
         position: absolute;
         top: 1.5em; } }
-    @media screen and (min-width: 60.0625em) {
+    @media screen and (min-width: 35.0625em) {
       header.navigation ul.submenu .submenu {
         left: 13.8em;
         top: 0; } }
     header.navigation ul.submenu li {
       display: block;
       padding-right: 0; }
-      @media screen and (min-width: 60.0625em) {
+      @media screen and (min-width: 35.0625em) {
         header.navigation ul.submenu li {
           line-height: 46.15385px; }
           header.navigation ul.submenu li:first-child > a {
@@ -813,7 +917,7 @@ header.navigation {
         display: inline-block;
         text-align: right;
         width: 100%; }
-        @media screen and (min-width: 60.0625em) {
+        @media screen and (min-width: 35.0625em) {
           header.navigation ul.submenu li a {
             background-color: #01575d;
             padding-left: 1em;
@@ -831,7 +935,7 @@ header.navigation {
       color: white;
       line-height: 60px;
       padding-right: 3em; }
-    @media screen and (min-width: 60.0625em) {
+    @media screen and (min-width: 35.0625em) {
       header.navigation .navigation-tools {
         background: transparent;
         clear: none;
@@ -921,6 +1025,9 @@ header.navigation {
   background-repeat: no-repeat;
   background-size: cover;
   color: white; }
+  @media screen and (max-width: 35em) {
+    .prefooter {
+      text-align: center; } }
   .prefooter .inner {
     max-width: 68em;
     margin-left: auto;
@@ -929,23 +1036,24 @@ header.navigation {
       clear: both;
       content: "";
       display: table; }
-  .prefooter .logo {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%; }
-    .prefooter .logo:last-child {
-      margin-right: 0; }
-    .prefooter .logo img {
-      max-width: 148px; }
+  @media screen and (max-width: 35em) {
+    .prefooter .section {
+      width: 100%;
+      float: left; }
+      .prefooter .section:not(:last-child) {
+        margin-bottom: 0.75em; } }
+  @media screen and (min-width: 35.0625em) {
+    .prefooter .section {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .prefooter .section:last-child {
+        margin-right: 0; } }
+  .prefooter .logo img {
+    max-width: 148px; }
   .prefooter .contact {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%;
     line-height: 1.8em; }
-    .prefooter .contact:last-child {
-      margin-right: 0; }
     .prefooter .contact .title {
       font-weight: 700;
       margin-bottom: 0.25em; }
@@ -1203,7 +1311,7 @@ header.navigation {
     display: none; }
   .button-group label {
     margin-bottom: 0; }
-    @media screen and (min-width: 60.0625em) {
+    @media screen and (min-width: 35.0625em) {
       .button-group label {
         float: left; } }
     .button-group label .button-group-item {
@@ -1219,7 +1327,7 @@ header.navigation {
       line-height: 1;
       padding: 0.75em 0.9em;
       width: 100%; }
-      @media screen and (min-width: 60.0625em) {
+      @media screen and (min-width: 35.0625em) {
         .button-group label .button-group-item {
           border-bottom: 1px solid silver;
           border-left: 0;
@@ -1232,7 +1340,7 @@ header.navigation {
       border-top-left-radius: 3px;
       border-top-right-radius: 3px;
       border-top: 1px solid silver; }
-      @media screen and (min-width: 60.0625em) {
+      @media screen and (min-width: 35.0625em) {
         .button-group label:first-child .button-group-item {
           border-bottom-left-radius: 3px;
           border-left: 1px solid silver;
@@ -1242,7 +1350,7 @@ header.navigation {
       border-bottom-left-radius: 3px;
       border-bottom-right-radius: 3px;
       border-bottom: 1px solid silver; }
-      @media screen and (min-width: 60.0625em) {
+      @media screen and (min-width: 35.0625em) {
         .button-group label:last-child .button-group-item {
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 3px;
