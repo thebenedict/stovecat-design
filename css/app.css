@@ -507,8 +507,6 @@ main[role="landing"] .row {
     max-width: 38em;
     float: left;
     clear: right; }
-    main[role="landing"] .row .description.site-description {
-      margin-bottom: 0.75em; }
   main[role="landing"] .row .title {
     width: 100%;
     float: left;
