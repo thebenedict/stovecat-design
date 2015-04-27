@@ -418,7 +418,7 @@ main[role="landing"] .hero {
   padding: 3em 1.5em;
   color: white;
   text-transform: uppercase;
-  font-size: 85%; }
+  font-size: 80%; }
   @media screen and (min-width: 76.3125em) {
     main[role="landing"] .hero {
       padding: 3em 0; } }
@@ -562,28 +562,6 @@ main[role="landing"] .row {
       main[role="landing"] .row .learn-more-btn.about:disabled {
         cursor: not-allowed;
         opacity: 0.5; }
-main[role="landing"] .site-sections {
-  width: 100%;
-  float: let; }
-  @media screen and (min-width: 35.0625em) and (max-width: 60em) {
-    main[role="landing"] .site-sections {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 57.35098%; }
-      main[role="landing"] .site-sections:last-child {
-        margin-right: 0; } }
-main[role="landing"] .site-description {
-  width: 100%;
-  float: let; }
-  @media screen and (min-width: 35.0625em) and (max-width: 60em) {
-    main[role="landing"] .site-description {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 40.29137%; }
-      main[role="landing"] .site-description:last-child {
-        margin-right: 0; } }
 main[role="landing"] .site-section {
   width: 100%;
   float: left;
@@ -591,7 +569,7 @@ main[role="landing"] .site-section {
   box-shadow: 0 2px 4px gray;
   cursor: pointer;
   font-family: "Trocchi", serif;
-  min-height: 180px;
+  min-height: 230px;
   padding: 0.75em;
   color: white;
   background-size: cover;
@@ -610,7 +588,7 @@ main[role="landing"] .site-section {
         margin-right: 0; } }
   @media screen and (min-width: 35.0625em) and (max-width: 60em) {
     main[role="landing"] .site-section {
-      font-size: 1.4rem; } }
+      min-height: 320px; } }
   main[role="landing"] .site-section:after {
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
@@ -626,15 +604,17 @@ main[role="landing"] .site-section {
     background: transparent; }
   main[role="landing"] .site-section:focus:after, main[role="landing"] .site-section:hover:after {
     background: rgba(51, 51, 51, 0.3); }
+  main[role="landing"] .site-section:nth-child(2) {
+    clear: left; }
   main[role="landing"] .site-section.stoves {
-    background: url("../images/cambodia-briquettes.jpg") center no-repeat;
-    background: url("../images/cambodia-briquettes.jpg") center no-repeat; }
+    background: url("../images/wood-rocket.jpg") center/cover no-repeat;
+    background: url("../images/wood-rocket.jpg") center/cover no-repeat; }
   main[role="landing"] .site-section.fuels {
-    background: url("../images/uganda-briquettes.jpg") center no-repeat;
-    background: url("../images/uganda-briquettes.jpg") center no-repeat; }
+    background: url("../images/uganda-briquettes.jpg") center/cover no-repeat;
+    background: url("../images/uganda-briquettes.jpg") center/cover no-repeat; }
   main[role="landing"] .site-section.test-results {
-    background: url("../images/epa-lab.jpg") 55% no-repeat;
-    background: url("../images/epa-lab.jpg") 55% no-repeat; }
+    background: url("../images/epa-lab.jpg") top/cover no-repeat;
+    background: url("../images/epa-lab.jpg") top/cover no-repeat; }
   main[role="landing"] .site-section .text {
     background: -webkit-linear-gradient(rgba(51, 51, 51, 0.75), transparent) bottom no-repeat;
     background: linear-gradient(rgba(51, 51, 51, 0.75), transparent) bottom no-repeat;
@@ -649,7 +629,6 @@ main[role="landing"] .site-section {
   main[role="landing"] .site-section .options {
     background: -webkit-linear-gradient(transparent, rgba(51, 51, 51, 0.85)) bottom no-repeat;
     background: linear-gradient(transparent, rgba(51, 51, 51, 0.85)) bottom no-repeat;
-    display: none;
     width: 100%;
     position: absolute;
     bottom: 0;

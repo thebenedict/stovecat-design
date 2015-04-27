@@ -40,7 +40,7 @@ main[role="landing"] {
       font-size: 1.2em;
     }
 
-    font-size: 85%;
+    font-size: 80%;
 
   }
 
@@ -123,31 +123,14 @@ main[role="landing"] {
 
   }
 
-  .site-sections {
-    @include media($medium-screen) {
-      @include span-columns(7 of 12);
-    }
-    @include fill-parent;
-    float: let;
-  }
-
-  .site-description {
-    @include media($medium-screen) {
-      @include span-columns(5 of 12);
-    }
-    @include fill-parent;
-    float: let;    
-  }
-
   .site-section {
     @include media($large-screen-up) {
       @include span-columns(4 of 12);
       min-height: 365px;
       margin-bottom: 0;
     }
-
     @include media($medium-screen) {
-      font-size: 1.4rem;
+      min-height: 320px;
     }
 
     @include fill-parent;
@@ -157,7 +140,7 @@ main[role="landing"] {
     box-shadow: 0 2px 4px darken($medium-gray, 10%);
     cursor: pointer;
     font-family: $subheading-font-family;
-    min-height: 180px;
+    min-height: 230px;
     padding: $small-spacing;
     color: white;
     background-size: cover;
@@ -165,9 +148,11 @@ main[role="landing"] {
     text-shadow: 1px 1px 0 $dark-gray;
     margin-bottom: $small-spacing;
 
-    &.stoves { @include background(url("../images/cambodia-briquettes.jpg") center no-repeat); }
-    &.fuels { @include background(url("../images/uganda-briquettes.jpg") center no-repeat); }
-    &.test-results { @include background(url("../images/epa-lab.jpg") 55% no-repeat); }
+    &:nth-child(2) { clear: left; }
+
+    &.stoves { @include background(url("../images/wood-rocket.jpg") center / cover no-repeat); }
+    &.fuels { @include background(url("../images/uganda-briquettes.jpg") center / cover no-repeat); }
+    &.test-results { @include background(url("../images/epa-lab.jpg") top / cover no-repeat); }
 
     .text {
       @include background(linear-gradient(rgba($dark-gray, 0.75), transparent) bottom no-repeat);
@@ -186,7 +171,6 @@ main[role="landing"] {
         display: block;
       }
       @include background(linear-gradient(transparent, rgba($dark-gray, 0.85)) bottom no-repeat);
-      display: none;
       width: 100%;
       position: absolute;
       bottom: 0;
