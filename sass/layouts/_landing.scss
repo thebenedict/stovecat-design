@@ -20,14 +20,13 @@ main[role="landing"] {
 
     .logo {
       @include row;
-      margin-bottom: 1em;
+      margin-bottom: $base-spacing;
 
       img { max-width: 120px; }
     }
 
     .text {
       @include row;
-      line-height: 2.4em;
     }
 
     .title {
@@ -49,15 +48,13 @@ main[role="landing"] {
     float: left;
 
     &.shaded { background: lighten($alliance-tan, 8%); }
+
     .inner {
       @include outer-container;
       @include media($xlarge-screen) {
-        padding: ($base-spacing * 2) 0 ($base-spacing * 4) 0;
+        padding: ($base-spacing * 2) 0 ($base-spacing * 2) 0;
       }
-      @include media($small-screen) {
-        padding-bottom: $base-spacing * 2;
-      }
-      padding: ($base-spacing * 2) $base-spacing ($base-spacing * 4) $base-spacing;
+      padding: ($base-spacing * 2) $base-spacing ($base-spacing * 2) $base-spacing;
     }
 
     .large-section {
@@ -93,6 +90,8 @@ main[role="landing"] {
       max-width: 38em;
       float:left;
       clear: right;
+
+      &.site-description { margin-bottom: $base-spacing; }
     }
 
     .title {
@@ -118,17 +117,27 @@ main[role="landing"] {
       }
 
     }
+  }
 
+  .row-controls {
+    @include fill-parent;
+    float: left;
+  }
+
+  .site-sections {
+    @include fill-parent;
+    float: left;
+    margin-bottom: $base-spacing;
   }
 
   .site-section {
     @include media($large-screen-up) {
       @include span-columns(4 of 12);
-      min-height: 365px;
+      min-height: 260px;
       margin-bottom: 0;
     }
     @include media($medium-screen) {
-      min-height: 320px;
+      min-height: 260px;
     }
 
     @include fill-parent;
@@ -145,8 +154,6 @@ main[role="landing"] {
     font-size: 1.7rem;
     text-shadow: 1px 1px 0 $dark-gray;
     margin-bottom: $small-spacing;
-
-    &:nth-child(2) { clear: left; }
 
     &.stoves { @include background(url("../images/wood-rocket.jpg") center / cover no-repeat); }
     &.fuels { @include background(url("../images/uganda-briquettes.jpg") center / cover no-repeat); }
@@ -168,7 +175,7 @@ main[role="landing"] {
       @include media($large-screen-up) {
         display: block;
       }
-      @include background(linear-gradient(transparent, rgba($dark-gray, 0.85)) bottom no-repeat);
+      @include background(linear-gradient(transparent, rgba($dark-gray, 0.2)) bottom no-repeat);
       width: 100%;
       position: absolute;
       bottom: 0;
