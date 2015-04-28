@@ -8,7 +8,8 @@
   p { margin: 0; }
 
   .label, .value {
-    display: inline-block;
+    @include fill-parent;
+    float: left;
 
     &.full-width {
       @include fill-parent;
@@ -17,7 +18,9 @@
   }
 
   .label {
-    @include span-columns(4);
+    @include media($medium-screen-up) {
+      @include span-columns(4);
+    }
 
     &.full-width {
       margin-bottom: 0.25em;
@@ -25,7 +28,9 @@
   }
 
   .value {
-    @include span-columns(8);
+    @include media($medium-screen-up) {
+      @include span-columns(8);
+    }
     color: $value-color;
   }
 

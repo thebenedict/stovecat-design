@@ -50,18 +50,34 @@
 }
 
 .table-cell {
+  @include media($small-screen) {
+    @include fill-parent;
+    float: left;
+  }
+
   &.inline-photo-wrapper {
-    @include span-columns(3);
+    @include media($medium-screen-up) {
+      @include span-columns(3);
+    }
+    @include media($small-screen) {
+      text-align: center;
+      margin-bottom: $base-spacing;
+      img { max-height: 200px; }
+    }
   }
 
   &.space {
-    @include span-columns(1);
+    @include media($medium-screen-up) {
+      @include span-columns(1);
+    }
   }
 
   &.inline-map-wrapper {
-    @include span-columns(7);
-    @include reset-display;
-    vertical-align: top;
+    @include media($medium-screen-up) {
+      @include span-columns(7);
+      vertical-align: top;
+      @include reset-display;
+    }
   }
 }
 
@@ -78,8 +94,8 @@
     display: inline-block;
     border: 1px solid $base-accent-color;
     float: left;
-    margin-right: $small-spacing;
+    margin: 0 $small-spacing $small-spacing 0;
     border-radius: 3px;
-    cursor: pointer;   
+    cursor: pointer;
   }
 }

@@ -1,5 +1,5 @@
 aside[role="content-assist"] {
-  @include media ($medium-screen-up) {
+  @include media ($large-screen-up) {
     width: 30%;
     display: block !important;
   }
@@ -15,7 +15,7 @@ aside[role="content-assist"] {
 }
 
 main[role="content"] {
-  @include media ($medium-screen-up) {
+  @include media ($large-screen-up) {
     width: 70%;
     display: block !important;
   }
@@ -60,7 +60,7 @@ main[role="content"] {
 }
 
 .pane-controls {
-  @include media($medium-screen-up) {
+  @include media($large-screen-up) {
     display: none;
   }
   @include fill-parent;
