@@ -1874,4 +1874,14 @@ header.navigation {
     cursor: auto;
     padding-left: 1.75em; }
 
+@media screen and (min-width: 35.0625em) {
+  .test-result-table td, .test-result-table th {
+    display: table-cell !important; } }
+.test-result-table td:nth-child(3), .test-result-table th:nth-child(3) {
+  display: none; }
+.test-result-table td:nth-child(4), .test-result-table th:nth-child(4) {
+  display: none; }
+.test-result-table td:nth-child(5), .test-result-table th:nth-child(5) {
+  display: none; }
+
 /*# sourceMappingURL=app.css.map */

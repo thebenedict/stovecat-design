@@ -1,0 +1,11 @@
+.test-result-table {
+	@include media($medium-screen-up) {
+		td, th { display: table-cell !important; }
+	}
+
+	td, th {
+		&:nth-child(3) { display: none; }
+		&:nth-child(4) { display: none; }
+		&:nth-child(5) { display: none; }
+	}
+}
