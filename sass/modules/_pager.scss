@@ -46,15 +46,14 @@
     font-size: 0.9em;
   }
 
-  .position {
-    line-height: 1em;
-  }
-
 
   i[class^='icon'] { 
     font-size: 1.5em;
 
     &:hover { color: lighten($item-color, 5%) }
-    &::before { vertical-align: middle; }
+    &::before { 
+      vertical-align: top;
+      line-height: 1.1em;
+    }
   }
 }

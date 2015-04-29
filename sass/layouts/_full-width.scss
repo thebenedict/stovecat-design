@@ -26,11 +26,11 @@ main[role="full-width-content"] {
     }
     @include fill-parent;
     float: left;
-    padding: $base-spacing $base-spacing 0 $base-spacing;
+    padding: 0 $base-spacing;
 
     &.longform {
       line-height: $base-line-height * 1.2;
-      margin-bottom: $base-spacing; 
+      margin-bottom: $base-spacing * 2; 
     }
   }
 
