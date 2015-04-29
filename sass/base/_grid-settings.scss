@@ -7,15 +7,19 @@
 // $max-width: em(1088);
 
 // Neat Breakpoints
+$zero-breakpoint: 319px;
 $first-breakpoint: 560px;
 $second-breakpoint: 960px;
 $third-breakpoint: 1220px;
 
-$small-screen: new-breakpoint(max-width em($first-breakpoint));
+$xsmall-screen: new-breakpoint(max-width em($zero-breakpoint));
+$small-screen: new-breakpoint(min-width em($zero-breakpoint + 1) max-width em($first-breakpoint));
 $medium-screen: new-breakpoint(min-width em($first-breakpoint +1) max-width em($second-breakpoint));
 $large-screen: new-breakpoint(min-width em($second-breakpoint + 1) max-width em($third-breakpoint));
 $xlarge-screen: new-breakpoint(min-width em($third-breakpoint + 1));
 
+// can I get rid of these somehow?
+$up-to-small: new-breakpoint(max-width em($first-breakpoint));
 $up-to-xlarge: new-breakpoint(max-width em($third-breakpoint));
 
 $large-screen-up: new-breakpoint(min-width em($second-breakpoint + 1));

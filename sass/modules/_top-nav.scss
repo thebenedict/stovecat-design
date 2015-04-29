@@ -38,8 +38,12 @@ header.navigation {
     }
 
     img {
-      max-height: $navigation-height;
-      padding: 0.8em 0.8em 0.8em 0;
+      @include media($horizontal-bar-mode) {
+        max-height: $navigation-height;
+        padding: 0.8em 0.8em 0.8em 0;
+      }
+      max-height: $navigation-height * 0.8;
+      padding: 0.8em 0.4em 0 0;        
       float: left;
     }
 
@@ -47,6 +51,7 @@ header.navigation {
       @include media($horizontal-bar-mode) {
         font-size: $title-font-size;
       }
+      @include media($xsmall-screen) { display: none; }
       font-size: $title-font-size * 0.8;
       display: inline-block;
       line-height: $navigation-height;

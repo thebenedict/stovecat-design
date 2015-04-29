@@ -86,15 +86,15 @@
   float: left;
 
   img {
-    max-width: 8em;
+    max-width: 7.5em;
   }
 
   .photo-wrapper {
     @include overlay-on-hover(rgba($medium-gray, 0.2));
     display: inline-block;
+    margin: 0 $small-spacing $small-spacing 0;
     border: 1px solid $base-accent-color;
     float: left;
-    margin: 0 $small-spacing $small-spacing 0;
     border-radius: 3px;
     cursor: pointer;
   }
