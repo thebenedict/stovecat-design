@@ -1,22 +1,36 @@
 main[role="full-width-content"] {
   .sidebar {
-    @include span-columns(2);
-    padding: $base-spacing 0;
+    @include media($large-screen-up) {
+      @include span-columns(2);
+      padding: $base-spacing 0;
+      &:first-child { padding-left: $small-spacing; }
+    }
+    @include fill-parent;
+    float: left;
+    padding: $base-spacing;
 
     img {
+      @include media($medium-screen) {
+        max-width: 12em;
+      }
       border: 1px solid $base-accent-color;
       border-radius: 3px;
     }
   }
 
   .content {
-    @include span-columns(8);
-    padding: $base-spacing 0;
-    margin-bottom: $base-spacing * 4;
+    @include media($large-screen-up) {
+      @include span-columns(8);
+      padding: $base-spacing 0;
+      margin-bottom: $base-spacing * 2;
+    }
+    @include fill-parent;
+    float: left;
+    padding: $base-spacing $base-spacing 0 $base-spacing;
 
     &.longform {
       line-height: $base-line-height * 1.2;
-      margin-bottom: $base-spacing;
+      margin-bottom: $base-spacing; 
     }
   }
 
@@ -25,5 +39,21 @@ main[role="full-width-content"] {
     padding-top: ($navigation-height + 1px);
   }
 
-  .container { @include outer-container; }
+  .container { 
+    @include outer-container;
+    @include media($large-screen-up) { float: none; }
+    float: left;
+  }
+
+  .pager-container { 
+    @include media($large-screen-up) { 
+      padding-top: $base-spacing;
+      padding-bottom: $base-spacing;
+      text-align: left;
+    }
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: $base-spacing * 2;
+  }
+
 }

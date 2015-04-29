@@ -40,12 +40,20 @@
   }
 
   .filename {
-    @include span-columns(9);
+    @include media($medium-screen-up) {
+      @include span-columns(9);
+    }
+    @include fill-parent;
+    float: left;
     padding: 0.3em 0;
   }
 
   .download-link-wrapper {
-    @include span-columns(3);
+    @include media($medium-screen-up) {
+      @include span-columns(3);
+    }
+    @include fill-parent;
+    float: left;
   }
 
   .download-link {

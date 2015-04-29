@@ -1,23 +1,38 @@
 .title-bar {
-	background: lighten($base-accent-color, 8%);
-	font-family: $subheading-font-family;
-	border-bottom: (1px solid $base-accent-color);
+  background: lighten($base-accent-color, 8%);
+  font-family: $subheading-font-family;
+  border-bottom: (1px solid $base-accent-color);
+  @include fill-parent;
+  float: left;
 
-	.container { @include outer-container; }
-  	.inner-container { 
-  		@include span-columns(10 of 10);
-  		padding: 2em 0;
-  	}
+  .container { @include outer-container; }
 
-  	.title, .subtitle {
-		@include span-columns(10);
-		@include shift(2);
-  	}
+  .inner-container { 
+    @include media($medium-screen-up) {
+      padding: 2em 0;
+    }
+    padding: 1em 0;
+    @include fill-parent;
+    float: left;
+  }
 
-	.title {
-		font-size: 1.8em;
-		margin-bottom: $small-spacing / 2;
+  .title, .subtitle {
+    @include media($large-screen-up) {
+      @include span-columns(10);
+      @include shift(2);
+    }
+    @include fill-parent;
+    float: left;
+    padding: 0 1.5rem;
+  }
 
-		&.alone { margin-bottom: 0; }
-	}
+  .title {
+    @include media($medium-screen-up) { 
+      font-size: 1.8em;
+    }
+    font-size: 1.3em;
+    margin-bottom: $small-spacing / 2;
+
+    &.alone { margin-bottom: 0; }
+  }
 }
