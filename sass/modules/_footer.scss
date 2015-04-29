@@ -4,9 +4,10 @@
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
+  @include fill-parent;
+  float: left;
   background: $footer-background;
   padding: 1em 1.5rem 3rem 1.5rem;
-  width: 100%;
   display: inline-block;
   text-transform: uppercase;
   font-family: $heading-font-family;
@@ -18,44 +19,39 @@
   }
 
   .footer-logo {
-    margin-left: 1em;
-    padding: 0.8em 0;
-
     @include media($large-screen-up) {
       float: right;
       margin-bottom: 0;
+      padding: 0.3em 0;
+      margin-left: 1em;
     }
-
+    padding: 0.8em 0;
   }
 
   ul {
+    @include media($large-screen-up) {
+        float: left;
+        margin-bottom: 0;
+        line-height: 3em;
+    }
     line-height: 2.5em;
     margin: 0 0 1em 0;
     padding: 0;
-      
-    @include media($large-screen-up) {
-        float: left;
-        line-height: 4em;
-        margin-bottom: 0;
-    }
   }
 
   li {
-    list-style: none;
-    padding-right: 1em;
-
     @include media($large-screen-up) {
       display: inline;
       text-align: left;
     }
+
+    list-style: none;
+    padding-right: 1em;
   }
 
   li a {
     color: $footer-link-color;
     text-decoration: none;
-    @include media($large-screen-up) {
-        line-height: 4em;
-    }
     &:focus,
     &:hover {
       color: transparentize($footer-color, 0);

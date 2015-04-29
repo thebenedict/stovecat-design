@@ -36,7 +36,7 @@ main[role="content"] {
   .content {
     @include outer-container;
     padding: $base-spacing;
-    margin-bottom: $base-spacing * 4;
+    margin-bottom: $base-spacing * 3;
   }
 }
 

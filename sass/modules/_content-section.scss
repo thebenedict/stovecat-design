@@ -22,9 +22,10 @@
   .controls {
     @include fill-parent;
     float: left;
-    text-align: right;
+    @include media($medium-screen-up) { text-align: right; }
     font-size: 0.9em;
     margin: $small-spacing 0;
+    line-height: 1.8em;
 
     i::before {
       text-decoration: none;

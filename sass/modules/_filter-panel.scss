@@ -2,9 +2,12 @@ $filter-group-padding: 1em;
 $inline-filter-mode: $xlarge-screen;
 
 .filter-panel {
+  @include media($medium-screen-up) {
+    padding: 0.5em $base-spacing;
+  }
   @include outer-container;
   font-family: $heading-font-family;
-  padding: 0.5em 1.5em;
+  padding: 0.5em $base-spacing $base-spacing * 3 $base-spacing;
 
   .panel-header {
     @include fill-parent;
