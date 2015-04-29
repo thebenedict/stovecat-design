@@ -523,7 +523,7 @@ main[role="landing"] .row {
     float: left;
     clear: right; }
     main[role="landing"] .row .description.site-description {
-      margin-bottom: 1.5em; }
+      margin-bottom: 0.75em; }
   main[role="landing"] .row .title {
     width: 100%;
     float: left;
